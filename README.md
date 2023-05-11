@@ -1,5 +1,9 @@
 # 💾 About Me:
 O objetivo deste repositório é ser um baú sobre BugBounty.
+Checks:
+- [ ] Wordlists
+- [ ] Scripts
+
 
 ---
 ## Plataformas de BugBounty:
