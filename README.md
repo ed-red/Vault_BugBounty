@@ -6,13 +6,13 @@ O objetivo deste repositório é ser um baú sobre BugBounty.
 
 ----
 ## Plataformas de BugBounty:
-[HackerOne](https://www.hackerone.com)
+- [HackerOne](https://www.hackerone.com)
 
 ## [Scripts](https://github.com/ed-red/Vault_BugBounty/tree/c3d91698e8fceb7c44dfaa529c9785511de2db85/Scripts)
 ## [Wordlists](https://github.com/ed-red/Vault_BugBounty/tree/c3d91698e8fceb7c44dfaa529c9785511de2db85/Wordlists)
 
 ## Referências:
-[TelegramPro - Ofjaaah](https://github.com/KingOfBugbounty/TelegramPro)
+- [TelegramPro - Ofjaaah](https://github.com/KingOfBugbounty/TelegramPro)
 
 ### Cursos:
 
