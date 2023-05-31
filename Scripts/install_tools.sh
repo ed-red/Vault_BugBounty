@@ -20,11 +20,11 @@ white=`tput setaf 7`
 reset=`tput sgr0`
 
 #---- script
-echo "${yellow}[++] Atualizando Ubuntu ... ${reset}"
+echo "${yellow}[+] Atualizando Ubuntu ... ${reset}"
 apt update
 apt upgrade -y
 
-echo "${yellow}[++] Instalando Bash-completion ... ${reset}"
+echo "${yellow}[+] Instalando Bash-completion ... ${reset}"
 apt install bash-completion
 
 # Verifica se o Rust já está instalado
@@ -34,7 +34,7 @@ else
     echo "${red}[-] O Rust não está instalado.${reset}"
 
     # Instalando o Rust
-    echo "${yellow}[++] Installing Rust ${reset}"
+    echo "${yellow}[+] Installing Rust ${reset}"
 
     # Baixa o script rustup-init
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o rustup-init.sh
@@ -45,8 +45,8 @@ else
 
     # Verifica se a instalação foi bem-sucedida
     if [ $? -eq 0 ]; then
-        echo "${green}[+] Rust foi instalado com sucesso.${reset}"
-        echo "${yellow}[+] Carregando as configurações do Rust...${reset}"
+        echo "${green}[++] Rust foi instalado com sucesso.${reset}"
+        echo "${yellow}[++] Carregando as configurações do Rust...${reset}"
         source $HOME/.cargo/env
     else
         echo "${red}[-] Ocorreu um erro durante a instalação do Rust.${reset}"
@@ -62,7 +62,18 @@ fi
 # Instalação Pacotes Base
 echo "${yellow}[+] Instalando pacotes base${reset}"
 apt update
-apt install -y vim-nox tmux git exuberant-ctags zsh tree htop ncurses-term silversearcher-ag curl npm libpcap-dev
+apt install -y vim-nox \
+                tmux \
+                git \
+                exuberant-ctags \
+                zsh \
+                tree \
+                htop \
+                ncurses-term \
+                silversearcher-ag \
+                curl \
+                npm \
+                libpcap-dev
 
 # Instalação Pacotes Base-Dev
 echo "${yellow}[+] Instalando base-dev libs ... ${reset}"
@@ -94,8 +105,7 @@ apt install -y python3 \
               apt-transport-https \
               xvfb \
               prips $DEBUG_STD
-echo "${yellow}[*] Feito. ${reset}"
-
+echo "${green}[*] Feito. ${reset}"
 
 # Instalando Golang Tools
 echo "${yellow}[+] Installing Golang Tools ${reset}"
@@ -103,15 +113,15 @@ echo "${yellow}[+] Installing Golang Tools ${reset}"
 for tool in $TOOLS
 do
   tool_name=$(echo $tool | sed -E 's#(https://github.com/|github.com/)(.*)@latest#\2#')
-  echo "${blue}[++] Instalando a ferramenta $tool_name...${reset}"
+  echo "${blue}[+] Instalando a ferramenta $tool_name...${reset}"
   output=$(GO111MODULE=on go install $tool 2>&1)
   if [ $? -eq 0 ]; then
-    echo "${green}[+] Instalação bem sucedida de $tool_name${reset}"
+    echo "${green}[++] Instalação bem sucedida de $tool_name${reset}"
   else
     echo "${red}[-] Erro na instalação de $tool_name com go install${reset}"
     output=$(GO111MODULE=on go get -u $tool 2>&1)
     if [ $? -eq 0 ]; then
-      echo "${green}[+] Instalação bem sucedida de $tool_name com go get -u${reset}"
+      echo "${green}[++] Instalação bem sucedida de $tool_name com go get -u${reset}"
     else
       echo "${red}[-] Erro na instalação de $tool_name com go get -u${reset}"
       errors="${errors}\n${red}Erro na instalação de $tool_name:${reset}\n$output\n"
@@ -123,11 +133,11 @@ if [ -n "$errors" ]; then
   echo -e "\n${red}Erros encontrados durante a instalação:${reset}"
   echo -e "$errors"
 else
-  echo "Todas as ferramentas foram instaladas com sucesso."
+  echo "${green}[**]Todas as ferramentas foram instaladas com sucesso.${reset}"
 fi
 
 # Instalar Ferramentas com o Pip3
 # - [ ] TurboSearch
 echo "${yellow}[+] Installing PIP3 Tools ${reset}"
-echo "${blue}[++] Instalando a ferramenta turbosearch...${reset}"
+echo "${blue}[+] Instalando a ferramenta turbosearch...${reset}"
 pip3 install --upgrade turbosearch
