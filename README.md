@@ -14,7 +14,7 @@ O objetivo deste repositório é ser um baú sobre BugBounty.
 ## Referências:
 - [TelegramPro - Ofjaaah](https://github.com/KingOfBugbounty/TelegramPro)
 
-### Cursos:
+### Recomendados Cursos:
 
 ----
 ## 🪙 You can help me by Donating:
