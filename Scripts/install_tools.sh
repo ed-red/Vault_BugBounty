@@ -155,10 +155,7 @@ else
     echo "${green}[**] Todas as ferramentas foram instaladas com sucesso.${reset}"
 fi
 
-# Instalar Ferramentas com o Pip3
-# - [ ] TurboSearch
-
-
+# Instalar Ferramentas com o PIP3
 echo "${yellow}[+] Installing PIP3 Tools ${reset}"
 
 for tool in "${PIP3_TOOLS[@]}"
