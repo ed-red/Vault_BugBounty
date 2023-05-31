@@ -158,7 +158,7 @@ fi
 # Instalar Ferramentas com o PIP3
 echo "${yellow}[+] Installing PIP3 Tools ${reset}"
 
-for tool in "${PIP3_TOOLS[@]}"
+for tool in $PIP3_TOOLS
 do
     if pip3 show "$tool" &>/dev/null; then
         echo "${green}[*] O pacote $tool já está instalado.${reset}"
