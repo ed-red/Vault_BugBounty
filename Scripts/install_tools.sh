@@ -6,10 +6,7 @@
 #------- Variáveis
 URL_RUST="https://sh.rustup.rs"
 GO_TOOLS=$(curl -s https://raw.githubusercontent.com/ed-red/Vault_BugBounty/main/Tools/add_me_go_tools.txt)
-PIP3_TOOLS=(
-    turbosearch
-    pyccat
-)
+PIP3_TOOLS=$(curl -s https://raw.githubusercontent.com/ed-red/Vault_BugBounty/main/Tools/add_me_pip3_tools.txt)
 errors=""
 
 #--- Cores
