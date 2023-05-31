@@ -76,7 +76,10 @@ apt install -y vim-nox \
                 silversearcher-ag \
                 curl \
                 npm \
-                libpcap-dev
+                libpcap-dev \
+                default-jre \
+                default-jdk \
+                libmagic-dev
 
 # Instalação Pacotes Base-Dev
 echo "${yellow}[+] Instalando base-dev libs ... ${reset}"
