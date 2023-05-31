@@ -3,9 +3,13 @@
 # Install para não dar erro:
 # apt install -y libpcap-dev
 
-#------- Constantes
+#------- Variáveis
 URL_RUST="https://sh.rustup.rs"
-TOOLS=$(curl -s https://raw.githubusercontent.com/ed-red/Vault_BugBounty/main/Tools/add_me_tools.txt)
+GO_TOOLS=$(curl -s https://raw.githubusercontent.com/ed-red/Vault_BugBounty/main/Tools/add_me_go_tools.txt)
+PIP3_TOOLS=(
+    turbosearch
+    pyccat
+)
 errors=""
 
 #--- Cores
@@ -22,7 +26,9 @@ reset=`tput sgr0`
 #---- script
 echo "${yellow}[+] Atualizando Ubuntu ... ${reset}"
 apt update
-apt upgrade -y
+echo "${yellow}[+] Start Full-Upgrade Ubuntu ... ${reset}"
+apt full-upgrade -y
+echo "${green}[+] Finalizou Full-Upgrade Ubuntu ... ${reset}"
 
 echo "${yellow}[+] Instalando Bash-completion ... ${reset}"
 apt install bash-completion
@@ -116,7 +122,7 @@ package_installed() {
 # Instalando Golang Tools
 echo "${yellow}[+] Installing Golang Tools ${reset}"
 
-for tool in $TOOLS
+for tool in $GO_TOOLS
 do
     tool_name=$(echo $tool | sed -E 's#(https://github.com/|github.com/)(.*)@latest#\2#')
 
@@ -151,14 +157,11 @@ fi
 
 # Instalar Ferramentas com o Pip3
 # - [ ] TurboSearch
-pip3_tools=(
-    turbosearch
-    pyccat
-)
+
 
 echo "${yellow}[+] Installing PIP3 Tools ${reset}"
 
-for tool in "${pip3_tools[@]}"
+for tool in "${PIP3_TOOLS[@]}"
 do
     if pip3 show "$tool" &>/dev/null; then
         echo "${green}[*] O pacote $tool já está instalado.${reset}"
