@@ -27,7 +27,7 @@ apt upgrade -y
 echo "${yellow}[+] Instalando Bash-completion ... ${reset}"
 apt install bash-completion
 
-# Verifica se o Rust já está instalado
+# Verifica se o Rust já está instalado, se não estiver instalar
 if [ -x "$(command -v rustc)" ]; then
     echo "${green}[++] O Rust já está instalado.${reset}"
 else
