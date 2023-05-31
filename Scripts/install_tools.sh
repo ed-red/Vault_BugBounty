@@ -27,7 +27,7 @@ apt upgrade -y
 echo "${yellow}[+] Instalando Bash-completion ... ${reset}"
 apt install bash-completion
 
-# Verifica se o Rust já está instalado, se não estiver instalar
+# Verifica se o Rust já está instalado
 if [ -x "$(command -v rustc)" ]; then
     echo "${green}[++] O Rust já está instalado.${reset}"
 else
@@ -107,37 +107,69 @@ apt install -y python3 \
               prips $DEBUG_STD
 echo "${green}[*] Feito. ${reset}"
 
+# Função para verificar se um pacote Go está instalado
+package_installed() {
+    local package="$1"
+    go list -e -f '{{.ImportPath}}' "$package" >/dev/null 2>&1
+}
+
 # Instalando Golang Tools
 echo "${yellow}[+] Installing Golang Tools ${reset}"
 
 for tool in $TOOLS
 do
-  tool_name=$(echo $tool | sed -E 's#(https://github.com/|github.com/)(.*)@latest#\2#')
-  echo "${blue}[+] Instalando a ferramenta $tool_name...${reset}"
-  output=$(GO111MODULE=on go install $tool 2>&1)
-  if [ $? -eq 0 ]; then
-    echo "${green}[++] Instalação bem sucedida de $tool_name${reset}"
-  else
-    echo "${red}[-] Erro na instalação de $tool_name com go install${reset}"
-    output=$(GO111MODULE=on go get -u $tool 2>&1)
-    if [ $? -eq 0 ]; then
-      echo "${green}[++] Instalação bem sucedida de $tool_name com go get -u${reset}"
+    tool_name=$(echo $tool | sed -E 's#(https://github.com/|github.com/)(.*)@latest#\2#')
+
+    if package_installed "$tool_name"; then
+        echo "${green}[*] O pacote $tool_name já está instalado.${reset}"
     else
-      echo "${red}[-] Erro na instalação de $tool_name com go get -u${reset}"
-      errors="${errors}\n${red}Erro na instalação de $tool_name:${reset}\n$output\n"
+        echo "${blue}[+] Instalando a ferramenta $tool_name...${reset}"
+        output=$(GO111MODULE=on go install $tool 2>&1)
+        
+        if [ $? -eq 0 ]; then
+            echo "${green}[++] Instalação bem sucedida de $tool_name${reset}"
+        else
+            echo "${red}[-] Erro na instalação de $tool_name com go install${reset}"
+            output=$(GO111MODULE=on go get -u $tool 2>&1)
+            
+            if [ $? -eq 0 ]; then
+                echo "${green}[++] Instalação bem sucedida de $tool_name com go get -u${reset}"
+            else
+                echo "${red}[-] Erro na instalação de $tool_name com go get -u${reset}"
+                errors="${errors}\n${red}Erro na instalação de $tool_name:${reset}\n$output\n"
+            fi
+        fi
     fi
-  fi
 done
 
 if [ -n "$errors" ]; then
-  echo -e "\n${red}Erros encontrados durante a instalação:${reset}"
-  echo -e "$errors"
+    echo -e "\n${red}Erros encontrados durante a instalação:${reset}"
+    echo -e "$errors"
 else
-  echo "${green}[**]Todas as ferramentas foram instaladas com sucesso.${reset}"
+    echo "${green}[**] Todas as ferramentas foram instaladas com sucesso.${reset}"
 fi
 
 # Instalar Ferramentas com o Pip3
 # - [ ] TurboSearch
+pip3_tools=(
+    turbosearch
+    pyccat
+)
+
 echo "${yellow}[+] Installing PIP3 Tools ${reset}"
-echo "${blue}[+] Instalando a ferramenta turbosearch...${reset}"
-pip3 install --upgrade turbosearch
+
+for tool in "${pip3_tools[@]}"
+do
+    if pip3 show "$tool" &>/dev/null; then
+        echo "${green}[*] O pacote $tool já está instalado.${reset}"
+    else
+        echo "${blue}[++] Iniciando a instalação do pacote $tool...${reset}"
+        if pip3 install --upgrade "$tool"; then
+            echo "${green}[+] O pacote $tool foi instalado com sucesso.${reset}"
+        else
+            echo "${red}[-] Ocorreu um erro durante a instalação do pacote $tool.${reset}"
+        fi
+    fi
+done
+
+echo "${yellow}[*] Instalação de pacotes concluída.${reset}"
