@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install para não dar erro:
-# apt install -y libpcap-dev
+# apt install -y libpcap-dev por que dava pau com uma tool de go
 
 #------- Variáveis
 URL_RUST="https://sh.rustup.rs"
