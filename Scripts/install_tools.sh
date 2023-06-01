@@ -168,3 +168,4 @@ do
 done
 
 echo "${yellow}[*] Instalação de pacotes concluída.${reset}"
+
