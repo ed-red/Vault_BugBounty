@@ -40,7 +40,7 @@ else
     echo "${yellow}[+] Installing Rust ${reset}"
 
     # Baixa o script rustup-init
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o rustup-init.sh
+    curl --proto '=https' --tlsv1.2 -sSf $URL_RUST -o rustup-init.sh
 
     # Executa o script rustup-init para instalar o Rust
     chmod +x rustup-init.sh
@@ -112,7 +112,7 @@ apt install -y python3 \
               jq \
               apt-transport-https \
               xvfb \
-              prips $DEBUG_STD
+              prips
 echo "${green}[*] Feito. ${reset}"
 
 # Função para verificar se um pacote Go está instalado
