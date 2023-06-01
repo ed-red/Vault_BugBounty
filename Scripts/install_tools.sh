@@ -61,7 +61,6 @@ else
     # Verifica a versão do Rust instalada
     rustc --version
 fi
-
 # Final da instalação do Rust
 
 # Instalação Pacotes Base
@@ -86,20 +85,14 @@ apt install -y vim-nox \
 # Instalação Pacotes Base-Dev
 echo "${yellow}[+] Instalando base-dev libs ... ${reset}"
 apt install -y build-essential \
-              git \
-              vim \
-              xclip \
-              curl \
-              wget
-apt install -y python3 \
+			  vim \
+			  xclip \
+			  wget \
+			  python3 \
               python3-pip \
-              build-essential \
               gcc \
               cmake \
               ruby \
-              git \
-              curl \
-              libpcap-dev \
               zip \
               python3-dev \
               pv \
