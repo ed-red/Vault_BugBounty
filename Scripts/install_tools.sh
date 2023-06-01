@@ -45,6 +45,8 @@ else
     # Executa o script rustup-init para instalar o Rust
     chmod +x rustup-init.sh
     ./rustup-init.sh -y
+    # Remove script rustup-init
+    rm -rf rustup-init.sh
 
     # Verifica se a instalação foi bem-sucedida
     if [ $? -eq 0 ]; then
