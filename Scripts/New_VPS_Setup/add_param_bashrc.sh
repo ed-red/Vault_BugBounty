@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# -- Criar pasta .secret e arquivo .apis:
+# SHODAN_API_KEY=xxx
+# CENSYS_API_ID=xxx
+# CENSYS_API_SECRET=xxx
+# FOFA_EMAIL=xxx
+# FOFA_KEY=xxx
+# QUAKE_TOKEN=xxx
+# HUNTER_API_KEY=xxx
+# ZOOMEYE_API_KEY=xxx
+# NETLAS_API_KEY=xxx
+# CRIMINALIP_API_KEY=xxx
+# PUBLICWWW_API_KEY=xxx
+
 #--- seta cores
 red=`tput setaf 1`
 green=`tput setaf 2`
