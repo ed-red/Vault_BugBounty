@@ -1,6 +1,0 @@
-steps:
-  - shell: bash
-    env:
-      SUPER_SECRET: ${{ secrets.SuperSecret }}
-    run: |
-      example-command "$SUPER_SECRET"
