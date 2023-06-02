@@ -18,6 +18,7 @@ O objetivo deste repositório completo de BugBounty, vou tentar add o maior nume
 
 
 ----
+# Table of Contents
 ### Plataformas de BugBounty:
 - [HackerOne](https://www.hackerone.com)
 
