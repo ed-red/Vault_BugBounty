@@ -1,4 +1,4 @@
-# 💾 About Me:
+## 💾 About Me:
 O objetivo deste repositório é ser um baú do BugBounty, vou tentar add o maior numero de informações referente ao assunto.
 
 <!-- TO DO: add more details about me later -->
@@ -33,5 +33,3 @@ O objetivo deste repositório é ser um baú do BugBounty, vou tentar add o maio
 ## 🪙 You can help me by Donating:
 [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/edhunt)
 
-
-dasdas
