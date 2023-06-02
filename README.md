@@ -1,5 +1,5 @@
 ## 💾 About Me:
-O objetivo deste repositório é ser um baú do BugBounty, vou tentar add o maior numero de informações referente ao assunto.
+O objetivo deste repositório completo de BugBounty, vou tentar add o maior numero de informações referente ao assunto.
 
 <!-- TO DO: add more details about me later -->
 #### Checklist:
