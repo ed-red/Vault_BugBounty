@@ -29,6 +29,7 @@ O objetivo deste repositório completo de BugBounty, vou tentar add o maior nume
 - [TelegramPro - Ofjaaah](https://github.com/KingOfBugbounty/TelegramPro)
 
 ### Recomendados Cursos:
+### Book's:
 
 ----
 ## 🪙 You can help me by Donating:
