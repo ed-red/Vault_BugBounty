@@ -4,7 +4,7 @@ O objetivo deste repositório completo de BugBounty, vou tentar add o maior nume
 <!-- TO DO: add more details about me later -->
 #### Checklist:
 - [ ] Script para automatizar uma nova instalação de VPS
-    [>> caminho para o script ](Scripts/install_tools.sh)
+    [>> caminho para o script ](Scripts/New_VPS_Setup/install_tools.sh)
   - [ ] Configurar exports no .bashrc ou .zshrc
   - [ ] Instalar as principais tools
     - [x] que instala via apt
