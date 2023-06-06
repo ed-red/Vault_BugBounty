@@ -3,5 +3,6 @@
   # uses: oNaiPs/secrets-to-env-action@80af0bb8dba2db50965bfb3ed5950275594baf02
   uses: oNaiPs/secrets-to-env-action@v1.2
   with:
+    # JSON representation of the secrets, use provided placeholder'
     secrets: ${{ toJSON(secrets) }}
 - run: echo "Value of MY_SECRET: $MY_SECRET"
