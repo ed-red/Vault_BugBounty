@@ -74,13 +74,18 @@ for repo in "${!repos[@]}"; do
         printf "${red} Unable to install $repo, try manually (${repos_step}/${#repos[@]})${reset}\n"
         continue
     fi
-    if [ -s "setup.py" ]; then
-        eval $SUDO python3 setup.py install 
-    fi
     if [ -s "requirements.txt" ]; then
-        eval $SUDO pip3 install -r requirements.txt 
+        echo "${yellow}[+] Instalando os requirements do "${repos[$repo]}"... ${reset}"
+        eval $SUDO pip3 install -r requirements.txt
+        echo "${green}[++] Requirements Instalado "${repos[$repo]}"... ${reset}"
+    fi
+    if [ -s "setup.py" ]; then
+        echo "${yellow}[+] Instalando o setup.py do "${repos[$repo]}"... ${reset}"
+        eval $SUDO python3 setup.py install
+        echo "${green}[++] Setup.py Instalado "${repos[$repo]}"... ${reset}"
     fi
     if [ -s "Makefile" ]; then
+        echo "${yellow}[+] Instalando com Make "${repos[$repo]}"... ${reset}"
         eval $SUDO make 
         eval $SUDO make install 
     fi
