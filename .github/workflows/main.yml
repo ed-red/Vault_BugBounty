@@ -9,8 +9,4 @@
     MY_SECRET5: ${{ secrets.MY_SECRET5 }}
     MY_SECRET6: ${{ secrets.MY_SECRET6 }}
 
-  uses: oNaiPs/secrets-to-env-action@v1.2
-  with:
-    # JSON representation of the secrets, use provided placeholder'
-    secrets: ${{ toJSON(secrets) }}
 - run: echo "Value of MY_SECRET: $MY_SECRET"
