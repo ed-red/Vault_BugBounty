@@ -55,13 +55,13 @@ cd "$dir" || {
 repos_step=0
 for repo in "${!repos[@]}"; do
     # Verifica se o diretório do repositório já existe
+    echo "${yellow}[+] Verificando se "${repo,,}" já está instalado...${reset}"
     if [ -d "$dir/$repo" ]; then
-        echo "${yellow}[+] Verificando se $repo já está instalado...${reset}"
         echo "${green}[+][+] O pacote $repo já está instalado. Pulando a instalação...${reset}"
         continue
     fi
 
-    echo "${yellow}[+] Baixando o "${repos[$repo]}" do Github para a pasta $dir... ${reset}"
+    echo "${yellow}[+] Não existe, baixando o "${repos[$repo]}" do Github para a pasta $dir... ${reset}"
     repos_step=$((repos_step + 1))
     eval git clone https://github.com/${repos[$repo]} $dir/$repo 
 
