@@ -1,6 +1,14 @@
 - name: Export all secrets to env variables
   # You may pin to the exact commit or the version.
   # uses: oNaiPs/secrets-to-env-action@80af0bb8dba2db50965bfb3ed5950275594baf02
+  env:
+    MY_SECRET: ${{ secrets.MY_SECRET }}
+    MY_SECRET2: ${{ secrets.MY_SECRET2 }}
+    MY_SECRET3: ${{ secrets.MY_SECRET3 }}
+    MY_SECRET4: ${{ secrets.MY_SECRET4 }}
+    MY_SECRET5: ${{ secrets.MY_SECRET5 }}
+    MY_SECRET6: ${{ secrets.MY_SECRET6 }}
+
   uses: oNaiPs/secrets-to-env-action@v1.2
   with:
     # JSON representation of the secrets, use provided placeholder'
