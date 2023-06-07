@@ -117,7 +117,7 @@ package_installed() {
 # Instalando Golang Tools
 echo "${yellow}[+] Installing Golang Tools ${reset}"
 
-for tool in $GO_TOOLS
+echo "$GO_TOOLS" | while read -r tool
 do
     tool_name=$(echo $tool | sed -E 's#(https://github.com/|github.com/)(.*)@latest#\2#')
 
