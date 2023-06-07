@@ -114,7 +114,8 @@ echo "${green}[*] Feito. ${reset}"
 # Função para verificar se um pacote Go está instalado
 package_installed() {
     local package="$1"
-    go list -e -f '{{.ImportPath}}' "$package" >/dev/null 2>&1
+    bin_name=$(basename "$package")
+    command -v "$bin_name" >/dev/null 2>&1
 }
 
 # Instalando Golang Tools
@@ -123,24 +124,30 @@ echo "${yellow}[+] Installing Golang Tools ${reset}"
 echo "$GO_TOOLS" | while read -r tool
 do
     tool_name=$(echo $tool | sed -E 's#(https://github.com/|github.com/)(.*)@latest#\2#')
+    bin_name=$(basename "$tool_name")
 
-    if package_installed "$tool_name"; then
-        echo "${green}[*] O pacote $tool_name já está instalado.${reset}"
+    if package_installed "$bin_name"; then
+        echo "${green}[*] O pacote $bin_name já está instalado.${reset}"
     else
-        echo "${blue}[+] Instalando a ferramenta $tool_name...${reset}"
+        echo "${blue}[+] Instalando a ferramenta $bin_name...${reset}"
         output=$(GO111MODULE=on go install $tool 2>&1)
         
         if [ $? -eq 0 ]; then
-            echo "${green}[++] Instalação bem sucedida de $tool_name${reset}"
+            echo "${green}[++] Instalação bem sucedida de $bin_name${reset}"
         else
-            echo "${red}[-] Erro na instalação de $tool_name com go install${reset}"
+            echo "${red}[-] Erro na instalação de $bin_name com go install${reset}"
             output=$(GO111MODULE=on go get -u $tool 2>&1)
             
             if [ $? -eq 0 ]; then
-                echo "${green}[++] Instalação bem sucedida de $tool_name com go get -u${reset}"
+                echo "${green}[++] Instalação bem sucedida de $bin_name com go get -u${reset}"
             else
-                echo "${red}[-] Erro na instalação de $tool_name com go get -u${reset}"
-                errors="${errors}\n${red}Erro na instalação de $tool_name:${reset}\n$output\n"
+                echo "${red}[-] Erro na instalação de $bin_name com go get -u${reset}"
+                if pip3 install --upgrade "$bin_name"; then
+                    echo "${green}[+] O pacote $bin_name foi instalado com sucesso.${reset}"
+                else
+                    # echo "${red}[-] Ocorreu um erro durante a instalação do pacote $bin_name.${reset}"
+                    errors="${errors}\n${red}Erro na instalação de $bin_name:${reset}\n$output\n"
+                fi
             fi
         fi
     fi
