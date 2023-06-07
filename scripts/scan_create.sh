@@ -191,9 +191,11 @@ echo "Starting scan against roots:"
 cat "$roots_exist"
 cp -v "$roots_exist" "$scan_path/roots.txt"
 
-### ADD SCAN LOGIC HERE ###
+##################### ADD SCAN LOGIC HERE #####################
 cat "$roots_exist" | subfinder | anew subs.txt
 
+
+###############################################################
 
 # calculate time diff
 end_time=$(date +%s)
