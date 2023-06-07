@@ -6,6 +6,7 @@ O objetivo deste repositório completo de BugBounty, vou tentar add o maior nume
 - [ ] Script para automatizar uma nova instalação de VPS
     [>> caminho para o script ](Scripts/New_VPS_Setup/install_tools.sh)
   - [ ] Configurar exports no .bashrc ou .zshrc
+    - [ ] Ajustar a data no servidor
   - [ ] Instalar as principais tools
     - [x] que instala via apt
     - [x] instalar as dependências das tools
@@ -14,7 +15,6 @@ O objetivo deste repositório completo de BugBounty, vou tentar add o maior nume
       - [x] usando apenas o pip3 install
       - [ ] ou tendo que baixar o repositório e usar o "pip3 install -r requeriments"
   - [ ] Baixar as melhores wordlists
-  - [ ] 
 
 
 ----

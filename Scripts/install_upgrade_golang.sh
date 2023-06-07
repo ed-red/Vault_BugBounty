@@ -1,26 +1,36 @@
 #!/bin/bash
 
 #--- seta cores
+black=`tput setaf 0`
 red=`tput setaf 1`
 green=`tput setaf 2`
 yellow=`tput setaf 3`
+blue=`tput setaf 4`
+magenta=`tput setaf 5`
+cyan=`tput setaf 6`
+white=`tput setaf 7`
 reset=`tput sgr0`
 
 #---- inicia script
+# Define a versão do Go mais atual
+echo "${yellow}[+] Definindo a versão do Go a ser instalada...${reset}"
+latest_version=$(curl -sSL https://golang.org/VERSION?m=text)
+echo "${yellow}[+] A ultima versão do Go é a $latest_version...${reset}"
 
 # Verifica se o Go já está instalado
-echo "${yellow}[+] Verificando se o Go já está instalado${reset}"
+echo "${yellow}[+]${reset}"
+echo "${cyan}[+] Verificando se a versão $latest_version do Go já está instalada...${reset}"
 if command -v go &>/dev/null; then
-    echo "${green}[++] O Go já está instalado.${reset}"
-    echo "${green}[++] Versão atual: $(go version)${reset}"
-    exit 0
+    current_version=$(go version | awk '{print $3}')
+    if [[ "$current_version" == "$latest_version" ]]; then
+        echo "${green}[++] O Go já está instalado na versão mais recente: $latest_version.${reset}"
+        echo "${yellow}[+]${reset}"
+        exit 0
+    fi
+    echo "${red}[+] A versão do Go que está instalada no server e a $current_version, mais antiga que a ultima $latest_version${reset}"
 fi
 
-# Define a versão do Go a ser instalada
-echo "${yellow}[+] Definindo a versão do Go a ser instalada${reset}"
-latest_version=$(curl -sSL https://golang.org/VERSION?m=text)
-
-echo "${yellow}[+] Iniciando a instalação do Go versão $latest_version...${reset}"
+echo "${yellow}[+] Iniciando a instalação/atualização do Go para a versão $latest_version, a mais recente...${reset}"
 
 # Define o diretório de instalação
 install_dir="/usr/local"
