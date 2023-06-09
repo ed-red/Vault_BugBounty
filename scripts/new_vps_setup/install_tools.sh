@@ -31,40 +31,7 @@ apt full-upgrade -y
 echo "${green}[+] Finalizou Full-Upgrade Ubuntu ... ${reset}"
 
 echo "${yellow}[+] Instalando Bash-completion ... ${reset}"
-apt install bash-completion
-
-# Verifica se o Rust já está instalado
-if [ -x "$(command -v rustc)" ]; then
-    echo "${green}[++] O Rust já está instalado.${reset}"
-else
-    echo "${red}[-] O Rust não está instalado.${reset}"
-
-    # Instalando o Rust
-    echo "${yellow}[+] Installing Rust ${reset}"
-
-    # Baixa o script rustup-init
-    curl --proto '=https' --tlsv1.2 -sSf $URL_RUST -o rustup-init.sh
-
-    # Executa o script rustup-init para instalar o Rust
-    chmod +x rustup-init.sh
-    ./rustup-init.sh -y
-    # Remove script rustup-init
-    rm -rf rustup-init.sh
-
-    # Verifica se a instalação foi bem-sucedida
-    if [ $? -eq 0 ]; then
-        echo "${green}[++] Rust foi instalado com sucesso.${reset}"
-        echo "${yellow}[++] Carregando as configurações do Rust...${reset}"
-        source $HOME/.cargo/env
-    else
-        echo "${red}[-] Ocorreu um erro durante a instalação do Rust.${reset}"
-        exit 1
-    fi
-
-    # Verifica a versão do Rust instalada
-    rustc --version
-fi
-# Final da instalação do Rust
+apt install -y bash-completion
 
 # Instalação Pacotes Base
 echo "${yellow}[+] Instalando pacotes base${reset}"
@@ -110,6 +77,40 @@ apt install -y build-essential \
               xvfb \
               prips
 echo "${green}[*] Feito. ${reset}"
+
+
+# Verifica se o Rust já está instalado
+if [ -x "$(command -v rustc)" ]; then
+    echo "${green}[++] O Rust já está instalado.${reset}"
+else
+    echo "${red}[-] O Rust não está instalado.${reset}"
+
+    # Instalando o Rust
+    echo "${yellow}[+] Installing Rust ${reset}"
+
+    # Baixa o script rustup-init
+    curl --proto '=https' --tlsv1.2 -sSf $URL_RUST -o rustup-init.sh
+
+    # Executa o script rustup-init para instalar o Rust
+    chmod +x rustup-init.sh
+    ./rustup-init.sh -y
+    # Remove script rustup-init
+    rm -rf rustup-init.sh
+
+    # Verifica se a instalação foi bem-sucedida
+    if [ $? -eq 0 ]; then
+        echo "${green}[++] Rust foi instalado com sucesso.${reset}"
+        echo "${yellow}[++] Carregando as configurações do Rust...${reset}"
+        source $HOME/.cargo/env
+    else
+        echo "${red}[-] Ocorreu um erro durante a instalação do Rust.${reset}"
+        exit 1
+    fi
+
+    # Verifica a versão do Rust instalada
+    rustc --version
+fi
+# Final da instalação do Rust
 
 # Função para verificar se um pacote Go está instalado
 package_installed() {
