@@ -62,11 +62,4 @@ echo "bleopt highlight_syntax="
 ## Compartilha o historico dos comandos com outras sessões
 echo "bleopt history_share=1"
 
-
-echo "source ~/.local/share/blesh/ble.sh"
-
-
-
-
-
 echo "${yellow}[+] Instalando Bash.it ... ${reset}"
