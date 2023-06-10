@@ -28,6 +28,10 @@ O objetivo deste repositório completo de BugBounty, vou tentar add o maior nume
 ### Referências:
 - [TelegramPro - Ofjaaah](https://github.com/KingOfBugbounty/TelegramPro)
 
+### Oneliners
+https://github.com/thecybertix/One-Liner-Collections
+
+
 ### Recomendados Cursos:
 ### Book's:
 
