@@ -32,7 +32,8 @@ O objetivo deste repositório completo de BugBounty, vou tentar add o maior nume
 https://github.com/thecybertix/One-Liner-Collections
 
 
-### Recomendados Cursos:
+## Recomendados:
+### Cursos:
 ### Book's:
 
 ----
