@@ -83,7 +83,8 @@ scope_path="$ppath/scope/$EMPRESA"
 roots_exist="$scope_path/roots.txt"
 
 timestamp="$(date +%s)"
-scan_path="$ppath/scans/$EMPRESA-$timestamp"
+date_scan_path="$(date +%m-%d-%Y-%T)"
+scan_path="$ppath/scans/$EMPRESA-$date_scan_path"
 
 # check if ppath exists, if not create it
 echo "${yellow}[+] Check se as pastas recons/scope e recons/scan existem...${reset}"

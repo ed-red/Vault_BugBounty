@@ -23,7 +23,7 @@ cyan=`tput setaf 6`
 white=`tput setaf 7`
 reset=`tput sgr0`
 
-# Ajustando Clock TimeZone
+# Ajustando Clock TimeZone + Date
 timedatectl set-timezone America/Sao_Paulo
 
 #---- script
