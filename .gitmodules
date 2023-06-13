@@ -1,0 +1,3 @@
+[submodule "redmc_custom_templates_nuclei"]
+	path = redmc_custom_templates_nuclei
+	url = git@github.com:ed-red/redmc_custom_templates_nuclei.git
