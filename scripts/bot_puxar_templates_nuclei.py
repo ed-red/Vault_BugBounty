@@ -56,7 +56,7 @@ for link in links:
         output_path = os.path.join(output_directory, path)
 
         if os.path.exists(output_path) and saved_hashes.get(output_path) == calculate_hash(output_path):
-            print(f"Skipping download for {output_path}, file already exists and has not been modified.")
+            # print(f"Skipping download for {output_path}, file already exists and has not been modified.")
             continue  # Skip this file
 
         download_content(link, output_path)

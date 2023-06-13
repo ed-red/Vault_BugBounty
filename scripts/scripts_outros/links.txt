@@ -378,3 +378,9 @@ https://github.com/projectdiscovery/nuclei-templates/raw/c926a4e676d1f1047f42ae2
 https://github.com/projectdiscovery/nuclei-templates/raw/0fea720652d4820cb465d65e0501577f2eb1e191/http%2Fcves%2F2023%2FCVE-2023-20887.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/52125ed559232b1c67b87f7325afb3f8f45f5d46/http%2Fexposed-panels%2FMinIO-login-panel.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/52125ed559232b1c67b87f7325afb3f8f45f5d46/http%2Fexposed-panels%2FiClock-admin-panel.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/f8e645ae41d8117b92da4d71d94e7415625d5d8a/http%2Fcves%2F2023%2FCVE-2023-20887.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/4953074616b7b341a46adb775e2b39a95a9a32cc/http%2Fexposed-panels%2Fc2%2Fevilginx.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/4953074616b7b341a46adb775e2b39a95a9a32cc/http%2Fexposed-panels%2Fc2%2Fnh-c2.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/7797b031da20219d97215bc6c53782ec9409fd3c/http%2Fexposed-panels%2FiClock-admin-panel.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/1ee72e0cf8c753169a0844dbcb1635d9bf8da909/network%2Fapache-rocketmq-broker-unauth.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/5d5ace2015650ca796809ef2b18f0e006272d210/ssl%2Fc2%2Fasyncrat-c2.yaml
