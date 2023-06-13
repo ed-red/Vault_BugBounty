@@ -72,3 +72,4 @@ github.com/daehee/mildew/cmd/mildew@latest
 github.com/d3mondev/puredns/v2@latest
 github.com/bp0lr/gauplus@latest
 github.com/hakluke/haktrails@latest
+github.com/tr3ss/newclei@latest

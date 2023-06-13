@@ -3,7 +3,6 @@ cat "$roots_exist" | haktrails subdomains | anew subs.txt
 cat "$roots_exist" | subfinder | anew subs.txt
 cat "$roots_exist" | shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" | anew subs.txt
 ## DNS Resolution - Resolve Discovered Subdomains
-puredns resolve "$scan_path/subs.txt" -r "$ppath/lists/res
 puredns resolve "$scan_path/subs.txt" -r "$RESOLVERS" -w "$scan_path/resolved.txt" | wc -l
 dnsx -l "$scan_path/resolved.txt" -json -o "$scan_path/dns.json" | jq -r '.a?[]?' | anew "$scan_path/ips.txt" | wc -l
 ## Port Scanning & HTTP Server Discovery
