@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Inspiration of the blog https://blog.projectdiscovery.io/building-one-shot-recon/
+
 #--- seta cores
 black=`tput setaf 0`
 red=`tput setaf 1`
@@ -19,6 +21,7 @@ GIT_ROOT=$(git rev-parse --show-toplevel)
 SUBDOM_LIST="$GIT_ROOT/wordlists/assetnote.io_best-dns-wordlist.txt"
 RESOLVERS="$GIT_ROOT/resolvers/resolvers.txt"
 # export GIT_ROOT=$PWD
+export DOTFILES=$PWD
 
 # Verifica se o campo $id está vazio
 if [ -z "$EMPRESA" ]; then
@@ -83,8 +86,8 @@ scope_path="$ppath/scope/$EMPRESA"
 roots_exist="$scope_path/roots.txt"
 
 timestamp="$(date +%s)"
-date_scan_path="$(date +%m-%d-%Y-%T)"
-scan_path="$ppath/scans/$EMPRESA-$date_scan_path"
+date_scan_path="$(date +%d-%m-%Y_%Hh-%Mm-%Ss)"
+scan_path="$ppath/scans/$EMPRESA/$EMPRESA-$date_scan_path"
 
 # check if ppath exists, if not create it
 echo "${yellow}[+] Check se as pastas recons/scope e recons/scan existem...${reset}"
@@ -205,17 +208,19 @@ cp -v "$roots_exist" "$scan_path/roots.txt"
 cd "$scan_path"
 
 ##################### ADD SCAN LOGIC HERE #####################
+source $DOTFILES/bot_scan_recon_vuln.sh
+
 # pwd
 # cat "$roots_exist" | subfinder | anew $scan_path/subs.txt
 # cat "$roots_exist" | shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" | anew $scan_path/subs.txt
 
-command_file="$GIT_ROOT/scripts/add_oneliners_link_scan.sh"
+# command_file="$GIT_ROOT/scripts/add_oneliners_link_scan.sh"
 
-# Execute cada linha do arquivo de comando
-while read -r line; do
-  echo "${blue}[+] Executando: $line${reset}"
-  eval "$line"
-done < "$command_file"
+# # Execute cada linha do arquivo de comando
+# while read -r line; do
+#   echo "${blue}[+] Executando: $line${reset}"
+#   eval "$line"
+# done < "$command_file"
 
 
 ###############################################################
