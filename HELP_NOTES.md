@@ -2,6 +2,7 @@
 - pry0cc/lazy - https://github.com/pry0cc/lazy
 - building-one-shot-recon - https://blog.projectdiscovery.io/building-one-shot-recon/
 - One-Liner-Collections - https://github.com/thecybertix/One-Liner-Collections
+- recommended-bash-scripting-extensions-for-vs-code - https://medium.com/devops-and-sre-learning/recommended-bash-scripting-extensions-for-vs-code-67c62a132978
 
 ## Resolver alguns problemas do Git:
 #### Quando começar a dar erro de permissão:
