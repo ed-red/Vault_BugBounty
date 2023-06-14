@@ -2,8 +2,10 @@
 O objetivo deste repositório completo de BugBounty, vou tentar add o maior numero de informações referente ao assunto.
 
 <!-- TO DO: add more details about me later -->
-#### Checklist:
-[>> caminho para README_scripts.md ](scripts/README_scripts.md)
+[>> caminho para HELP_NOTES.md ](HELP_NOTES.md)
+[>> caminho para Scripts](https://github.com/ed-red/Vault_BugBounty/tree/c3d91698e8fceb7c44dfaa529c9785511de2db85/Scripts)
+[>> caminho para Wordlists](https://github.com/ed-red/Vault_BugBounty/tree/c3d91698e8fceb7c44dfaa529c9785511de2db85/Wordlists)
+#### Checklists:
 - **Checklist para instalação de ferramentas e configuração da maquina VPS:**
   - [ ] Script para automatizar uma nova instalação de VPS
       [>> caminho para o script ](Scripts/new_vps_setup/install_tools.sh)
@@ -32,9 +34,6 @@ O objetivo deste repositório completo de BugBounty, vou tentar add o maior nume
 ### Plataformas de BugBounty:
 - [HackerOne](https://www.hackerone.com)
 
-### [>> caminho para Scripts](https://github.com/ed-red/Vault_BugBounty/tree/c3d91698e8fceb7c44dfaa529c9785511de2db85/Scripts)
-### [>> caminho para Wordlists](https://github.com/ed-red/Vault_BugBounty/tree/c3d91698e8fceb7c44dfaa529c9785511de2db85/Wordlists)
-
 ### Referências:
 - pry0cc/lazy - https://github.com/pry0cc/lazy
 - building-one-shot-recon - https://blog.projectdiscovery.io/building-one-shot-recon/
@@ -43,7 +42,6 @@ O objetivo deste repositório completo de BugBounty, vou tentar add o maior nume
 
 ### Oneliners:
 https://github.com/thecybertix/One-Liner-Collections
-
 
 ## Recomendados:
 ### Cursos:
