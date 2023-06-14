@@ -1,9 +1,17 @@
-### Referências:
+## Referências:
 - pry0cc/lazy - https://github.com/pry0cc/lazy
 - building-one-shot-recon - https://blog.projectdiscovery.io/building-one-shot-recon/
 - One-Liner-Collections - https://github.com/thecybertix/One-Liner-Collections
 
-### TMUX comandos:
+## Resolver alguns problemas do Git:
+#### Quando começar a dar erro de permissão:
+- Referencia:
+    https://stackoverflow.com/questions/5335197/gits-famous-error-permission-to-git-denied-to-user/40907049#40907049
+```bash
+git remote set-url origin git@github.com:ed-red/Vault_BugBounty.git
+```
+
+## TMUX comandos:
 https://www.hostinger.com.br/tutoriais/como-usar-tmux-lista-de-comandos
 https://tmuxcheatsheet.com/
 
