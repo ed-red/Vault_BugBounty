@@ -4,6 +4,9 @@
 - One-Liner-Collections - https://github.com/thecybertix/One-Liner-Collections
 - recommended-bash-scripting-extensions-for-vs-code - https://medium.com/devops-and-sre-learning/recommended-bash-scripting-extensions-for-vs-code-67c62a132978
 
+## Subdomain Referencia
+- https://github.com/Dheerajmadhukar/subzzZ
+
 ## Resolver alguns problemas do Git:
 #### Quando começar a dar erro de permissão:
 - Referencia:
