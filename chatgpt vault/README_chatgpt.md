@@ -16,4 +16,3 @@
 Adding `?token=$(date +%s)` to the end of the URL worked for me.
     **Ex:**`https://raw.githubusercontent.com/ed-red/Vault_BugBounty/main/chatgpt%20vault/ed_chatgtp_prompts.csv?token=$(date +%s)`
 
-- 
