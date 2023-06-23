@@ -43,8 +43,8 @@ class scope():
 
 def main():
 	################ This is optional so you don't have to use -t AND -u Arguments.
-	APIKEY = "B10l86+WxIdA/BBw4vp3CjASG4YTjU1wfLH1rjbvhdI="
-	USERNAME = "edred"
+	APIKEY = ""
+	USERNAME = ""
 	################
 	
 	parser = argparse.ArgumentParser()
