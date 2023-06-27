@@ -1,4 +1,3 @@
-https://github.com/projectdiscovery/nuclei-templates/raw/8c6ff1e5e93eeec530bf214fd86f84a2a125907e/http%2Fcves%2F2023%2FCVE-2023-34598.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/4acca76a1f940ea79107b713e265353839ab5b25/http%2Fexposed-panels%2Fgrafana-detect.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/a41665d948edb66a80f1214475aa810bfafb9996/http%2Fcves%2F2023%2FCVE-2023-20889.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/cd4bcb88022914744caf1a36a4c07afba1a051a1/http%2Fcves%2F2023%2FCVE-2023-20888.yaml
@@ -457,3 +456,4 @@ https://github.com/projectdiscovery/nuclei-templates/raw/ce37292545694261ab189e4
 https://github.com/projectdiscovery/nuclei-templates/raw/ce37292545694261ab189e41c321f0268d90c338/http%2Ftechnologies%2Fjira-detect.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/ce37292545694261ab189e41c321f0268d90c338/http%2Ftechnologies%2Fwordpress-detect.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/61279cd6c785c15ff8b099356fd62f307e8f9f17/http%2Ftakeovers%2Fgithub-takeover.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/8c6ff1e5e93eeec530bf214fd86f84a2a125907e/http%2Fcves%2F2023%2FCVE-2023-34598.yaml
