@@ -14,7 +14,7 @@ source ~/.bashrc
 
 # Variaveis
 date="$(date +%d-%m-%Y_%Hh-%Mm-%Ss)"
-github_token=$GITHUB_TOKEN_NEWCLEI
+github_token=$GITHUB_NEWCLEI
 
 # Diretório dos scripts
 echo "${yellow}[+] Mudando para o diretório dos scripts...${reset}"
