@@ -42,4 +42,4 @@ Por padrão, o prefixo é CTRL+B.
 
 ## CronTab
 59 10 * * * nuclei -update-templates ; echo NUCLEI ATUALIZADO | /usr/bin/notify >/dev/null 2>&1 >/dev/null 2>81
-59 10 * * * ~/Vault_BugBounty/scripts/scripts_atualizar_templates_nuclei/setup_atualizar_templates_nuclei.sh ; echo NUCLEI ATUALIZADO | /root/go/bin/notify >/dev/null 2>&1 >/dev/null 2>81
+59 10 * * * ~/Vault_BugBounty/scripts/scripts_atualizar_templates_nuclei/setup_atualizar_templates_nuclei.sh ; echo NUCLEI ATUALIZADO $(date) | /root/go/bin/notify >/dev/null 2>&1 >/dev/null 2>81
