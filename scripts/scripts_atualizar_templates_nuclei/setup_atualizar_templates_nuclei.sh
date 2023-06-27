@@ -22,7 +22,7 @@ cd /root/Vault_BugBounty/scripts/scripts_atualizar_templates_nuclei
 
 # Passo 1: Atualizar com o comando newclei
 echo "${yellow}[+] Atualizando com o comando newclei...(newclei -token $github_token | anew links.txt | wc -l)${reset}"
-newclei -token $github_token | anew links.txt | wc -l | notify
+newclei -token $github_token | anew links.txt | wc -l | notify -silent
 
 # Passo 2: Executar o script Python para puxar os templates
 echo "${yellow}[+] Executando o script Python para puxar os templates...${reset}"
