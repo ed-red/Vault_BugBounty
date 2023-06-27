@@ -10,16 +10,19 @@ cyan=`tput setaf 6`
 white=`tput setaf 7`
 reset=`tput sgr0`
 
+source ~/.bashrc
+
 # Variaveis
 date="$(date +%d-%m-%Y_%Hh-%Mm-%Ss)"
+github_token=$GITHUB_TOKEN_NEWCLEI
 
 # Diretório dos scripts
 echo "${yellow}[+] Mudando para o diretório dos scripts...${reset}"
 cd /root/Vault_BugBounty/scripts/scripts_atualizar_templates_nuclei
 
 # Passo 1: Atualizar com o comando newclei
-echo "${yellow}[+] Atualizando com o comando newclei...${reset}"
-newclei -token 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 | anew links.txt | wc -l
+echo "${yellow}[+] Atualizando com o comando newclei...(newclei -token $github_token | anew links.txt | wc -l)${reset}"
+newclei -token $github_token | anew links.txt | wc -l
 
 # Passo 2: Executar o script Python para puxar os templates
 echo "${yellow}[+] Executando o script Python para puxar os templates...${reset}"
