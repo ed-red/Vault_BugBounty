@@ -26,11 +26,22 @@ echo "${yellow}[+] Executando o script Python para puxar os templates...${reset}
 python3 bot_puxar_templates_nuclei.py
 
 # Passo 3: Ir para o diretório do repositório e dar um pull
-echo "${yellow}[+] Mudando para o diretório do repositório e atualizando...${reset}"
+echo "${yellow}[+] Mudando para o diretório do repositório e atualizando Git...${reset}"
 cd /root/Vault_BugBounty/redmc_custom_templates_nuclei
 pwd
 
 echo "${yellow}[+] git commit -m "Atualização Templates - $date"...${reset}"
+git add .
+git commit -m "Atualização Templates - $date"
+echo "${yellow}[+] git push origin main:main...${reset}"
+git push origin main:main
+
+# Passo 4: Ir para o diretório do repositório e dar um pull
+echo "${yellow}[+] Mudando para o diretório do repositório e atualizando Git...${reset}"
+cd /root/Vault_BugBounty
+pwd
+
+echo "${yellow}[+] git commit -m "Atualização Templates Nuclei - $date"...${reset}"
 git add .
 git commit -m "Atualização Templates - $date"
 echo "${yellow}[+] git push origin main:main...${reset}"
