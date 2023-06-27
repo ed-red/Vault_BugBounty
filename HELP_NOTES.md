@@ -43,3 +43,8 @@ Por padrão, o prefixo é CTRL+B.
 ## CronTab
 59 10 * * * nuclei -update-templates ; echo NUCLEI ATUALIZADO | /usr/bin/notify >/dev/null 2>&1 >/dev/null 2>81
 0 8,20 * * * ~/Vault_BugBounty/scripts/scripts_atualizar_templates_nuclei/setup_atualizar_templates_nuclei.sh ; echo NUCLEI ATUALIZADO - $(date) | $HOME/go/bin/notify >/dev/null 2>&1 >/dev/null 2>81
+
+
+## Usar o BBRF
+https://medium.com/@ataidejunior/utilizando-bbrf-com-foco-em-reconnaissance-bugbounty-affc99663bc1
+
