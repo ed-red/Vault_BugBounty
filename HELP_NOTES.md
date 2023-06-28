@@ -48,3 +48,46 @@ Por padrão, o prefixo é CTRL+B.
 ## Usar o BBRF
 https://medium.com/@ataidejunior/utilizando-bbrf-com-foco-em-reconnaissance-bugbounty-affc99663bc1
 
+### Commands / Oneliners
+
+- 
+```bash
+# bbrf scope in -p tiktok --wildcard --top | subfinder | bbrf domain add - --show-new | notify -silent
+
+bbrf scope in -p tiktok --wildcard --top | subfinder >> domains.txt && addInChunks domains.txt domains | notify -silent
+
+bbrf scope in -p github --wildcard --top | subfinder >> domains.txt && addInChunks domains.txt domains | notify -silent -bulk
+
+bbrf scope in --all --wildcard --top
+
+bbrf scope in --all --wildcard --top | subfinder >> domains.txt && addInChunks domains.txt domains | notify -silent
+
+bbrf scope in --all --wildcard --top | subfinder | bbrf domain add - --show-new | notify -silent
+
+bbrf show tiktok | jq -r '.inscope | arrays'
+
+cat urls.txt | bbrf url add - --show-new
+
+
+
+```
+
+Acessar um programa pela api da HackerOne:
+https://api.hackerone.com/v1/hackers/programs/yuga_labs
+
+
+## Automatizar BBRF scan
+
+1. Um menu que traga as opções:
+   1. Lista os Programas da H1:
+      1. Vai usar o seguinte comando `bbrf programs`, vai listar os nomes dos programa.
+      2. depois que listar, vai aparece para selecionar um programa ou escrever o nome: 
+      3. Depois vai usar a informação que eu selecionei ou escrevi como variavel para o <nome do programa>:
+         1. Vai usar o seguinte comando `bbrf use <nome do programa>`
+      4. Quer ver o scope completo do program <nome do programa>, listando tudo, domains e wildcard:
+         1. Pergunta se quer listar tudo, Domains e Wildcards:
+            1. Vai usar o seguinte comando para listar tudo `bbrf scope in -p <nome do programa>`
+         2. Pergunta se quer apenas os Wildcards:
+            1. Vai usar o seguinte comando para listar apenas os wildcards `bbrf scope in -p <nome do programa> --wildcard`
+
+
