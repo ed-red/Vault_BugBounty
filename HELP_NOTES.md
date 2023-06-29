@@ -68,7 +68,10 @@ bbrf show tiktok | jq -r '.inscope | arrays'
 
 cat urls.txt | bbrf url add - --show-new
 
-
+##-- Add portas
+bbrf ips -p yelp | naabu | bbrf service add - --show-new
+##-- Add portas e serviços
+bbrf ips -p yelp | naabu -sD | bbrf service add - --show-new
 
 ```
 
