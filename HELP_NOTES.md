@@ -1,11 +1,16 @@
-## Referências:
+## Referências em Geral:
 - pry0cc/lazy - https://github.com/pry0cc/lazy
 - building-one-shot-recon - https://blog.projectdiscovery.io/building-one-shot-recon/
 - One-Liner-Collections - https://github.com/thecybertix/One-Liner-Collections
 - recommended-bash-scripting-extensions-for-vs-code - https://medium.com/devops-and-sre-learning/recommended-bash-scripting-extensions-for-vs-code-67c62a132978
 
-## Subdomain Referencia
+## Tools:
+### Recon subdomains:
 - https://github.com/Dheerajmadhukar/subzzZ
+
+### Ferramentas Teste de Vulns:
+#### XSS:
+
 
 ## Resolver alguns problemas do Git:
 #### Quando começar a dar erro de permissão:
@@ -41,16 +46,30 @@ Por padrão, o prefixo é CTRL+B.
 
 
 ## CronTab
+### Exemplos de Crontabs:
+```bash
 59 10 * * * nuclei -update-templates ; echo NUCLEI ATUALIZADO | /usr/bin/notify >/dev/null 2>&1 >/dev/null 2>81
-0 8,20 * * * ~/Vault_BugBounty/scripts/scripts_atualizar_templates_nuclei/setup_atualizar_templates_nuclei.sh ; echo NUCLEI ATUALIZADO - $(date) | $HOME/go/bin/notify >/dev/null 2>&1 >/dev/null 2>81
+0 8,20 * * * ~/Vault_BugBounty/scripts/
+
+scripts_atualizar_templates_nuclei/setup_atualizar_templates_nuclei.sh ; echo NUCLEI ATUALIZADO - $(date) | $HOME/go/bin/notify >/dev/null 2>&1 >/dev/null 2>81
+
+```
+### Crontab que estou usando:
+```bash
+##-- NUCLEI
+0 */6 * * * ~/Vault_BugBounty/scripts/scripts_atualizar_templates_nuclei/setup_atualizar_templates_nuclei.sh ; echo NUCLEI ATUALIZADO - $(date) | $HOME/go/bin/notify >/dev/null 2>&1 >/dev/null 2>81
+
+##-- BBRF
+30 10 * * * ~/Vault_BugBounty/scripts/scripts_bbrf/hackerone-update-program-scopes.sh ; echo UPDATE PROGRAMAS H1 - BBRF - $(date) | $HOME/go/bin/notify -silent -bulk >/dev/null 2>&1 >/dev/null 2>81
+
+```
 
 
 ## Usar o BBRF
 https://medium.com/@ataidejunior/utilizando-bbrf-com-foco-em-reconnaissance-bugbounty-affc99663bc1
 
 ### Commands / Oneliners
-
-- 
+#### BBRF
 ```bash
 # bbrf scope in -p tiktok --wildcard --top | subfinder | bbrf domain add - --show-new | notify -silent
 
@@ -75,6 +94,7 @@ bbrf ips -p yelp | naabu -sD | bbrf service add - --show-new
 
 ```
 
+## Usar API da HackerOne:
 Acessar um programa pela api da HackerOne:
 https://api.hackerone.com/v1/hackers/programs/yuga_labs
 
@@ -92,5 +112,4 @@ https://api.hackerone.com/v1/hackers/programs/yuga_labs
             1. Vai usar o seguinte comando para listar tudo `bbrf scope in -p <nome do programa>`
          2. Pergunta se quer apenas os Wildcards:
             1. Vai usar o seguinte comando para listar apenas os wildcards `bbrf scope in -p <nome do programa> --wildcard`
-
 
