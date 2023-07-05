@@ -25,7 +25,7 @@ if command -v go &>/dev/null; then
     if [[ "$current_version" == "$latest_version" ]]; then
         echo "${green}[++] O Go já está instalado na versão mais recente: $latest_version.${reset}"
         echo "${yellow}[+]${reset}"
-        exit 0
+        return 0
     fi
     echo "${red}[+] A versão do Go que está instalada no server e a $current_version, mais antiga que a ultima $latest_version${reset}"
 fi
@@ -62,4 +62,3 @@ else
     echo "${red}[-] Ocorreu um erro durante a instalação do Go.${reset}"
     exit 1
 fi
-
