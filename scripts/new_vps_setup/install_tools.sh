@@ -133,24 +133,20 @@ do
 
     if package_installed "$bin_name"; then
         echo "${green}[*] O pacote $bin_name já está instalado.${reset}"
+    else
         echo "${blue}[+] Instalando a ferramenta $bin_name...${reset}"
         output=$(GO111MODULE=on go install $tool 2>&1)
-    fi
 
-    if [ $? -eq 0 ]; then
-        echo "${green}[++] Instalação bem sucedida de $bin_name${reset}"
-    else
-        echo "${red}[-] Erro na instalação de $bin_name com go install${reset}"
-        output=$(GO111MODULE=on go get -u $tool 2>&1)
-        
         if [ $? -eq 0 ]; then
-            echo "${green}[++] Instalação bem sucedida de $bin_name com go get -u${reset}"
+            echo "${green}[++] Instalação bem sucedida de $bin_name${reset}"
         else
-            echo "${red}[-] Erro na instalação de $bin_name com go get -u${reset}"
-            if pip3 install --upgrade "$bin_name"; then
-                echo "${green}[+] O pacote $bin_name foi instalado com sucesso.${reset}"
+            echo "${red}[-] Erro na instalação de $bin_name com go install${reset}"
+            output=$(GO111MODULE=on go get -u $tool 2>&1)
+            
+            if [ $? -eq 0 ]; then
+                echo "${green}[++] Instalação bem sucedida de $bin_name com go get -u${reset}"
             else
-                # echo "${red}[-] Ocorreu um erro durante a instalação do pacote $bin_name.${reset}"
+                echo "${red}[-] Erro na instalação de $bin_name com go get -u${reset}"
                 errors="${errors}\n${red}Erro na instalação de $bin_name:${reset}\n$output\n"
             fi
         fi

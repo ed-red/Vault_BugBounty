@@ -1,7 +1,7 @@
+github.com/projectdiscovery/uncover/cmd/uncover@latest
 github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 github.com/projectdiscovery/notify/cmd/notify@latest
 github.com/projectdiscovery/cdncheck/cmd/cdncheck@latest
-github.com/projectdiscovery/uncover/cmd/uncover@latest
 github.com/projectdiscovery/alterx/cmd/alterx@latest
 github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
@@ -14,7 +14,6 @@ github.com/projectdiscovery/openrisk@latest
 github.com/projectdiscovery/shuffledns/cmd/shuffledns@latest
 github.com/projectdiscovery/katana/cmd/katana@latest
 github.com/projectdiscovery/dnsx/cmd/dnsx@latest
-github.com/projectdiscovery/puredns/cmd/puredns@latest
 github.com/projectdiscovery/chaos-client/cmd/chaos@latest
 github.com/tomnomnom/hacks/waybackurls@latest
 github.com/tomnomnom/hacks/tojson@latest
