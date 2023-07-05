@@ -3,6 +3,7 @@
 - building-one-shot-recon - https://blog.projectdiscovery.io/building-one-shot-recon/
 - One-Liner-Collections - https://github.com/thecybertix/One-Liner-Collections
 - recommended-bash-scripting-extensions-for-vs-code - https://medium.com/devops-and-sre-learning/recommended-bash-scripting-extensions-for-vs-code-67c62a132978
+- Para configurar repositório externo no Nuclei - https://nuclei.projectdiscovery.io/nuclei/get-started/#custom-templates
 
 ## Tools:
 ### Recon subdomains:
