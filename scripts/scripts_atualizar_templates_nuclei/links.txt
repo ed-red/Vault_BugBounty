@@ -345,3 +345,9 @@ https://github.com/projectdiscovery/nuclei-templates/raw/f3397664f347951eff7139d
 https://github.com/projectdiscovery/nuclei-templates/raw/f3397664f347951eff7139d0d1c97eaf148c952a/technologies%2Fgraphql%2Fgraphql-wpgraphql-detect.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/d16b2c0183f9d344566ae676cafb0495324b76e5/cves%2F2021%2FCVE-2021-24507.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/b2dd78e54e3ace7c59e452ef5dcc75aa1fa1fc88/cves%2F2020%2FCVE-2020-1147.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/6dc7cbafe6e84135f0efffe4f4a16ba644f16b52/http%2Fcves%2F2023%2FCVE-2023-3479.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/a068bf6283d96cac2808363ab4d2b18642224aad/http%2Fvulnerabilities%2Fother%2Fsitemap-sql-injection.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/bf7df662c4dd0d8202d18ecb2fdef6144ca20c5e/http%2Fmisconfiguration%2Fsymfony-default-key-rce
+https://github.com/projectdiscovery/nuclei-templates/raw/6ec14f3645f871aa2940f9df8b93d92717033452/network%2Fcves%2F2023%2FCVE-2023-3460.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/f371951eca8fba22b4a6af7e145341315933450a/http%2Fcves%2F2021%2FCVE-2021-45046.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/f01695614b0355c97ea0337d8bc48d6255278384/http%2Fmisconfiguration%2Fproxy%2Fopen-proxy-internal.yaml
