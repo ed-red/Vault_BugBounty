@@ -28,3 +28,11 @@ for i in $(cat lista_sub.txt); do dig $i +short; done
 
 for i in $(cat lista_sub.txt); do host $i ; done
 ```
+
+#### Nuclei commands:
+
+```bash
+nuclei -u https://testphp.vulnweb.com -t nuclei-templates/github/redmc_custom_templates_nuclei/
+
+
+```
