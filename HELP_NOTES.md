@@ -112,3 +112,4 @@ https://api.hackerone.com/v1/hackers/programs/yuga_labs
          2. Pergunta se quer apenas os Wildcards:
             1. Vai usar o seguinte comando para listar apenas os wildcards `bbrf scope in -p <nome do programa> --wildcard`
 
+
