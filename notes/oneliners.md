@@ -4,6 +4,8 @@
 # Verificar se esta ativo:
 echo "vulnweb.com" | httpx -silent -probe -status-code -title -content-length
 cat lista_sub.txt | httpx -silent -probe -status-code -title -content-length
+cat lista_sub.txt | httpx -silent -probe -status-code -title -content-length -ip -cname
+
 
 # com httpx
 echo "vulnweb.com" | httpx -status-code -title -content-length -er 'The requested URL.*'
