@@ -15,6 +15,9 @@ echo "vulnweb.com" | httpx -silent -probe -status-code -title -content-length -e
 cat lista_sub.txt | httpx -silent -probe -status-code -title -content-length -er 'The requested URL.*'
 echo "vulnweb.com" | httpx -silent -probe -status-code -title -content-length -er 'Invalid URL.*' -er 'The requested URL.*' -er 'Reference.*'
 
+## Verificar WAF AKamai
+cat sub.txt | httpx -silent -probe -status-code -title -content-length -ip -cname |grep "<NOME_EMPRESA ou DOMINIO>.edgekey.net"
+
 # com curl
 curl -s vulnweb.com | grep -o 'The requested URL.*'
 ```
