@@ -38,6 +38,13 @@ for i in $(cat lista_sub.txt); do host $i ; done
 
 ```bash
 nuclei -u https://testphp.vulnweb.com -t nuclei-templates/github/redmc_custom_templates_nuclei/
+cat domains_only_newegg.txt | nuclei -rl 60 -uc -es info -o nuclei_repor_newegg
 
+
+```
+
+#### Netlas commands:
+```bash
+netlas download -d domain -c 7 -i domain domain:"*.target.com" | jq -r .data.domain
 
 ```
