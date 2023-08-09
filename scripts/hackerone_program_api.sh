@@ -14,7 +14,7 @@ while [ "$next" ]; do
     p=$(echo $l | cut -d',' -f 2)
     echo $p
     
-    
+
 
     data_scope=$(curl -g -s 'https://api.hackerone.com/v1/hackers/programs/'$p -u $h1name:$apitoken)
     echo $data | jq '.relationships.structured_scopes.data[].attributes | select(.asset_type == "URL" and .eligible_for_bounty and .eligible_for_submission and .archived_at == null) | .asset_identifier' -r
@@ -22,14 +22,6 @@ while [ "$next" ]; do
     echo $data | jq '.relationships.structured_scopes.data[].attributes | select(.asset_type == "WILDCARD" and .eligible_for_bounty and .eligible_for_submission and .archived_at == null) | .asset_identifier' -r
     echo $data | jq '.relationships.structured_scopes.data[].attributes | select(.asset_type == "WILDCARD" and .eligible_for_submission == false and .archived_at == null) | .asset_identifier' -r
     
-    (
-    curl -g -s 'https://api.hackerone.com/v1/hackers/programs/'$p -u $h1name:$apitoken | tee \
-      >( jq '.relationships.structured_scopes.data[].attributes | select(.asset_type == "URL" and .eligible_for_bounty and .eligible_for_submission and .archived_at == null) | .asset_identifier' -r ) \
-      >( jq '.relationships.structured_scopes.data[].attributes | select(.asset_type == "URL" and .eligible_for_submission == false and .archived_at == null) | .asset_identifier' -r ) \
-      >( jq '.relationships.structured_scopes.data[].attributes | select(.asset_type == "WILDCARD" and .eligible_for_bounty and .eligible_for_submission and .archived_at == null) | .asset_identifier' -r ) \
-      >( jq '.relationships.structured_scopes.data[].attributes | select(.asset_type == "WILDCARD" and .eligible_for_submission == false and .archived_at == null) | .asset_identifier' -r ) \
-      > /dev/null
-    ) &
   done
 
 done
