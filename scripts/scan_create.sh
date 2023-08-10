@@ -40,6 +40,39 @@ listar_empresas() {
   done
 }
 
+# Lista as empresas e pede ao usuário para selecionar uma
+start_index=0
+while true; do
+  echo "${blue}Empresas disponíveis:${reset}"
+  listar_empresas $start_index
+  echo "---------------------------------------------"
+  echo "${yellow}Digite 'm' para mostrar mais, 'q' para sair, 'a' para escanear todas as empresas, ou selecione o número da empresa ou escreva o nome da empresa que deseja escanear:${reset}"
+  read -r entrada_empresa
+  echo "---------------------------------------------"
+
+  if [[ $entrada_empresa == 'm' ]]; then
+    start_index=$((start_index + 25))
+    continue
+  elif [[ $entrada_empresa == 'q' ]]; then
+    echo "${red}Saindo do script.${reset}"
+    exit 0
+  elif [[ $entrada_empresa == 'a' ]]; then
+    echo "${green}Você selecionou escanear todas as empresas.${reset}"
+    # Aqui você pode adicionar o código para lidar com a opção de escanear todas as empresas
+    break
+  elif [[ $entrada_empresa =~ ^[0-9]+$ ]] && [ "$entrada_empresa" -le "${#empresas[@]}" ]; then
+    EMPRESA=${empresas[$((entrada_empresa-1))]}
+    echo "${green}Você selecionou a empresa:${reset} $EMPRESA"
+    break
+  elif [[ " ${empresas[@]} " =~ " ${entrada_empresa} " ]]; then
+    EMPRESA=$entrada_empresa
+    echo "${green}Você selecionou a empresa:${reset} $EMPRESA"
+    break
+  else
+    echo "${red}Entrada inválida. Tente novamente.${reset}"
+  fi
+done
+
 escanear_empresa() {
   EMPRESA=$1
   # Verifique se os diretórios $HOME/recons e $GIT_ROOT/recons existem
@@ -266,49 +299,3 @@ escanear_empresa() {
   #echo "Scan $EMPRESA took $time" | notify
 }
 
-# Lista as empresas e pede ao usuário para selecionar uma
-start_index=0
-scan_todas=false
-while true; do
-  echo "${blue}Empresas disponíveis:${reset}"
-  listar_empresas $start_index
-  echo "---------------------------------------------"
-  echo "${yellow}Digite 'm' para mostrar mais, 'q' para sair, 'a' para escanear todas as empresas, ou selecione o número da empresa ou escreva o nome da empresa que deseja escanear:${reset}"
-  read -r entrada_empresa
-  echo "---------------------------------------------"
-
-  if [[ $entrada_empresa == 'm' ]]; then
-    start_index=$((start_index + 25))
-    continue
-  elif [[ $entrada_empresa == 'q' ]]; then
-    echo "${red}Saindo do script.${reset}"
-    exit 0
-  elif [[ $entrada_empresa == 'a' ]]; then
-    echo "${green}Você selecionou escanear todas as empresas.${reset}"
-    scan_todas=true
-    break
-  elif [[ $entrada_empresa =~ ^[0-9]+$ ]] && [ "$entrada_empresa" -le "${#empresas[@]}" ]; then
-    EMPRESA=${empresas[$((entrada_empresa-1))]}
-    echo "${green}Você selecionou a empresa:${reset} $EMPRESA"
-    break
-  elif [[ " ${empresas[@]} " =~ " ${entrada_empresa} " ]]; then
-    EMPRESA=$entrada_empresa
-    echo "${green}Você selecionou a empresa:${reset} $EMPRESA"
-    break
-  else
-    echo "${red}Entrada inválida. Tente novamente.${reset}"
-  fi
-done
-
-# Loop para escanear todas as empresas ou apenas uma, dependendo da escolha do usuário
-if $scan_todas; then
-  echo "${green}Você selecionou escanear todas as empresas. As empresas a serem escaneadas são:${reset}"
-  printf '%-20s ' "${empresas[@]}"
-  echo "" # Adiciona uma nova linha após imprimir as empresas
-  for EMPRESA in "${empresas[@]}"; do
-    echo "${green}Escaneando a empresa:${reset} $EMPRESA"
-    escanear_empresa $EMPRESA
-  done
-else
-  escanear_empresa $EMPRESA
-fi
