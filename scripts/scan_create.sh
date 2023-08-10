@@ -302,18 +302,13 @@ done
 
 # Loop para escanear todas as empresas ou apenas uma, dependendo da escolha do usuário
 if $scan_todas; then
-  echo "${green}Você selecionou escanear todas as empresas.${reset}"
-  echo "[+] O diretório /root/recons já existe, mesmo assim você quer criar no diretório /recons? (yes/no)"
-  read -r confirmacao
-  if [[ $confirmacao == 'yes' ]]; then
-    for EMPRESA in "${empresas[@]}"; do
-      echo "${green}Escaneando a empresa:${reset} $EMPRESA"
-      escanear_empresa $EMPRESA
-    done
-  else
-    echo "${red}Operação cancelada pelo usuário.${reset}"
-    exit 0
-  fi
+  echo "${green}Você selecionou escanear todas as empresas. As empresas a serem escaneadas são:${reset}"
+  printf '%-20s ' "${empresas[@]}"
+  echo "" # Adiciona uma nova linha após imprimir as empresas
+  for EMPRESA in "${empresas[@]}"; do
+    echo "${green}Escaneando a empresa:${reset} $EMPRESA"
+    escanear_empresa $EMPRESA
+  done
 else
   escanear_empresa $EMPRESA
 fi

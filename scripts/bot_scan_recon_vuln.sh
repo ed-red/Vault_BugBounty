@@ -20,7 +20,7 @@ reset=`tput sgr0`
 echo "${yellow}[+] DNS Enumeration - Find Subdomains...${reset}"
 cat "$roots_exist" | haktrails subdomains | anew subs.txt
 cat "$roots_exist" | subfinder | anew subs.txt
-cat "$roots_exist" | shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" | anew subs.txt
+# cat "$roots_exist" | shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" | anew subs.txt
 
 qnt_dominios_scan_path=$(wc -c subs.txt)
 echo "---------------------------------------------"
@@ -48,4 +48,4 @@ gospider -S "$scan_path/http.txt" --json | grep "{" | jq -r '.output?' | tee "$s
 echo "${yellow}[+] Javascript Pulling...${reset}"
 cat "$scan_path/crawl.txt" | grep "\\.js" | httpx -sr -srd js
 
-cat "$scan_path/subs.txt" | nuclei -rl 60 -uc -es info -o "$scan_path/nuclei.txt"
+# cat "$scan_path/subs.txt" | nuclei -rl 60 -uc -es info -o "$scan_path/nuclei.txt"
