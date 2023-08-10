@@ -323,3 +323,5 @@ https://github.com/projectdiscovery/nuclei-templates/raw/f82cf5b7ca2c0b0907881f2
 https://github.com/projectdiscovery/nuclei-templates/raw/f82cf5b7ca2c0b0907881f23b04ea9cdc62c4d3f/http%2Fcves%2F2023%2FCVE-2023-29632.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/f82cf5b7ca2c0b0907881f23b04ea9cdc62c4d3f/http%2Fcves%2F2023%2FCVE-2023-30150.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/f82cf5b7ca2c0b0907881f23b04ea9cdc62c4d3f/http%2Fvulnerabilities%2Fprestashop%2Fprestashop-marketplace-sqli.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/723c5a3dc8c522dcaac25d6836632522c605a891/http%2Fcves%2F2023%2FCVE-2023-4165.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/54ced80d22276763873c1a8caa62f4295637d0ac/file%2Fpython%2Fpython-scanner.yaml

@@ -95,7 +95,7 @@ bbrf ips -p yelp | naabu -sD | bbrf service add - --show-new
 
 ## Usar API da HackerOne:
 Acessar um programa pela api da HackerOne:
-https://api.hackerone.com/v1/hackers/programs/yuga_labs
+https://api.hackerone.com/v1/hacketmuxrs/programs/yuga_labs
 
 
 ## Automatizar BBRF scan

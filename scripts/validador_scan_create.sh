@@ -23,51 +23,11 @@ RESOLVERS="$GIT_ROOT/resolvers/resolvers.txt"
 # export GIT_ROOT=$PWD
 export DOTFILES=$PWD
 
-# Verifica se o arquivo /root/recons/companies.txt existe
-if [ ! -f "/root/recons/companies.txt" ]; then
-  echo "${red}O arquivo /root/recons/companies.txt não existe. Por favor, crie o arquivo com os nomes das empresas.${reset}"
+# Verifica se o campo $id está vazio
+if [ -z "$EMPRESA" ]; then
+  echo "${red}Por favor, forneça o nome da EMPRESA ao qual quer escanear. Ex. ./scan_create.sh nome_da_EMPRESA${reset}"
   exit 1
 fi
-
-# Lê as empresas do arquivo
-readarray -t empresas < /root/recons/companies.txt
-
-# Função para listar empresas com paginação
-listar_empresas() {
-  local start_index=$1
-  for ((i=start_index; i<start_index+25 && i<${#empresas[@]}; i++)); do
-    echo "${green}$((i+1)).${reset} ${empresas[i]}"
-  done
-}
-
-# Lista as empresas e pede ao usuário para selecionar uma
-start_index=0
-while true; do
-  echo "${blue}Empresas disponíveis:${reset}"
-  listar_empresas $start_index
-  echo "---------------------------------------------"
-  echo "${yellow}Digite 'm' para mostrar mais, 'q' para sair, ou selecione o número da empresa ou escreva o nome da empresa que deseja escanear:${reset}"
-  read -r entrada_empresa
-  echo "---------------------------------------------"
-
-  if [[ $entrada_empresa == 'm' ]]; then
-    start_index=$((start_index + 25))
-    continue
-  elif [[ $entrada_empresa == 'q' ]]; then
-    echo "${red}Saindo do script.${reset}"
-    exit 0
-  elif [[ $entrada_empresa =~ ^[0-9]+$ ]] && [ "$entrada_empresa" -le "${#empresas[@]}" ]; then
-    EMPRESA=${empresas[$((entrada_empresa-1))]}
-    echo "${green}Você selecionou a empresa:${reset} $EMPRESA"
-    break
-  elif [[ " ${empresas[@]} " =~ " ${entrada_empresa} " ]]; then
-    EMPRESA=$entrada_empresa
-    echo "${green}Você selecionou a empresa:${reset} $EMPRESA"
-    break
-  else
-    echo "${red}Entrada inválida. Tente novamente.${reset}"
-  fi
-done
 
 # Verifique se os diretórios $HOME/recons e $GIT_ROOT/recons existem
 if [ -d "$HOME/recons" ] && [ -d "$GIT_ROOT/recons" ]; then
@@ -122,15 +82,8 @@ else
   esac
 fi
 
-# Caminho para os arquivos de escopo da empresa selecionada
 scope_path="$ppath/scope/$EMPRESA"
-roots_exist="$scope_path/scope_dominio.txt" # Aponta para o arquivo de domínio
-
-# Verifica se o arquivo roots_exist existe
-if [ ! -f "$roots_exist" ]; then
-  echo "${red}O arquivo $roots_exist não existe. Por favor, verifique o nome da empresa ou o caminho do arquivo.${reset}"
-  exit 1
-fi
+roots_exist="$scope_path/roots.txt"
 
 timestamp="$(date +%s)"
 date_scan_path="$(date +%d-%m-%Y_%Hh-%Mm-%Ss)"
@@ -219,10 +172,6 @@ manage_urls() {
         manage_urls
         ;;
     esac
-    echo "${blue}Conteúdo de scope_dominio.txt:${reset}"
-    cat "$scope_path/scope_dominio.txt"
-    echo "${blue}Conteúdo de scope_subdominio.txt:${reset}"
-    cat "$scope_path/scope_subdominio.txt"
 }
 
 # Menu principal
