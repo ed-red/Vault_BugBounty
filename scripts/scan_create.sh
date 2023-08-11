@@ -22,15 +22,16 @@ SUBDOM_LIST="$GIT_ROOT/wordlists/assetnote.io_best-dns-wordlist.txt"
 RESOLVERS="$GIT_ROOT/resolvers/resolvers.txt"
 # export GIT_ROOT=$PWD
 export DOTFILES=$PWD
+COMPANIES_H1="/root/recons/companies.txt"
 
-# Verifica se o arquivo /root/recons/companies.txt existe
-if [ ! -f "/root/recons/companies.txt" ]; then
-  echo "${red}O arquivo /root/recons/companies.txt não existe. Por favor, crie o arquivo com os nomes das empresas.${reset}"
+# Verifica se o arquivo $COMPANIES_H1 existe
+if [ ! -f "$COMPANIES_H1" ]; then
+  echo "${red}O arquivo $COMPANIES_H1 não existe. Por favor, crie o arquivo com os nomes das empresas.${reset}"
   exit 1
 fi
 
 # Lê as empresas do arquivo
-readarray -t empresas < /root/recons/companies.txt
+readarray -t empresas < $COMPANIES_H1
 
 # Função para listar empresas com paginação
 listar_empresas() {
@@ -40,92 +41,66 @@ listar_empresas() {
   done
 }
 
-# Lista as empresas e pede ao usuário para selecionar uma
-start_index=0
-while true; do
-  echo "${blue}Empresas disponíveis:${reset}"
-  listar_empresas $start_index
-  echo "---------------------------------------------"
-  echo "${yellow}Digite 'm' para mostrar mais, 'q' para sair, 'a' para escanear todas as empresas, ou selecione o número da empresa ou escreva o nome da empresa que deseja escanear:${reset}"
-  read -r entrada_empresa
-  echo "---------------------------------------------"
-
-  if [[ $entrada_empresa == 'm' ]]; then
-    start_index=$((start_index + 25))
-    continue
-  elif [[ $entrada_empresa == 'q' ]]; then
-    echo "${red}Saindo do script.${reset}"
-    exit 0
-  elif [[ $entrada_empresa == 'a' ]]; then
-    echo "${green}Você selecionou escanear todas as empresas.${reset}"
-    # Aqui você pode adicionar o código para lidar com a opção de escanear todas as empresas
-    break
-  elif [[ $entrada_empresa =~ ^[0-9]+$ ]] && [ "$entrada_empresa" -le "${#empresas[@]}" ]; then
-    EMPRESA=${empresas[$((entrada_empresa-1))]}
-    echo "${green}Você selecionou a empresa:${reset} $EMPRESA"
-    break
-  elif [[ " ${empresas[@]} " =~ " ${entrada_empresa} " ]]; then
-    EMPRESA=$entrada_empresa
-    echo "${green}Você selecionou a empresa:${reset} $EMPRESA"
-    break
-  else
-    echo "${red}Entrada inválida. Tente novamente.${reset}"
-  fi
-done
+ja_confirmado=false
+confirmado_opcao2=false
 
 escanear_empresa() {
   EMPRESA=$1
+  CONFIRMADO=$2
+  confirmado_opcao2=$3
   # Verifique se os diretórios $HOME/recons e $GIT_ROOT/recons existem
-  if [ -d "$HOME/recons" ] && [ -d "$GIT_ROOT/recons" ]; then
-    # Informe ao usuário que ambos os diretórios existem e peça que ele escolha
-    echo "${blue}[+] Os diretórios $HOME/recons e $GIT_ROOT/recons existem. Qual você gostaria de usar?${reset}"
-    echo "${green}1) $HOME/recons${reset}"
-    echo "${green}2) $GIT_ROOT/recons${reset}"
-    read -p "Por favor, escolha uma opção (1-2): " option
-    
-    # Verifique a entrada do usuário e defina o ppath de acordo
-    case $option in
-      1) ppath="$HOME/recons";;
-      2) ppath="$GIT_ROOT/recons";;
-      * ) echo "${red}Opção inválida, saindo do script.${reset}"; exit 1;;
-    esac
-  elif [ -d "$HOME/recons" ]; then
-    # Informe ao usuário que o diretório $HOME/recons existe
-    echo "${blue}[+] O diretório ${green}$HOME/recons${reset}${blue} já existe, mesmo assim você quer criar no diretório $GIT_ROOT/recons? (yes/no)${reset}"
-    read -p "Por favor, digite sua resposta (y/N/c): " res
-    
-    # Verifique a entrada do usuário e defina o ppath de acordo
-    case $res in
-      [Yy]* ) ppath="$GIT_ROOT/recons";;
-      [Nn]* ) ppath="$HOME/recons";;
-      [Cc]* ) echo "${red}Saindo do script.${reset}"; exit 1;;
-      * ) echo "${yellow}[+] Continua em ${green}$HOME/recons${reset}"; ppath="$HOME/recons";;
-    esac
-  elif [ -d "$GIT_ROOT/recons" ]; then
-    # Informe ao usuário que o diretório $GIT_ROOT/recons existe
-    echo "${blue}[+] O diretório ${green}$GIT_ROOT/recons${reset}${blue} já existe, mesmo assim você quer criar no diretório $HOME/recons? (yes/no)${reset}"
-    read -p "Por favor, digite sua resposta (y/N/c): " res
-    
-    # Verifique a entrada do usuário e defina o ppath de acordo
-    case $res in
-      [Yy]* ) ppath="$HOME/recons";;
-      [Nn]* ) ppath="$GIT_ROOT/recons";;
-      [Cc]* ) echo "${red}Saindo do script.${reset}"; exit 1;;
-      * ) echo "${yellow}[+] Continua em ${green}$GIT_ROOT/recons${reset}"; ppath="$GIT_ROOT/recons";;
-    esac
-  else
-    # Pergunte ao usuário onde ele deseja criar os diretórios
-    echo "${blue}[+] Onde você deseja criar os diretórios?${reset}"
-    echo "${green}1) No diretório $HOME/recons${reset}"
-    echo "${green}2) No diretório atual do git${reset}"
-    read -p "Por favor, escolha uma opção (1-2): " option
+  if [ "$CONFIRMADO" != "true" ]; then
+    if [ -d "$HOME/recons" ] && [ -d "$GIT_ROOT/recons" ]; then
+      # Informe ao usuário que ambos os diretórios existem e peça que ele escolha
+      echo "${blue}[+] Os diretórios $HOME/recons e $GIT_ROOT/recons existem. Qual você gostaria de usar?${reset}"
+      echo "${green}1) $HOME/recons${reset}"
+      echo "${green}2) $GIT_ROOT/recons${reset}"
+      read -p "Por favor, escolha uma opção (1-2): " option
+      
+      # Verifique a entrada do usuário e defina o ppath de acordo
+      case $option in
+        1) ppath="$HOME/recons";;
+        2) ppath="$GIT_ROOT/recons";;
+        * ) echo "${red}Opção inválida, saindo do script.${reset}"; exit 1;;
+      esac
+    elif [ -d "$HOME/recons" ]; then
+      # Informe ao usuário que o diretório $HOME/recons existe
+      echo "${blue}[+] O diretório ${green}$HOME/recons${reset}${blue} já existe, mesmo assim você quer criar no diretório $GIT_ROOT/recons? (yes/no)${reset}"
+      read -p "Por favor, digite sua resposta (y/N/c): " res
+      
+      # Verifique a entrada do usuário e defina o ppath de acordo
+      case $res in
+        [Yy]* ) ppath="$GIT_ROOT/recons";;
+        [Nn]* ) ppath="$HOME/recons";;
+        [Cc]* ) echo "${red}Saindo do script.${reset}"; exit 1;;
+        * ) echo "${yellow}[+] Continua em ${green}$HOME/recons${reset}"; ppath="$HOME/recons";;
+      esac
+    elif [ -d "$GIT_ROOT/recons" ]; then
+      # Informe ao usuário que o diretório $GIT_ROOT/recons existe
+      echo "${blue}[+] O diretório ${green}$GIT_ROOT/recons${reset}${blue} já existe, mesmo assim você quer criar no diretório $HOME/recons? (yes/no)${reset}"
+      read -p "Por favor, digite sua resposta (y/N/c): " res
+      
+      # Verifique a entrada do usuário e defina o ppath de acordo
+      case $res in
+        [Yy]* ) ppath="$HOME/recons";;
+        [Nn]* ) ppath="$GIT_ROOT/recons";;
+        [Cc]* ) echo "${red}Saindo do script.${reset}"; exit 1;;
+        * ) echo "${yellow}[+] Continua em ${green}$GIT_ROOT/recons${reset}"; ppath="$GIT_ROOT/recons";;
+      esac
+    else
+      # Pergunte ao usuário onde ele deseja criar os diretórios
+      echo "${blue}[+] Onde você deseja criar os diretórios?${reset}"
+      echo "${green}1) No diretório $HOME/recons${reset}"
+      echo "${green}2) No diretório atual do git${reset}"
+      read -p "Por favor, escolha uma opção (1-2): " option
 
-    # Verifique a entrada do usuário e defina o ppath de acordo
-    case $option in
-      1) ppath="$HOME/recons";;
-      2) ppath="$GIT_ROOT/recons";;
-      * ) echo "${red}Opção inválida, saindo do script.${reset}"; exit 1;;
-    esac
+      # Verifique a entrada do usuário e defina o ppath de acordo
+      case $option in
+        1) ppath="$HOME/recons";;
+        2) ppath="$GIT_ROOT/recons";;
+        * ) echo "${red}Opção inválida, saindo do script.${reset}"; exit 1;;
+      esac
+    fi
   fi
 
   # Caminho para os arquivos de escopo da empresa selecionada
@@ -139,7 +114,8 @@ escanear_empresa() {
   fi
 
   timestamp="$(date +%s)"
-  date_scan_path="$(date +%d-%m-%Y_%Hh-%Mm-%Ss)"
+  # date_scan_path="$(date +%d-%m-%Y_%Hh-%Mm-%Ss)"
+  date_scan_path="$(date +%d-%m-%Y)"
   scan_path="$ppath/scans/$EMPRESA/$EMPRESA-$date_scan_path"
 
   # check if ppath exists, if not create it
@@ -232,7 +208,8 @@ escanear_empresa() {
   }
 
   # Menu principal
-  while true; do
+  if [ "$confirmado_opcao2" != "true" ]; then
+    while true; do
       echo "${blue}[+] URLs atualmente no escopo:${reset}"
       cat "$roots_exist"
       echo "${yellow}[+]${reset}"
@@ -247,6 +224,7 @@ escanear_empresa() {
           ;;
       2)
           # Iniciar a varredura
+          confirmado_opcao2=true
           break
           ;;
       3)
@@ -257,7 +235,13 @@ escanear_empresa() {
           echo "Opção inválida."
           ;;
       esac
-  done
+    done
+  fi
+
+  echo "${blue}Conteúdo de scope_dominio.txt:${reset}"
+  cat "$scope_path/scope_dominio.txt"
+  echo "${blue}Conteúdo de scope_subdominio.txt:${reset}"
+  cat "$scope_path/scope_subdominio.txt"
 
   echo "Starting scan against roots:"
   cat "$roots_exist"
@@ -265,7 +249,7 @@ escanear_empresa() {
   cd "$scan_path"
 
   ##################### ADD SCAN LOGIC HERE #####################
-  source $DOTFILES/bot_scan_recon_vuln.sh
+  source /root/Vault_BugBounty/scripts/bot_scan_recon_vuln.sh
 
   # pwd
   # cat "$roots_exist" | subfinder | anew $scan_path/subs.txt
@@ -280,22 +264,50 @@ escanear_empresa() {
   # done < "$command_file"
 
 
-  ###############################################################
-
-  # calculate time diff
-  end_time=$(date +%s)
-  seconds="$(expr $end_time - $timestamp)"
-  time=""
-
-  if [[ "$seconds" -gt 59 ]]
-  then
-    minutes=$(expr $seconds / 60)
-    time="$minutes minutes"
-  else
-    time="$seconds seconds"
-  fi
-
-  echo "Scan $EMPRESA took $time"
-  #echo "Scan $EMPRESA took $time" | notify
+  
 }
 
+# Lista as empresas e pede ao usuário para selecionar uma
+start_index=0
+scan_todas=false
+while true; do
+  echo "${blue}Empresas disponíveis:${reset}"
+  listar_empresas $start_index
+  echo "---------------------------------------------"
+  echo "${yellow}Digite 'm' para mostrar mais, 'q' para sair, 'a' para escanear todas as empresas, ou selecione o número da empresa ou escreva o nome da empresa que deseja escanear:${reset}"
+  read -r entrada_empresa
+  echo "---------------------------------------------"
+
+  if [[ $entrada_empresa == 'm' ]]; then
+    start_index=$((start_index + 25))
+    continue
+  elif [[ $entrada_empresa == 'q' ]]; then
+    echo "${red}Saindo do script.${reset}"
+    exit 0
+  elif [[ $entrada_empresa == 'a' ]]; then
+    echo "${green}Você selecionou escanear todas as $(wc -c $COMPANIES_H1) empresas.${reset}"
+    scan_todas=true
+    break
+  elif [[ $entrada_empresa =~ ^[0-9]+$ ]] && [ "$entrada_empresa" -le "${#empresas[@]}" ]; then
+    EMPRESA=${empresas[$((entrada_empresa-1))]}
+    echo "${green}Você selecionou a empresa:${reset} $EMPRESA"
+    break
+  elif [[ " ${empresas[@]} " =~ " ${entrada_empresa} " ]]; then
+    EMPRESA=$entrada_empresa
+    echo "${green}Você selecionou a empresa:${reset} $EMPRESA"
+    break
+  else
+    echo "${red}Entrada inválida. Tente novamente.${reset}"
+  fi
+done
+
+if $scan_todas; then
+  for EMPRESA in "${empresas[@]}"; do
+    echo "${green}Escaneando a empresa:${reset} $EMPRESA"
+    escanear_empresa $EMPRESA $ja_confirmado $confirmado_opcao2
+    ja_confirmado=true
+    confirmado_opcao2=true
+  done
+else
+  escanear_empresa $EMPRESA false false
+fi

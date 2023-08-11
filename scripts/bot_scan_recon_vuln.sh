@@ -20,7 +20,7 @@ reset=`tput sgr0`
 echo "${yellow}[+] DNS Enumeration - Find Subdomains...${reset}"
 cat "$roots_exist" | haktrails subdomains | anew subs.txt
 cat "$roots_exist" | subfinder | anew subs.txt
-# cat "$roots_exist" | shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" | anew subs.txt
+cat "$roots_exist" | shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" | anew subs.txt
 
 qnt_dominios_scan_path=$(wc -c subs.txt)
 echo "---------------------------------------------"
