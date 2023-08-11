@@ -4,3 +4,5 @@
 [0;34mTamanho do arquivo de empresas existente:[0m 22
 [0;34mTamanho do arquivo de empresas existente:[0m 15
 [0;34mTamanho do arquivo de empresas existente:[0m 207
+
+10-08-2023 - Tamanho total de empresas coletadas na H1: 1885

@@ -73,7 +73,7 @@ while [ "$next" ]; do
   done
 done
 
-total_count_h1=$(echo -e "${RED}\n$date - Tamanho total de empresas coletadas na H1:${NC} $(cat /root/recons/companies.txt | wc -c)\n")
+total_count_h1=$(echo -e "${RED}$date - Tamanho total de empresas coletadas na H1:${NC} $(cat /root/recons/companies.txt | wc -c)\n")
 echo -e $total_count_h1
 echo -e "$total_count_h1" | sed "s/\x1B\[[0-9;]*[JKmsu]//g" >> qnt_empresas_h1.txt
 echo -e "${YELLOW}========================================${NC}\n"
