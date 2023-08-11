@@ -11,6 +11,7 @@ h1name=$H1NAME
 apitoken=$HACKERONE_API_KEY
 next="https://api.hackerone.com/v1/hackers/programs?page%5Bsize%5D=100"
 deleted_companies=""
+date="$(date +%d-%m-%Y)"
 
 echo -e "\n${YELLOW}========================================${NC}"
 echo -e "${GREEN}Iniciando o reconhecimento...${NC}"
@@ -48,7 +49,7 @@ while [ "$next" ]; do
     # Get the scope data and save it to a text file
     data_scope=$(curl -g -s "https://api.hackerone.com/v1/hackers/programs/$p" -u "$h1name:$apitoken")
     url_scope=$(echo $data_scope | jq '.relationships.structured_scopes.data[].attributes | select(.asset_type == "URL" and .eligible_for_bounty and .eligible_for_submission == true ) | .asset_identifier' -r | sed -e 's#^http://##' -e 's#^https://##' -e 's#^*\.##')
-    wildcard_scope=$(echo $data_scope | jq '.relationships.structured_scopes.data[].attributes | select(.asset_type == "WILDCARD" and .eligible_for_bounty and .eligible_for_submission == true ) | .asset_identifier' -r | sed -E 's#^(\*\.?|http://|https://)?([^/]*).*#\2#')
+    wildcard_scope=$(echo $data_scope | jq '.relationships.structured_scopes.data[].attributes | select(.asset_type == "WILDCARD" and .eligible_for_bounty and .eligible_for_submission == true ) | .asset_identifier' -r | sed -E 's#^(\*\.?|http://|https://)?([^/]*).*#\2#' | sed -e 's/^http:\/\///' -e 's/^https:\/\///' -e 's/^\*\.//')
 
     # Check if both URL and WILDCARD scopes are empty
     if [[ -z "$url_scope" && -z "$wildcard_scope" ]]; then
@@ -60,7 +61,7 @@ while [ "$next" ]; do
       continue
     fi
 
-    echo -e "$url_scope\n$wildcard_scope" > "/root/recons/scope/$p/scope.txt"
+    echo -e "$url_scope\n$wildcard_scope" | sed '/^$/d' > "/root/recons/scope/$p/scope.txt"
 
     # Print the processed scope data
     echo -e "${BLUE}Escopo URL:${NC}\n$url_scope"
@@ -68,11 +69,13 @@ while [ "$next" ]; do
     echo -e "${YELLOW}----------------------------------------${NC}\n"
 
     # Append to global scope file
-    echo -e "$url_scope\n$wildcard_scope" >> /root/recons/scope.txt
+    echo -e "$url_scope\n$wildcard_scope" | sed '/^$/d' >> /root/recons/scope.txt | anew
   done
 done
 
-echo -e "${RED}\nTamanho total do arquivo de empresas:${NC} $(cat /root/recons/companies.txt | wc -c)"
+total_count_h1=$(echo -e "${RED}\n$date - Tamanho total de empresas coletadas na H1:${NC} $(cat /root/recons/companies.txt | wc -c)\n")
+echo -e $total_count_h1
+echo -e "$total_count_h1" | sed "s/\x1B\[[0-9;]*[JKmsu]//g" >> qnt_empresas_h1.txt
 echo -e "${YELLOW}========================================${NC}\n"
 
 echo -e "${GREEN}Reconhecimento concluído!${NC}"

@@ -1,0 +1,6 @@
+[0;31m
+10-08-2023 - Tamanho total do arquivo de empresas:[0m 1885
+
+[0;34mTamanho do arquivo de empresas existente:[0m 22
+[0;34mTamanho do arquivo de empresas existente:[0m 15
+[0;34mTamanho do arquivo de empresas existente:[0m 207
