@@ -20,7 +20,7 @@ reset=`tput sgr0`
 echo "${yellow}[+] DNS Enumeration - Find Subdomains...${reset}"
 cat "$roots_exist" | haktrails subdomains | anew subs.txt
 cat "$roots_exist" | subfinder | anew subs.txt
-cat "$roots_exist" | shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" | anew subs.txt
+# cat "$roots_exist" | shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" | anew subs.txt
 
 qnt_dominios_scan_path=$(wc -c subs.txt)
 echo "---------------------------------------------"
@@ -48,4 +48,11 @@ gospider -S "$scan_path/http.txt" --json | grep "{" | jq -r '.output?' | tee "$s
 echo "${yellow}[+] Javascript Pulling...${reset}"
 cat "$scan_path/crawl.txt" | grep "\\.js" | httpx -sr -srd js
 
-# cat "$scan_path/subs.txt" | nuclei -rl 60 -uc -es info -o "$scan_path/nuclei.txt"
+# cat "$scan_path/subs.txt" | waybackurls | sort -u >> $scan_path/waybackdata | gf ssrf | tee -a $scan_path/ssfrparams.txt
+
+# paramspider -l "$scan_path/subs.txt"
+# nuclei -l $scan_path/paramspider_output.txt -t "/root/Tools/fuzzing-templates" -rl 05
+
+paramspider -l $scan_path/subs.txt -s | nuclei -t "/root/Tools/fuzzing-templates" -rl 05
+
+cat "$scan_path/subs.txt" | nuclei -rl 60 -uc -es info -o "$scan_path/nuclei.txt"

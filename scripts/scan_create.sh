@@ -105,7 +105,7 @@ escanear_empresa() {
 
   # Caminho para os arquivos de escopo da empresa selecionada
   scope_path="$ppath/scope/$EMPRESA"
-  roots_exist="$scope_path/scope_dominio.txt" # Aponta para o arquivo de domínio
+  roots_exist="$scope_path/scope.txt" # Aponta para o arquivo de domínio
 
   # Verifica se o arquivo roots_exist existe
   if [ ! -f "$roots_exist" ]; then
@@ -201,8 +201,8 @@ escanear_empresa() {
           manage_urls
           ;;
       esac
-      echo "${blue}Conteúdo de scope_dominio.txt:${reset}"
-      cat "$scope_path/scope_dominio.txt"
+      echo "${blue}Conteúdo de scope.txt:${reset}"
+      cat "$scope_path/scope.txt"
       echo "${blue}Conteúdo de scope_subdominio.txt:${reset}"
       cat "$scope_path/scope_subdominio.txt"
   }
@@ -238,8 +238,8 @@ escanear_empresa() {
     done
   fi
 
-  echo "${blue}Conteúdo de scope_dominio.txt:${reset}"
-  cat "$scope_path/scope_dominio.txt"
+  echo "${blue}Conteúdo de scope.txt:${reset}"
+  cat "$scope_path/scope.txt"
   echo "${blue}Conteúdo de scope_subdominio.txt:${reset}"
   cat "$scope_path/scope_subdominio.txt"
 
