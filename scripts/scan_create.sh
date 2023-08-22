@@ -245,7 +245,7 @@ escanear_empresa() {
 
   echo "Starting scan against roots:"
   cat "$roots_exist"
-  cp -v "$roots_exist" "$scan_path/roots.txt"
+  cp -v "$roots_exist" "$scan_path/subs.txt"
   cd "$scan_path"
 
   ##################### ADD SCAN LOGIC HERE #####################

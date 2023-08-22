@@ -14,3 +14,8 @@
 11-08-2023 - Tamanho total de Dominios/URL coletados na H1: 40577
 =================================================================
 
+
+21-08-2023 - Tamanho total de empresas coletadas na H1: 1878
+21-08-2023 - Tamanho total de Dominios/URL coletados na H1: 40339
+=================================================================
+

@@ -2,7 +2,7 @@
 
 ```bash
 # Verificar se esta ativo:
-echo "vulnweb.com" | httpx -silent -probe -status-code -title -content-length
+echo "vulnweb.com" | httpx -silent -probe -status-code -title -ip -cname -content-length
 cat lista_sub.txt | httpx -silent -probe -status-code -title -content-length
 cat lista_sub.txt | httpx -silent -probe -status-code -title -content-length -ip -cname
 

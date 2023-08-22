@@ -14,7 +14,7 @@ reset=`tput sgr0`
 #---- inicia script
 # Define a versão do Go mais atual
 echo "${yellow}[+] Definindo a versão do Go a ser instalada...${reset}"
-latest_version=$(curl -sSL https://golang.org/VERSION?m=text)
+latest_version=$(curl -sSL https://golang.org/VERSION?m=text | head -n 1)
 echo "${yellow}[+] A ultima versão do Go é a $latest_version...${reset}"
 
 # Verifica se o Go já está instalado
@@ -41,7 +41,7 @@ wget -q "https://go.dev/dl/$latest_version.linux-amd64.tar.gz" -P /tmp
 
 # Extrai o arquivo compactado para o diretório de instalação
 echo "${yellow}[+] Extraindo o arquivo compactado para o diretório de instalação${reset}"
-rm -rf $install_dir/go
+rm -rf "$install_dir/go"
 tar -C $install_dir -xzf "/tmp/$latest_version.linux-amd64.tar.gz"
 
 # Define as variáveis de ambiente para o Go

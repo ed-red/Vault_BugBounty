@@ -6,10 +6,10 @@
 #------- Variáveis
 git_root=$(git rev-parse --show-toplevel)
 URL_RUST="https://sh.rustup.rs"
-# GO_TOOLS=$(curl -s https://raw.githubusercontent.com/ed-red/Vault_BugBounty/main/tools/add_me_go_tools.txt)
-# PIP3_TOOLS=$(curl -s https://raw.githubusercontent.com/ed-red/Vault_BugBounty/main/tools/add_me_pip3_tools.txt)
-GO_TOOLS=$(cat $git_root/tools/add_me_go_tools.txt)
-PIP3_TOOLS=$(cat $git_root/tools/add_me_pip3_tools.txt)
+GO_TOOLS=$(curl -s https://raw.githubusercontent.com/ed-red/Vault_BugBounty/main/tools/add_me_go_tools.txt)
+PIP3_TOOLS=$(curl -s https://raw.githubusercontent.com/ed-red/Vault_BugBounty/main/tools/add_me_pip3_tools.txt)
+# GO_TOOLS=$(cat $git_root/tools/add_me_go_tools.txt)
+# PIP3_TOOLS=$(cat $git_root/tools/add_me_pip3_tools.txt)
 errors=""
 
 #--- Cores
@@ -129,6 +129,7 @@ echo "${yellow}[+] Installing Golang Tools ${reset}"
 echo "$GO_TOOLS" | while read -r tool
 do
     tool_name=$(echo $tool | sed -E 's#(https://github.com/|github.com/)(.*)@latest#\2#')
+    echo $tool_name
     bin_name=$(basename "$tool_name")
 
     if package_installed "$bin_name"; then
