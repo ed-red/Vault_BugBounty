@@ -101,6 +101,6 @@ echo "---------------------------------------------"
 # nuclei -l $scan_path/paramspider_output.txt -t "/root/Tools/fuzzing-templates" -rl 05
 
 # nuclei -l $scan_path/params/ssfr.txt -t "/root/Tools/fuzzing-templates/ssrf" -rl 05
-nuclei -l $scan_path/params/params.txt -t "/root/Tools/fuzzing-templates" -rl 05
+nuclei -l $scan_path/params/params.txt -t "/root/Tools/fuzzing-templates" -rl 05 | notify -silent -bulk
 
-# cat "$scan_path/resolved.txt" | nuclei -rl 60 -uc -es info -o "$scan_path/nuclei.txt" | notify -silent -bulk
+cat "$scan_path/resolved.txt" | nuclei -es info -o "$scan_path/nuclei.txt" | notify -silent -bulk

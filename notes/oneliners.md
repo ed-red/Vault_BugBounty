@@ -48,3 +48,13 @@ cat domains_only_newegg.txt | nuclei -rl 60 -uc -es info -o nuclei_repor_newegg
 netlas download -d domain -c 7 -i domain domain:"*.target.com" | jq -r .data.domain
 
 ```
+
+```bash
+
+xargs -a params/params.txt -I@ bash -c 'python3 /root/Tools/XSStrike/xsstrike.py -u @ --fuzzer'
+xargs -a params/params.txt -I@ bash -c 'echo "Lendo: @" && python3 /root/Tools/XSStrike/xsstrike.py -u @ --fuzzer'
+xargs -a params/params.txt -I@ bash -c 'echo "Processando: @" && python3 /root/Tools/XSStrike/xsstrike.py -u @ --fuzzer'
+
+
+xargs -P 500 -a dominios.txt -I@ sh -c 'nc -w1 -z -v @ 443 2>/dev/null && echo @' | xargs -I@ -P10 sh -c './gospider -a -s "http://@" -d 2 | grep -Eo "(http|https)://[^/\"].*\.js+" | sed "s#\] \- #\n#g" | ./unew'
+```

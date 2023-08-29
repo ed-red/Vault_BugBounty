@@ -374,3 +374,14 @@ https://github.com/projectdiscovery/nuclei-templates/raw/020f397cad67ae259c7cb82
 https://github.com/projectdiscovery/nuclei-templates/raw/020f397cad67ae259c7cb82a76a5456d1722a089/http%2Fcves%2F2023%2FCVE-2023-27034.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/020f397cad67ae259c7cb82a76a5456d1722a089/http%2Fcves%2F2023%2FCVE-2023-30150.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/020f397cad67ae259c7cb82a76a5456d1722a089/http%2Fvulnerabilities%2Fprestashop%2Fprestashop-apmarketplace-sqli.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/8c2227c4be45c7259db9a1118a8ed366361edbe2/http%2Fcves%2F2023%2FCVE-2023-37629.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/242ad4b0ca6039e65af7a0e47d1471e92ebdbb03/http%2Fmisconfiguration%2Fnacos%2Fnacos-create-user.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/5593ae03c04a9bce821edce5c2d07c904a9a876d/http%2Fcves%2F2018%2FCVE-2018-17153.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/51539224a86dd75c152b9fb6ba66a9f61266c526/headless%2Fclickjacking-detect.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/cf48d6229c593c170863221f5c75a7cab6570d07/http%2Fexposed-panels%2Fjorani-panel.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/0a0ef08aca7584c710d553a464c91d543eb63fc7/http%2Fexposures%2Ftokens%2FJOTFORM_API_KEY
+https://github.com/projectdiscovery/nuclei-templates/raw/73225ff8a3b9e396ebe49844f444d09e2073786d/http%2Fmisconfiguration%2Fsri-missing.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/60b42c2e5b4b9b9d9063b2312b6a12829c1158c3/http%2Fmiscellaneous%2Frdap.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b866c5c7767ce4eae8ad15341b76fcf8551face3/.github%2Fworkflows%2Ftemplate-validate.yml
+https://github.com/projectdiscovery/nuclei-templates/raw/7106abd7b8ce4c8ec64fabe0e15017e7f53d3039/http%2Fcves%2F2023%2FCVE-2023-34192.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/f570f7e329aec3ad63fa8c9a96f2bfa28f72d935/cves%2F2022%2FCVE-2022-0342.yaml
