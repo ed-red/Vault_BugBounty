@@ -76,13 +76,14 @@ done
 total_empresa_count_h1=$(echo -e "${RED}$date - Tamanho total de empresas coletadas na H1:${NC} $(cat /root/recons/companies.txt | wc -c)")
 total_dominio_count_h1=$(echo -e "${RED}$date - Tamanho total de Dominios/URL coletados na H1:${NC} $(cat /root/recons/scope.txt | wc -c)")
 echo -e "$total_empresa_count_h1\n$total_dominio_count_h1\n"
-echo -e "\n$total_empresa_count_h1\n$total_dominio_count_h1\n=================================================================\n" | sed "s/\x1B\[[0-9;]*[JKmsu]//g" >> qnt_empresas_dominios_h1.txt
+echo -e "\n$total_empresa_count_h1\n$total_dominio_count_h1\n" | sed "s/\x1B\[[0-9;]*[JKmsu]//g" >> /root/Vault_BugBounty/scripts/scripts_scopes_hackerone/qnt_empresas_dominios_h1.txt
 echo -e "${YELLOW}========================================${NC}\n"
 
 echo -e "${GREEN}Reconhecimento concluído!${NC}"
 echo -e "${YELLOW}========================================${NC}"
 if [ -n "$deleted_companies" ]; then
   echo -e "${RED}Empresas excluídas:${NC}\n$deleted_companies" # Mostra cada empresa em uma nova linha
+  echo -e "${RED}$date - Empresas excluídas:${NC}\n$deleted_companies\n=================================================================\n" | sed "s/\x1B\[[0-9;]*[JKmsu]//g" >> /root/Vault_BugBounty/scripts/scripts_scopes_hackerone/qnt_empresas_dominios_h1.txt
 else
   echo -e "${RED}Nenhuma empresa foi excluída.${NC}"
 fi

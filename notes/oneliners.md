@@ -55,6 +55,14 @@ xargs -a params/params.txt -I@ bash -c 'python3 /root/Tools/XSStrike/xsstrike.py
 xargs -a params/params.txt -I@ bash -c 'echo "Lendo: @" && python3 /root/Tools/XSStrike/xsstrike.py -u @ --fuzzer'
 xargs -a params/params.txt -I@ bash -c 'echo "Processando: @" && python3 /root/Tools/XSStrike/xsstrike.py -u @ --fuzzer'
 
+xargs -a /root/recons/scans/vulnweb/vulnweb-29-08-2023/output_xss_vibes.txt -I@ bash -c 'echo "Processando: @" && python3 /root/Tools/XSStrike/xsstrike.py -u @ --file-log-level 'GOOD','CRITICAL','VULN' --log-file /root/recons/scans/vulnweb/vulnweb-29-08-2023/output_xsstrike.txt'
+
+
+
 
 xargs -P 500 -a dominios.txt -I@ sh -c 'nc -w1 -z -v @ 443 2>/dev/null && echo @' | xargs -I@ -P10 sh -c './gospider -a -s "http://@" -d 2 | grep -Eo "(http|https)://[^/\"].*\.js+" | sed "s#\] \- #\n#g" | ./unew'
+
+
+
+
 ```

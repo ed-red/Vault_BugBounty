@@ -116,7 +116,7 @@ escanear_empresa() {
   timestamp="$(date +%s)"
   # date_scan_path="$(date +%d-%m-%Y_%Hh-%Mm-%Ss)"
   date_scan_path="$(date +%d-%m-%Y)"
-  scan_path="$ppath/scans/$EMPRESA/$EMPRESA-$date_scan_path"
+  scan_path="$ppath/scans/$EMPRESA"
 
   # check if ppath exists, if not create it
   echo "${yellow}[+] Check se as pastas recons/scope e recons/scan existem...${reset}"
