@@ -27,6 +27,7 @@ echo $RESOLVERS
 echo $scan_path
 echo $roots_exist
 # cd $scan_path
+echo $(pwd)
 
 echo "---------------------------------------------"
 echo "${yellow}[+] DNS Enumeration - Find Subdomains...${reset}"
@@ -99,9 +100,9 @@ echo "---------------------------------------------"
 # nuclei -l $scan_path/paramspider_output.txt -t "/root/Tools/fuzzing-templates" -rl 05
 
 # nuclei -l $scan_path/params/ssfr.txt -t "/root/Tools/fuzzing-templates/ssrf" -rl 05
-cat $scan_path/paramspider.txt | nuclei -es info -t "/root/Tools/fuzzing-templates" -rl 50 -o nuclei_output.txt | anew | notify -silent -bulk
+cat $scan_path/paramspider.txt | nuclei -es info -t "/root/Tools/fuzzing-templates" -rl 50 -o nuclei_output.txt | anew | notify -silent -bulk >> /root/recons/nuclei_output_all.txt
 
-python3 /root/Tools/xss_vibes/main.py -f $scan_path/paramspider.txt -o $scan_path/xssvibes_endpoint_vulns.txt | notify -silent -bulk
-python3 /root/Tools/xss_vibes/main.py -f $scan_path/xssvibes_endpoint_vulns.txt>> $scan_path/output_xssvibes_completo.txt | notify -silent -bulk
+python3 /root/Tools/xss_vibes/main.py -f $scan_path/paramspider.txt -o $scan_path/xssvibes_endpoint_vulns.txt | notify -silent -bulk >> /root/recons/nuclei_output_all.txt
+python3 /root/Tools/xss_vibes/main.py -f $scan_path/xssvibes_endpoint_vulns.txt>> $scan_path/output_xssvibes_completo.txt | notify -silent -bulk >> /root/recons/nuclei_output_all.txt
 
 # cat "$scan_path/resolved.txt" | nuclei -es info -o "$scan_path/nuclei.txt" | notify -silent -bulk
