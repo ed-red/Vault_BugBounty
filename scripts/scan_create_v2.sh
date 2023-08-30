@@ -10,11 +10,11 @@ RESET=`tput sgr0`
 # Caminho base
 BASE_PATH="/root/recons"
 
-# set vars
-GIT_ROOT=$(git rev-parse --show-toplevel)
-
 # Lista de empresas
 COMPANIES_FILE="${BASE_PATH}/companies.txt"
+
+# set vars
+GIT_ROOT=$(git rev-parse --show-toplevel)
 
 # Função para obter o nome base do domínio (sem TLD)
 get_base_name() {

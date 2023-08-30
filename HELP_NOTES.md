@@ -59,7 +59,7 @@ Por padrão, o prefixo é CTRL+B.
 0 */6 * * * ~/Vault_BugBounty/scripts/scripts_atualizar_templates_nuclei/setup_atualizar_templates_nuclei.sh ; echo NUCLEI ATUALIZADO - $(date) | $HOME/go/bin/notify >/dev/null 2>&1 >/dev/null 2>81
 
 ##-- BBRF
-30 10 * * * ~/Vault_BugBounty/scripts/scripts_bbrf/hackerone-update-program-scopes.sh ; echo UPDATE PROGRAMAS H1 - BBRF - $(date) | $HOME/go/bin/notify -silent -bulk >/dev/null 2>&1 >/dev/null 2>81
+0 0 * * * ~/Vault_BugBounty/scripts/scripts_bbrf/hackerone-update-program-scopes.sh ; echo UPDATE PROGRAMAS H1 - BBRF - $(date)\ncat ~/Vault_BugBounty/scripts/scripts_bbrf/qnt_empresas_dominios_h1.txt | $HOME/go/bin/notify -silent -bulk >/dev/null 2>&1 >/dev/null 2>81
 
 ```
 

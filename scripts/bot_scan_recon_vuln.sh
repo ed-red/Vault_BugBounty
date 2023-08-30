@@ -18,24 +18,43 @@ cyan=`tput setaf 6`
 white=`tput setaf 7`
 reset=`tput sgr0`
 
-SUBDOM_LIST="$GIT_ROOT/wordlists/assetnote.io_best-dns-wordlist.txt"
-RESOLVERS="$GIT_ROOT/resolvers/resolvers.txt"
+SUBDOM_LIST="$GIT_ROOT/wordlists/best-dns-wordlist.txt"
+RESOLVERS="$GIT_ROOT/wordlists/resolvers/resolvers.txt"
 
 echo $GIT_ROOT
+echo $SUBDOM_LIST
 echo $RESOLVERS
 echo $scan_path
 echo $roots_exist
 # cd $scan_path
-echo $(pwd)
 
 echo "---------------------------------------------"
 echo "${yellow}[+] DNS Enumeration - Find Subdomains...${reset}"
+# Verifique se o arquivo "subs.txt" existe e obtenha a contagem de linhas
+if [[ -f "subs.txt" ]]; then
+    prev_count=$(wc -l < "subs.txt")
+    echo "${green}[+] Número de subdominios em subs.txt antes: $prev_count${reset}."
+else
+    echo "O arquivo subs.txt não existe. Contagem definida como 0."
+    prev_count=0
+fi
 cat "$roots_exist" | haktrails subdomains | anew subs.txt
 cat "$roots_exist" | subfinder | anew subs.txt
+
 cat "$roots_exist" | shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" | anew subs.txt
 awk '{print "http://" $0; print "https://" $0}' $roots_exist | katana -f fqdn | anew subs.txt
-echo "---------------------------------------------"
 
+# Contagem após a execução dos comandos
+if [[ -f "subs.txt" ]]; then
+    new_count=$(wc -l < "subs.txt")
+else
+    echo "O arquivo subs.txt não existe após a execução. Contagem definida como 0."
+    new_count=0
+fi
+# Exibindo o comparativo
+echo "---------------------------------------------"
+echo "${green}Número de subdominios em subs.txt antes: $prev_count${reset}"
+echo "Número de subdominios em subs.txt agora: $new_count${reset}"
 qnt_dominios_scan_path=$(wc -c subs.txt)
 echo "---------------------------------------------"
 echo "${green}$(wc -c subs.txt) domínios adicionados com sucesso!${reset}"
@@ -99,9 +118,9 @@ echo "---------------------------------------------"
 # nuclei -l $scan_path/paramspider_output.txt -t "/root/Tools/fuzzing-templates" -rl 05
 
 # nuclei -l $scan_path/params/ssfr.txt -t "/root/Tools/fuzzing-templates/ssrf" -rl 05
-cat $scan_path/paramspider.txt | nuclei -es info -t "/root/Tools/fuzzing-templates" -rl 50 -o nuclei_output.txt | anew | notify -silent -bulk >> /root/recons/nuclei_output_all.txt
+cat $scan_path/paramspider.txt | nuclei -es info -t "/root/Tools/fuzzing-templates" -rl 50 -o nuclei_output.txt | anew | notify -silent -bulk
 
-python3 /root/Tools/xss_vibes/main.py -f $scan_path/paramspider.txt -o $scan_path/xssvibes_endpoint_vulns.txt | notify -silent -bulk >> /root/recons/nuclei_output_all.txt
-python3 /root/Tools/xss_vibes/main.py -f $scan_path/xssvibes_endpoint_vulns.txt>> $scan_path/output_xssvibes_completo.txt | notify -silent -bulk >> /root/recons/nuclei_output_all.txt
+python3 /root/Tools/xss_vibes/xss_viber.py -f $scan_path/paramspider.txt -o $scan_path/xssvibes_endpoint_vulns.txt | notify -silent -bulk
+python3 /root/Tools/xss_vibes/xss_viber.py -f $scan_path/xssvibes_endpoint_vulns.txt >> $scan_path/output_xssvibes_completo.txt | notify -silent -bulk
 
 # cat "$scan_path/resolved.txt" | nuclei -es info -o "$scan_path/nuclei.txt" | notify -silent -bulk
