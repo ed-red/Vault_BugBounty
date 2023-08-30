@@ -10,6 +10,9 @@ RESET=`tput sgr0`
 # Caminho base
 BASE_PATH="/root/recons"
 
+# set vars
+GIT_ROOT=$(git rev-parse --show-toplevel)
+
 # Lista de empresas
 COMPANIES_FILE="${BASE_PATH}/companies.txt"
 

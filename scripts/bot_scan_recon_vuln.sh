@@ -4,7 +4,6 @@
 export EDITOR='vim'
 export DOTFILES=$PWD
 # DOTFILES=$(git rev-parse --show-toplevel)
-
 # roots_exist=$1
 # scan_path=$2
 
