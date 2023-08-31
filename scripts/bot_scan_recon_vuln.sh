@@ -194,8 +194,8 @@ vuln_scan() {
 
     # nuclei -l $scan_path/params/ssfr.txt -t "/root/Tools/fuzzing-templates/ssrf" -rl 05
     cat $scan_path/paramspider.txt | nuclei -es info -t "/root/Tools/fuzzing-templates" -rl 50 -o nuclei_fuzzing-templates.txt | anew | notify -silent -bulk
-    cat $scan_path/paramspider.txt | nuclei -es info -rl 50 -o nuclei_all_templates_paramspider.txt | anew | notify -silent -bulk
-    cat $scan_path/paramspider.txt | nuclei -es info -rl 50 -o nuclei_all_resolved.txt | anew | notify -silent -bulk
+    # cat $scan_path/paramspider.txt | nuclei -es info -rl 50 -o nuclei_all_templates_paramspider.txt | anew | notify -silent -bulk
+    # cat $scan_path/paramspider.txt | nuclei -es info -rl 50 -o nuclei_all_resolved.txt | anew | notify -silent -bulk
 
     python3 /root/Tools/xss_vibes/xss_viber.py -f $scan_path/paramspider.txt -o $scan_path/xssvibes_endpoint_vulns.txt
     if [[ -f "$scan_path/xssvibes_endpoint_vulns.txt" ]]; then
