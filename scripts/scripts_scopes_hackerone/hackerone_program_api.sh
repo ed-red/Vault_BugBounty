@@ -11,7 +11,7 @@ h1name=$H1NAME
 apitoken=$HACKERONE_API_KEY
 next="https://api.hackerone.com/v1/hackers/programs?page%5Bsize%5D=100"
 deleted_companies=""
-date="$(date +%d-%m-%Y)"
+date="$(date +%d-%m-%Y-%H:%M:%S)"
 
 echo -e "\n${YELLOW}========================================${NC}"
 echo -e "${GREEN}Iniciando o reconhecimento...${NC}"
@@ -19,13 +19,18 @@ echo -e "${YELLOW}========================================${NC}\n"
 
 # Remove previous files if they exist
 if [ -s "/root/recons/companies.txt" ]; then
-  echo -e "${BLUE}Tamanho do arquivo de empresas existente:${NC} $(cat /root/recons/companies.txt | wc -c)"
+  echo -e "${BLUE}Tamanho do arquivo de empresas existente:${NC} $(cat /root/recons/companies.txt | wc -l)"
   rm -rf /root/recons/companies.txt
 fi
 
 if [ -s "/root/recons/scope.txt" ]; then
   rm -rf /root/recons/scope.txt
 fi
+
+if [ -d "/root/recons/scope/0_h1_completo" ]; then
+  rm -rf "/root/recons/scope/0_h1_completo"
+fi
+mkdir -p "/root/recons/scope/0_h1_completo"
 
 # Loop through HackerOne API
 while [ "$next" ]; do
@@ -61,22 +66,26 @@ while [ "$next" ]; do
       continue
     fi
 
-    echo -e "$url_scope\n$wildcard_scope" | sed '/^$/d' > "/root/recons/scope/$p/scope.txt"
+    echo -e "$url_scope\n$wildcard_scope" | sed '/^$/d' | sed 's#/.*##' > "/root/recons/scope/$p/scope.txt"
 
     # Print the processed scope data
     echo -e "${BLUE}Escopo URL:${NC}\n$url_scope"
     echo -e "${BLUE}Escopo WILDCARD:${NC}\n$wildcard_scope"
     echo -e "${YELLOW}----------------------------------------${NC}\n"
 
-    # Append to global scope file
-    echo -e "$url_scope\n$wildcard_scope" | sed '/^$/d' >> /root/recons/scope.txt | anew
+    echo -e "$url_scope\n$wildcard_scope" | sed '/^$/d' | sed 's#/.*##' >> /root/recons/scope/0_h1_completo/scope_completo.txt | anew
+    echo -e "$url_scope" | sed '/^$/d' | sed 's#/.*##' >> /root/recons/scope/0_h1_completo/scope.txt | anew
+    echo -e "$wildcard_scope" | sed '/^$/d' >> /root/recons/scope/0_h1_completo/wildcards.txt | anew
   done
 done
 
-total_empresa_count_h1=$(echo -e "${RED}$date - Tamanho total de empresas coletadas na H1:${NC} $(cat /root/recons/companies.txt | wc -c)")
-total_dominio_count_h1=$(echo -e "${RED}$date - Tamanho total de Dominios/URL coletados na H1:${NC} $(cat /root/recons/scope.txt | wc -c)")
-echo -e "$total_empresa_count_h1\n$total_dominio_count_h1\n"
-echo -e "\n$total_empresa_count_h1\n$total_dominio_count_h1\n" | sed "s/\x1B\[[0-9;]*[JKmsu]//g" >> /root/Vault_BugBounty/scripts/scripts_scopes_hackerone/qnt_empresas_dominios_h1.txt
+total_empresa_count_h1=$(echo -e "${RED}$date - Tamanho total de empresas coletadas na H1:${NC} $(cat /root/recons/companies.txt | wc -l)")
+total_dominio_count_h1=$(echo -e "${RED}$date - Tamanho total de Dominios/URL coletados na H1:${NC} $(cat /root/recons/scope/0_h1_completo/scope_completo.txt | wc -l)")
+total_URL_count_h1=$(echo -e "${RED}$date - Tamanho total de URL coletados na H1:${NC} $(cat /root/recons/scope/0_h1_completo/scope.txt | wc -l)")
+total_WILDCARD_count_h1=$(echo -e "${RED}$date - Tamanho total de WILDCARD coletados na H1:${NC} $(cat /root/recons/scope/0_h1_completo/wildcards.txt | wc -l)")
+
+echo -e "$total_empresa_count_h1\n$total_dominio_count_h1\n$total_URL_count_h1\n$total_WILDCARD_count_h1\n"
+echo -e "\n$total_empresa_count_h1\n$total_dominio_count_h1\n$total_URL_count_h1\n$total_WILDCARD_count_h1\n" | sed "s/\x1B\[[0-9;]*[JKmsu]//g" >> /root/Vault_BugBounty/scripts/scripts_scopes_hackerone/qnt_empresas_dominios_h1.txt
 echo -e "${YELLOW}========================================${NC}\n"
 
 echo -e "${GREEN}Reconhecimento concluído!${NC}"

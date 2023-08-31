@@ -61,6 +61,10 @@ Por padrão, o prefixo é CTRL+B.
 ##-- BBRF
 0 0 * * * ~/Vault_BugBounty/scripts/scripts_bbrf/hackerone-update-program-scopes.sh ; echo UPDATE PROGRAMAS H1 - BBRF - $(date)\ncat ~/Vault_BugBounty/scripts/scripts_bbrf/qnt_empresas_dominios_h1.txt | $HOME/go/bin/notify -silent -bulk >/dev/null 2>&1 >/dev/null 2>81
 
+~/Vault_BugBounty/scripts/scripts_scopes_hackerone/hackerone_program_api.sh ; echo UPDATE PROGRAMAS H1 - BBRF - $(date)\n$(cat ~/Vault_BugBounty/scripts/scripts_scopes_hackerone/qnt_empresas_dominios
+_h1.txt) | notify -silent -bulk >/dev/null 2>&1 >/dev/null 2>81
+
+
 ```
 
 

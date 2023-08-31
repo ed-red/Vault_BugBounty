@@ -12,6 +12,7 @@ BASE_PATH="/root/recons"
 
 # Lista de empresas
 COMPANIES_FILE="${BASE_PATH}/companies.txt"
+COMPANIES_AVULSOS_FILE="${BASE_PATH}/companies_avulsos.txt"
 
 # set vars
 GIT_ROOT=$(git rev-parse --show-toplevel)
@@ -25,14 +26,19 @@ get_base_name() {
 show_scope() {
     local company=$1
     local scope_file="${BASE_PATH}/scope/${company}/scope.txt"
-
-    if [[ -f $scope_file ]]; then
-        echo "${YELLOW}---------------------------------------------${RESET}"
-        echo "${GREEN}Escopo para ${RESET}${BLUE}${company}${RESET}:"
-        cat $scope_file
-        echo "${YELLOW}---------------------------------------------${RESET}"
+    
+    # Verifica se a empresa está no arquivo companies.txt ou companies_avulsos.txt
+    if grep -Fxq "$company" $COMPANIES_FILE || grep -Fxq "$company" $COMPANIES_AVULSOS_FILE; then
+        if [[ -f $scope_file ]]; then
+            echo "${YELLOW}---------------------------------------------${RESET}"
+            echo "${GREEN}Escopo para ${RESET}${BLUE}${company}${RESET}:"
+            cat $scope_file
+            echo "${YELLOW}---------------------------------------------${RESET}"
+        else
+            echo "${RED}Erro: Arquivo de escopo para ${BLUE}${company}${RESET}${RED} não encontrado.${RESET}"
+        fi
     else
-        echo "${RED}Erro: Arquivo de escopo para ${BLUE}${company}${RESET}${RED} não encontrado.${RESET}"
+        echo "${RED}${BLUE}${company}${RESET}${RED} não encontrado em ${COMPANIES_FILE} nem em ${COMPANIES_AVULSOS_FILE}.${RESET}"
     fi
 }
 
@@ -45,16 +51,17 @@ run_scan() {
     export scan_path=$SCAN_PATH
 
     mkdir -p $SCAN_PATH && cd $scan_path
+    cp "$roots_exist" "$scan_path/subs.txt"
     source /root/Vault_BugBounty/scripts/bot_scan_recon_vuln.sh
 }
 
 # Função para adicionar uma nova empresa e seu escopo
 add_new_company() {
     local company=$(get_base_name $1)
-    echo "$company" >> $COMPANIES_FILE
+    echo "$company" >> $COMPANIES_AVULSOS_FILE
     mkdir -p "${BASE_PATH}/scope/${company}"
-    echo "$1" > "${BASE_PATH}/scope/${company}/scope.txt"
-    echo "${GREEN}Empresa ${BLUE}${company}${RESET}${GREEN} adicionada com sucesso!${RESET}"
+    echo "$1" >> "${BASE_PATH}/scope/${company}/scope.txt"
+    echo "${GREEN}Empresa ${BLUE}${company}${RESET}${GREEN} adicionada com sucesso ao arquivo avulso!${RESET}"
 }
 
 # Função para adicionar mais domínios ao escopo de uma empresa
@@ -91,8 +98,11 @@ for arg in "$@"; do
 done
 
 # Se o primeiro argumento for "all", carregue todas as empresas do companies.txt
+# Se o primeiro argumento for "all", carregue todas as empresas do companies.txt E companies_avulsos.txt
 if [[ "${ADDR[0]}" == "all" ]]; then
     readarray -t ADDR < "$COMPANIES_FILE"
+    readarray -t AVULSOS < "$COMPANIES_AVULSOS_FILE"
+    ADDR=("${ADDR[@]}" "${AVULSOS[@]}")
 fi
 
 # Mostrando as empresas excluídas
@@ -107,15 +117,15 @@ for domain in "${ADDR[@]}"; do
         continue
     fi
 
-    domain=$(echo $domain | xargs)
+    domain=$(echo "$domain" | xargs)
     company=$(get_base_name $domain)
 
-    # Verifica se a empresa está na lista de companies.txt
-    if grep -Fxq "$company" $COMPANIES_FILE; then
+    # Verifica se a empresa está na lista de companies.txt ou companies_avulsos.txt
+    if grep -Fxq "$company" $COMPANIES_FILE || grep -Fxq "$company" $COMPANIES_AVULSOS_FILE; then
         show_scope $company
     else
-        echo "${RED}${BLUE}${company}${RESET}${RED} não encontrado em ${COMPANIES_FILE}.${RESET}"
-        read -p "${YELLOW}Deseja adicionar ${BLUE}${company}${RESET}${YELLOW} ao companies.txt e definir ${RESET}${BLUE}${domain}${RESET}${YELLOW} como seu escopo inicial? (s/n) ${RESET}" choice
+        echo "${RED}${BLUE}${company}${RESET}${RED} não encontrado em ${COMPANIES_FILE} nem em ${COMPANIES_AVULSOS_FILE}.${RESET}"
+        read -p "${YELLOW}Deseja adicionar ${BLUE}${company}${RESET}${YELLOW} ao arquivo 'companies_avulsos.txt' e definir ${RESET}${BLUE}${domain}${RESET}${YELLOW} como seu escopo inicial? (s/n) ${RESET}" choice
 
         case $choice in
             [Ss]* ) 
@@ -136,7 +146,7 @@ case $choice in
                 continue
             fi
 
-            domain=$(echo $domain | xargs)
+            domain=$(echo "$domain" | xargs)
             run_scan $domain
         done;;
     [Nn]* ) 
