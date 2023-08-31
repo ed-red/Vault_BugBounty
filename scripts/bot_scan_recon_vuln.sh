@@ -204,7 +204,6 @@ vuln_scan() {
         echo "O arquivo 'xssvibes_endpoint_vulns.txt' não existe."
     fi
 
-
     # cat "$scan_path/resolved.txt" | nuclei -es info -o "$scan_path/nuclei.txt" | notify -silent -bulk
 
     echo "${green}Verificação de vulnerabilidades concluída!${reset}"
