@@ -36,30 +36,33 @@ apt install -y git \
                 shellcheck \
                 htop
 
-echo "${yellow}[+] Instalando Ble.sh ... ${reset}"
-# Fonte: https://github.com/akinomyoga/ble.sh
+## --->>> Adicionar uma pergunta antes de modificar:
+cp $git_root/tools/bashrc ~/.bashrc
 
-cd $HOME
-git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
-make -C ble.sh install PREFIX=~/.local
-# Verifica se a linha já está no .bashrc
-if grep -Fxq "source ~/.local/share/blesh/ble.sh" ~/.bashrc
-then
-    echo "ble.sh já está configurado no .bashrc."
-else
-    echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc
-fi
-sleep 2
+# echo "${yellow}[+] Instalando Ble.sh ... ${reset}"
+# # Fonte: https://github.com/akinomyoga/ble.sh
 
-# Definindo parametros de customização do ble.sh
-echo "A instalação foi concluída. Por favor, execute os seguintes comandos para concluir a configuração:"
-## ble-face >> Muda a cor dos highlight:
-# ble-face auto_complete=bg=254,fg=238
-echo "ble-face auto_complete=fg=gray"
-echo "ble-face region_insert=fg=238,bg=254"
-## remove as cores dos highlights, = ou =1 para ativar
-echo "bleopt highlight_syntax="
-## Compartilha o historico dos comandos com outras sessões
-echo "bleopt history_share=1"
+# cd $HOME
+# git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
+# make -C ble.sh install PREFIX=~/.local
+# # Verifica se a linha já está no .bashrc
+# if grep -Fxq "source ~/.local/share/blesh/ble.sh" ~/.bashrc
+# then
+#     echo "ble.sh já está configurado no .bashrc."
+# else
+#     echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc
+# fi
+# sleep 2
 
-echo "${yellow}[+] Instalando Bash.it ... ${reset}"
+# # Definindo parametros de customização do ble.sh
+# echo "A instalação foi concluída. Por favor, execute os seguintes comandos para concluir a configuração:"
+# ## ble-face >> Muda a cor dos highlight:
+# # ble-face auto_complete=bg=254,fg=238
+# echo "ble-face auto_complete=fg=gray"
+# echo "ble-face region_insert=fg=238,bg=254"
+# ## remove as cores dos highlights, = ou =1 para ativar
+# echo "bleopt highlight_syntax="
+# ## Compartilha o historico dos comandos com outras sessões
+# echo "bleopt history_share=1"
+
+# echo "${yellow}[+] Instalando Bash.it ... ${reset}"
