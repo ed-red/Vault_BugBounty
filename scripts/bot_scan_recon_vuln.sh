@@ -22,7 +22,7 @@ reset=`tput sgr0`
 
 echo "${blue}Script iniciou em - $(date +%d-%m-%Y-%H:%M:%S)${reset}"
 
-SUBDOM_LIST="$GIT_ROOT/wordlists/best-dns-wordlist.txt"
+SUBDOM_LIST="$GIT_ROOT/wordlists/assetnote.io_best-dns-wordlist.txt"
 RESOLVERS="$GIT_ROOT/wordlists/resolvers/resolvers.txt"
 
 echo $GIT_ROOT
