@@ -12,6 +12,12 @@ apitoken=$HACKERONE_API_KEY
 next="https://api.hackerone.com/v1/hackers/programs?page%5Bsize%5D=100"
 deleted_companies=""
 date="$(date +%d-%m-%Y-%H:%M:%S)"
+today="$(date +%d-%m-%Y)"
+yesterday=$(date -d "yesterday" +%d-%m-%Y)
+
+# Variaveis - Pastas
+scope_completo_por_dia="/root/recons/scope/0_h1_completo/scope_completo_por_dia"
+new_urls_por_dia="/root/recons/scope/0_h1_completo/new_urls_por_dia"
 
 echo -e "\n${YELLOW}========================================${NC}"
 echo -e "${GREEN}Iniciando o reconhecimento...${NC}"
@@ -27,10 +33,19 @@ if [ -s "/root/recons/scope.txt" ]; then
   rm -rf /root/recons/scope.txt
 fi
 
-if [ -d "/root/recons/scope/0_h1_completo" ]; then
-  rm -rf "/root/recons/scope/0_h1_completo"
+if [ -s "/root/recons/scope/0_h1_completo/scope_completo.txt" ]; then
+  rm -rf /root/recons/scope/0_h1_completo/$today"_scope_completo.txt"
+  rm -rf /root/recons/scope/0_h1_completo/scope_completo.txt
+  rm -rf /root/recons/scope/0_h1_completo/scope.txt
+  rm -rf /root/recons/scope/0_h1_completo/wildcards.txt
 fi
-mkdir -p "/root/recons/scope/0_h1_completo"
+
+if [ -s "/root/recons/scope/0_h1_completo/wildcards.txt" ]; then
+  rm -rf /root/recons/scope/0_h1_completo/wildcards.txt
+fi
+
+mkdir -p "$scope_completo_por_dia"
+mkdir -p "$new_urls_por_dia"
 
 # Loop through HackerOne API
 while [ "$next" ]; do
@@ -73,11 +88,14 @@ while [ "$next" ]; do
     echo -e "${BLUE}Escopo WILDCARD:${NC}\n$wildcard_scope"
     echo -e "${YELLOW}----------------------------------------${NC}\n"
 
-    echo -e "$url_scope\n$wildcard_scope" | sed '/^$/d' | sed 's#/.*##' >> /root/recons/scope/0_h1_completo/scope_completo.txt | anew
-    echo -e "$url_scope" | sed '/^$/d' | sed 's#/.*##' >> /root/recons/scope/0_h1_completo/scope.txt | anew
-    echo -e "$wildcard_scope" | sed '/^$/d' >> /root/recons/scope/0_h1_completo/wildcards.txt | anew
+    echo -e "$url_scope\n$wildcard_scope" | sed '/^$/d' | sed 's#/.*##' >> $scope_completo_por_dia/$today"_scope_completo.txt"
+    echo -e "$url_scope\n$wildcard_scope" | sed '/^$/d' | sed 's#/.*##' >> /root/recons/scope/0_h1_completo/scope_completo.txt
+    echo -e "$url_scope" | sed '/^$/d' | sed 's#/.*##' >> /root/recons/scope/0_h1_completo/scope.txt
+    echo -e "$wildcard_scope" | sed '/^$/d' >> /root/recons/scope/0_h1_completo/wildcards.txt
   done
 done
+
+cat $scope_completo_por_dia/$today"_scope_completo.txt" | anew -d $scope_completo_por_dia/$yesterday"_scope_completo.txt" >> $new_urls_por_dia/$today"_new_urls_scope_completo.txt"
 
 total_empresa_count_h1=$(echo -e "${RED}$date - Tamanho total de empresas coletadas na H1:${NC} $(cat /root/recons/companies.txt | wc -l)")
 total_dominio_count_h1=$(echo -e "${RED}$date - Tamanho total de Dominios/URL coletados na H1:${NC} $(cat /root/recons/scope/0_h1_completo/scope_completo.txt | wc -l)")
