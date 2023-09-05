@@ -33,6 +33,9 @@ if [ -s "/root/recons/scope.txt" ]; then
   rm -rf /root/recons/scope.txt
 fi
 
+rm -rf /root/recons/scope/0_h1_completo/scope.txt
+rm -rf /root/recons/scope/0_h1_completo/wildcards.txt
+
 if [ -s "/root/recons/scope/0_h1_completo/scope_completo.txt" ]; then
   rm -rf /root/recons/scope/0_h1_completo/$today"_scope_completo.txt"
   rm -rf /root/recons/scope/0_h1_completo/scope_completo.txt
@@ -90,7 +93,7 @@ while [ "$next" ]; do
 
     echo -e "$url_scope\n$wildcard_scope" | sed '/^$/d' | sed 's#/.*##' >> $scope_completo_por_dia/$today"_scope_completo.txt"
     echo -e "$url_scope\n$wildcard_scope" | sed '/^$/d' | sed 's#/.*##' >> /root/recons/scope/0_h1_completo/scope_completo.txt
-    echo -e "$url_scope" | sed '/^$/d' | sed 's#/.*##' >> /root/recons/scope/0_h1_completo/scope.txt
+    echo -e "$wildcard_scope" | sed '/^$/d' | sed 's#/.*##' >> /root/recons/scope/0_h1_completo/scope.txt
     echo -e "$wildcard_scope" | sed '/^$/d' >> /root/recons/scope/0_h1_completo/wildcards.txt
   done
 done
@@ -101,9 +104,10 @@ total_empresa_count_h1=$(echo -e "${RED}$date - Tamanho total de empresas coleta
 total_dominio_count_h1=$(echo -e "${RED}$date - Tamanho total de Dominios/URL coletados na H1:${NC} $(cat /root/recons/scope/0_h1_completo/scope_completo.txt | wc -l)")
 total_URL_count_h1=$(echo -e "${RED}$date - Tamanho total de URL coletados na H1:${NC} $(cat /root/recons/scope/0_h1_completo/scope.txt | wc -l)")
 total_WILDCARD_count_h1=$(echo -e "${RED}$date - Tamanho total de WILDCARD coletados na H1:${NC} $(cat /root/recons/scope/0_h1_completo/wildcards.txt | wc -l)")
+total_Diferenca_count_h1=$(echo -e "${RED}$date - Tamanho total da diferença de $yesterday com $today coletados na H1:${NC} $(cat $scope_completo_por_dia/$today"_scope_completo.txt" | anew -d $scope_completo_por_dia/$yesterday"_scope_completo.txt" >> $new_urls_por_dia/$today"_new_urls_scope_completo.txt" | wc -l)")
 
-echo -e "$total_empresa_count_h1\n$total_dominio_count_h1\n$total_URL_count_h1\n$total_WILDCARD_count_h1\n"
-echo -e "\n$total_empresa_count_h1\n$total_dominio_count_h1\n$total_URL_count_h1\n$total_WILDCARD_count_h1\n" | sed "s/\x1B\[[0-9;]*[JKmsu]//g" >> /root/Vault_BugBounty/scripts/scripts_scopes_hackerone/qnt_empresas_dominios_h1.txt
+echo -e "$total_empresa_count_h1\n$total_dominio_count_h1\n$total_URL_count_h1\n$total_WILDCARD_count_h1\n$total_Diferenca_count_h1\n" | notify -silent -bulk
+echo -e "\n$total_empresa_count_h1\n$total_dominio_count_h1\n$total_URL_count_h1\n$total_WILDCARD_count_h1\n$total_Diferenca_count_h1\n" | sed "s/\x1B\[[0-9;]*[JKmsu]//g" >> /root/Vault_BugBounty/scripts/scripts_scopes_hackerone/qnt_empresas_dominios_h1.txt
 echo -e "${YELLOW}========================================${NC}\n"
 
 echo -e "${GREEN}Reconhecimento concluído!${NC}"

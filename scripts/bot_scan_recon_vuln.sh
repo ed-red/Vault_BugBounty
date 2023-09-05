@@ -1,5 +1,5 @@
 #!/bin/bash
-# set -x
+set -x
 START_TIME=$(date +%s)
 
 #-- variaveis
@@ -35,11 +35,20 @@ echo $roots_exist
 # Menu principal
 menu() {
     echo "${yellow}Escolha uma opção:${reset}"
-    echo "1. Enumeração de subdomínios"
-    echo "2. Verificação de vulnerabilidades"
-    echo "3. Enumeração de subdomínios e Verificação de vulnerabilidades"
-    echo "4. Sair"
+    echo "1. Enumeração /Resolved / Vulnerabilidades"
+    echo "2. Enumeração de subdomínios"
+    echo "3. Executando resolver URLs buscadas + Verificação de vulnerabilidades"
+    echo "4. Verificação de vulnerabilidades"
+    echo "5. Sair"
     read -p "Selecione uma opção [1-4]: " opt
+}
+
+# Função para verificar qual processo foi concluído
+check_complete() {
+    task_name=$1
+    count_subs=$2
+    funcion_text=$3
+    echo "${green}A tarefa '$task_name' foi concluída às $(date '+%H:%M:%S') e pegou $count_subs $funcion_text.${reset}"
 }
 
 subdomain_enum() {
@@ -63,16 +72,10 @@ subdomain_enum() {
     # awk '{print "http://" $0; print "https://" $0}' $roots_exist | katana -f fqdn | anew subs.txt
 
     # Pre-defina o número de processos paralelos
-    PROCESSES=100
+    PROCESSES=200
 
     echo "${yellow}Iniciando a enumeração de subdomínios...${reset}"
 
-    # Função para verificar qual processo foi concluído
-    check_complete() {
-        task_name=$1
-        count_subs=$2
-        echo "${green}A tarefa '$task_name' foi concluída às $(date '+%H:%M:%S') e pegou $count_subs novos subs.${reset}"
-    }
 
     # Função para o amass
     # amass_func() {
@@ -85,24 +88,27 @@ subdomain_enum() {
     # export -f amass_func
     export scan_path
 
-    # Execute todos os comandos em paralelo
-    cat "$roots_exist" | xargs -I {} sh -c "amass enum -silent -d {} -dir $scan_path/amass-outputs && amass db -names -d {} | anew subs.txt" && check_complete "Amass" "$(wc -l subs.txt)" &
-    echo "${green}Amass em andamento...${reset}"
+    # # Execute todos os comandos em paralelo
+    # cat "$roots_exist" | xargs -I {} sh -c "amass enum -silent -d {} -dir $scan_path/amass-outputs && amass db -names -d {} | anew subs.txt" && check_complete "Amass" "$(wc -l subs.txt)" &
+    # echo "${green}Amass em andamento...${reset}"
 
-    (cat "$roots_exist" | parallel -j $PROCESSES --pipe haktrails subdomains | anew subs.txt && check_complete "Haktrails" "$(wc -l subs.txt)") &
-    echo "${green}Haktrails em andamento...${reset}"
+    # (cat "$roots_exist" | parallel -j $PROCESSES --pipe haktrails subdomains | anew subs.txt && check_complete "Haktrails" "$(wc -l subs.txt)") &
+    # echo "${green}Haktrails em andamento...${reset}"
 
-    (cat "$roots_exist" | parallel -j $PROCESSES --pipe subfinder -silent | anew subs.txt && check_complete "Subfinder" "$(wc -l subs.txt)") &
-    echo "${green}Subfinder em andamento...${reset}"
+    # (cat "$roots_exist" | parallel -j $PROCESSES --pipe subfinder -silent | anew subs.txt && check_complete "Subfinder" "$(wc -l subs.txt)") &
+    # echo "${green}Subfinder em andamento...${reset}"
 
-    # (cat "$roots_exist" | parallel -j $PROCESSES --pipe shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" -silent | anew subs.txt && check_complete "Shuffledns" "$(wc -l subs.txt)") &
-    echo "${green}Shuffledns em andamento...${reset}"
+    # # (cat "$roots_exist" | parallel -j $PROCESSES --pipe shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" -silent | anew subs.txt && check_complete "Shuffledns" "$(wc -l subs.txt)") &
+    # # echo "${green}Shuffledns em andamento...${reset}"
 
-    (cat "$roots_exist" | parallel -j $PROCESSES --pipe "awk '{print \"http://\" \$0; print \"https://\" \$0}'" | katana -f fqdn -silent | anew subs.txt && check_complete "Katana Recon subs" "$(wc -l subs.txt)") &
-    echo "${green}Katana Recon subs em andamento...${reset}"
+    # (cat "$roots_exist" | parallel -j $PROCESSES --pipe "awk '{print \"http://\" \$0; print \"https://\" \$0}'" | katana -f fqdn -silent | anew subs.txt && check_complete "Katana Recon subs" "$(wc -l subs.txt)") &
+    # echo "${green}Katana Recon subs em andamento...${reset}"
 
-    (cat "$roots_exist" | parallel -j $PROCESSES --pipe alterx -silent | anew subs.txt && check_complete "Alterx" "$(wc -l subs.txt)") &
+    (cat "$roots_exist" | parallel -j $PROCESSES --pipe alterx -l -silent | anew subs.txt && check_complete "Alterx" "$(wc -l subs.txt)") &
     echo "${green}Alterx em andamento...${reset}"
+
+    (cat "$roots_exist" | parallel -j $PROCESSES chaos -d | anew subs.txt && check_complete "Chaos" "$(wc -l subs.txt)") &
+    echo "${green}Chaos em andamento...${reset}"
     # Aguarde todos os comandos em segundo plano serem concluídos
     wait
 
@@ -133,9 +139,17 @@ subdomain_enum() {
     echo "${green}Tempo total de execução: $ELAPSED_TIME segundos${reset}"
     echo "---------------------------------------------"
 
+    echo "${green}Enumeração de subdomínios concluída!${reset}"
+}
+
+resolved_verified() {
     echo "---------------------------------------------"
     echo "${yellow}[+] DNS Resolution - Resolve Discovered Subdomains...${reset}"
-    puredns resolve "$scan_path/subs.txt" -r "$RESOLVERS" -w "$scan_path/subs_resolved.txt" | wc -l
+    
+    (cat "$scan_path/subs.txt" | parallel -j $PROCESSES --pipe puredns resolve -r "$RESOLVERS" | anew $scan_path/subs_resolved.txt && check_complete "Puredns" "$(wc -l $scan_path/subs_resolved.txt)") &
+    echo "${green}Alterx em andamento...${reset}"
+    
+    # puredns resolve "$scan_path/subs.txt" -r "$RESOLVERS" -w "$scan_path/subs_resolved.txt" | wc -l
     cat "$scan_path/subs.txt" | httpx -silent -o "$scan_path/subs_resolved.txt"
     dnsx -l "$scan_path/subs_resolved.txt" -json -o "$scan_path/dns.json" | jq -r '.a?[]?' | anew "$scan_path/ips.txt" | wc -l
     echo "---------------------------------------------"
@@ -159,33 +173,14 @@ subdomain_enum() {
     echo "${yellow}[+] Javascript Pulling...${reset}"
     cat "$scan_path/crawl.txt" | grep "\\.js" | httpx -sr -srd js
     echo "---------------------------------------------"
-
-    echo "${green}Enumeração de subdomínios concluída!${reset}"
 }
 
-vuln_scan() {
-    # Seu código de verificação de vulnerabilidade vai aqui...
-    # paramspider -l $scan_path/subs_resolved.txt -s | nuclei -t "/root/Tools/fuzzing-templates" -rl 05 | notify -silent -bulk
-
+params_pulling(){
     echo "---------------------------------------------"
     echo "${yellow}[+] Params Pulling...${reset}"
     paramspider -l $scan_path/subs_resolved.txt -s | anew $scan_path/paramspider.txt
-    awk '{print "http://" $0; print "https://" $0}' $scan_path/subs.txt | katana | anew $scan_path/paramspider.txt
+    awk '{print "http://" $0; print "https://" $0}' $scan_path/subs_resolved.txt | katana | anew $scan_path/paramspider.txt
     mkdir $scan_path/params
-    # cat "$scan_path/paramspider.txt" | gf debug_logic | tee -a $scan_path/params/debug_logic.txt >> $scan_path/params/params.txt
-    # cat "$scan_path/paramspider.txt" | gf idor | tee -a $scan_path/params/idor.txt >> $scan_path/params/params.txt
-    # cat "$scan_path/paramspider.txt" | gf img-traversal | tee -a $scan_path/params/img-traversal.txt >> $scan_path/params/params.txt
-    # cat "$scan_path/paramspider.txt" | gf interestingEXT | tee -a $scan_path/params/interestingEXT.txt >> $scan_path/params/params.txt
-    # cat "$scan_path/paramspider.txt" | gf interestingparams | tee -a $scan_path/params/interestingparams.txt >> $scan_path/params/params.txt
-    # cat "$scan_path/paramspider.txt" | gf interestingsubs | tee -a $scan_path/params/interestingsubs.txt >> $scan_path/params/params.txt
-    # # cat "$scan_path/paramspider.txt" | gf jsvar | tee -a $scan_path/params/jsvar.txt
-    # cat "$scan_path/paramspider.txt" | gf lfi | tee -a $scan_path/params/lfi.txt >> $scan_path/params/params.txt
-    # cat "$scan_path/paramspider.txt" | gf rce | tee -a $scan_path/params/rce.txt >> $scan_path/params/params.txt
-    # cat "$scan_path/paramspider.txt" | gf redirect | tee -a $scan_path/params/redirect.txt >> $scan_path/params/params.txt
-    # cat "$scan_path/paramspider.txt" | gf sqli | tee -a $scan_path/params/sqli.txt >> $scan_path/params/params.txt
-    # cat "$scan_path/paramspider.txt" | gf ssrf | tee -a $scan_path/params/ssfr.txt >> $scan_path/params/params.txt
-    # cat "$scan_path/paramspider.txt" | gf ssti | tee -a $scan_path/params/ssti.txt >> $scan_path/params/params.txt
-    # cat "$scan_path/paramspider.txt" | gf xss | tee -a $scan_path/params/xss.txt >> $scan_path/params/params.txt
 
     # Declare an array with the list of patterns you want to search for using gf
     declare -a patterns=("debug_logic" "idor" "img-traversal" "interestingEXT" "interestingparams" "interestingsubs" "lfi" "rce" "redirect" "sqli" "ssrf" "ssti" "xss")
@@ -195,15 +190,21 @@ vuln_scan() {
         echo $pattern
         cat "$scan_path/paramspider.txt" | gf $pattern | tee -a $scan_path/params/$pattern.txt >> $scan_path/params/params.txt
     done
-
     echo "---------------------------------------------"
+}
 
-    # cat "$scan_path/subs_resolved.txt" | waybackurls | sort -u >> $scan_path/waybackdata | gf ssrf | tee -a $scan_path/ssfrparams.txt
+vuln_scan() {
+    echo "---------------------------------------------"
+    echo "${yellow}[+] Executando verificação de vulnerabilidades...${reset}"
+    # Seu código de verificação de vulnerabilidade vai aqui...
+    # paramspider -l $scan_path/subs_resolved.txt -s | nuclei -t "/root/Tools/fuzzing-templates" -rl 05 | notify -silent -bulk
+
+    # cat "$scan_path/subs_resolved.txt" | waybackurls | sort -u >> $scan_path/waybackdata | gf ssrf | tee -a $scan_path/ssrfparams.txt
 
     # paramspider -l "$scan_path/subs.txt"
     # nuclei -l $scan_path/paramspider_output.txt -t "/root/Tools/fuzzing-templates" -rl 05
 
-    # nuclei -l $scan_path/params/ssfr.txt -t "/root/Tools/fuzzing-templates/ssrf" -rl 05
+    # nuclei -l $scan_path/params/ssrf.txt -t "/root/Tools/fuzzing-templates/ssrf" -rl 05
     
     cat $scan_path/paramspider.txt | nuclei -t "github/redmc_custom_templates_nuclei-ed-red/fuzzing/xff-403-bypass.yaml" -rl 50 -o nuclei_fuzzing_xff-403-bypass.txt | notify -silent -bulk
     cat $scan_path/paramspider.txt | nuclei -es info -t "/root/Tools/fuzzing-templates" -rl 50 -o nuclei_fuzzing-templates.txt | notify -silent -bulk
@@ -222,6 +223,7 @@ vuln_scan() {
     # cat "$scan_path/subs_resolved.txt" | nuclei -es info -o "$scan_path/nuclei.txt" | notify -silent -bulk
 
     echo "${green}Verificação de vulnerabilidades concluída!${reset}"
+    echo "------------------------------------------------------------"
 }
 
 while true; do
@@ -229,17 +231,28 @@ while true; do
     case $opt in
         1)
             subdomain_enum
+            resolved_verified
+            params_pulling
+            vuln_scan
+            exit 0
             ;;
         2)
-            vuln_scan
+            subdomain_enum
+            resolved_verified
+            exit 0
             ;;
         3)
-            echo "${yellow}[+] Executando enumeração de subdomínios...${reset}"
-            subdomain_enum
-            echo "${yellow}[+] Executando verificação de vulnerabilidades...${reset}"
+            resolved_verified
+            params_pulling
             vuln_scan
+            exit 0
             ;;
         4)
+            params_pulling
+            vuln_scan
+            exit 0
+            ;;
+        5)
             echo "${blue}Saindo...${reset}"
             exit 0
             ;;

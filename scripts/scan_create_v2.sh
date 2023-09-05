@@ -19,12 +19,12 @@ GIT_ROOT=$(git rev-parse --show-toplevel)
 
 # Função para obter o nome base do domínio (sem TLD)
 get_base_name() {
-    echo $1 | cut -f1 -d'.'
+    echo $1 | cut -f1 -d'.' | tr 'A-Z' 'a-z'
 }
 
 # Função para mostrar o escopo de uma empresa
 show_scope() {
-    local company=$1
+    local company=$(echo "$1" | tr 'A-Z' 'a-z')
     local scope_file="${BASE_PATH}/scope/${company}/scope.txt"
     
     # Verifica se a empresa está no arquivo companies.txt ou companies_avulsos.txt

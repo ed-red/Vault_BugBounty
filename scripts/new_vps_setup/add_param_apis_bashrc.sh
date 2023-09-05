@@ -12,6 +12,7 @@
 # NETLAS_API_KEY=xxx
 # CRIMINALIP_API_KEY=xxx
 # PUBLICWWW_API_KEY=xxx
+# CHAOS_KEY=
 
 #--- seta cores
 black=`tput setaf 0`
