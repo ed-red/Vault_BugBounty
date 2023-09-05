@@ -51,7 +51,8 @@ run_scan() {
     export scan_path=$SCAN_PATH
 
     mkdir -p $SCAN_PATH && cd $scan_path
-    cp "$roots_exist" "$scan_path/subs.txt"
+    cp "$roots_exist" "$scan_path/scope.txt"
+    # cat "$roots_exist" | anew "$scan_path/subs.txt"
     source /root/Vault_BugBounty/scripts/bot_scan_recon_vuln.sh
 }
 
