@@ -117,3 +117,44 @@ https://api.hackerone.com/v1/hacketmuxrs/programs/yuga_labs
             1. Vai usar o seguinte comando para listar apenas os wildcards `bbrf scope in -p <nome do programa> --wildcard`
 
 
+## Trabalhando com Chunks nos Scripts:
+```bash
+split -l 10000 subs.txt subs/subs_chunk_
+
+ls subs/subs_chunk_* | parallel -j 50 "cat {} | httpx -silent | anew -q subs_resolved.txt"
+ls subs/subs_chunks/subs_chunk_* | parallel -j 8 "httpx -silent -o subs/subs_httpx_output/{/.}.httpx_output < {}"
+
+time ls subs/subs_chunks/subs_chunk_* | pv -l | parallel --progress --joblog subs/joblog --results subs/results -j 30 "httpx -silent -o subs/subs_httpx_output/{/.}.httpx_output < {}"
+
+time ls subs/subs_chunks/subs_chunk_* | pv -l | parallel --progress --joblog nuclei/joblog --results nuclei/results -j 30 "nuclei -silent -o vulns/nuclei/{/.}.nuclei_output < {}"
+
+time ls subs/subs_chunks/subs_chunk_* | pv -l | parallel --progress --joblog vulns/nuclei/joblog --results vulns/nuclei/results -j 10 "nuclei -silent -o vulns/nuclei/{/.}.nuclei_output < {}"
+
+find subs/subs_httpx_output/ -type f -name 'subs_chunk_*' | xargs cat > parallel_httpx_combined.txt
+
+find vulns -type f -name 'subs_chunk_*' | xargs cat > nuclei_vulns_combined.txt
+
+
+```
+
+## Alias para o Bashrc
+```bash
+
+# Alias
+searchscope() {
+    grep -ril "$1" ~/recons/scope/
+}
+
+reconjs(){
+gau -subs $1 |grep -iE '\.js'|grep -iEv '(\.jsp|\.json)' >> js.txt ; cat js.txt | anti-burl | awk '{print $4}' | sort -u >> AliveJs.txt
+}
+
+cert(){
+curl -s "[https://crt.sh/?q=%.$1&output=json](https://crt.sh/?q=%25.$1&output=json)" | jq -r '.[].name_value' | sed 's/\*\.//g' | anew
+}
+
+anubis(){
+curl -s "[https://jldc.me/anubis/subdomains/$1](https://jldc.me/anubis/subdomains/$1)" | grep -Po "((http|https):\/\/)?(([\w.-]*)\.([\w]*)\.([A-z]))\w+" | anew
+}
+
+```
