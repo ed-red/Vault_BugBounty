@@ -62,4 +62,13 @@ xargs -P 500 -a dominios.txt -I@ sh -c 'nc -w1 -z -v @ 443 2>/dev/null && echo @
 echo testphp.vulnweb.com | httpx -silent | hakrawler -subs | grep "=" | qsreplace '"><svg onload=confirm(1)>' | airixss -payload "confirm(1)" | egrep -v 'Not'
 
 
+split -l 10000 subs.txt subs/subs_chunk_
+
+ls subs/subs_chunk_* | parallel -j 50 "cat {} | httpx -silent | anew -q subs_resolved.txt"
+ls subs/subs_chunks/subs_chunk_* | parallel -j 8 "httpx -silent -o subs/subs_httpx_output/{/.}.httpx_output < {}"
+
+time ls subs/subs_chunks/subs_chunk_* | pv -l | parallel --progress --joblog subs/joblog --results subs/results -j 30 "httpx -silent -o subs/subs_httpx_output/{/.}.httpx_output < {}"
+
+time ls subs/subs_chunks/subs_chunk_* | pv -l | parallel --progress --joblog subs/joblog --results subs/results -j 30 "nuclei -silent -o vulns/nuclei/{/.}.nuclei_output < {}"
+
 ```
