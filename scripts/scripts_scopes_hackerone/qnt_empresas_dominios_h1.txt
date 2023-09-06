@@ -1634,3 +1634,210 @@ fireblocks_mpc
 06-09-2023-00:00:06 - Tamanho total de WILDCARD coletados na H1: 0
 06-09-2023-00:00:06 - Tamanho total da diferença de 05-09-2023 com 06-09-2023 coletados na H1: 0
 
+
+06-09-2023-15:17:40 - Tamanho total de empresas coletadas na H1: 208
+06-09-2023-15:17:40 - Tamanho total de Dominios/URL coletados na H1: 2032
+06-09-2023-15:17:40 - Tamanho total de URL coletados na H1: 368
+06-09-2023-15:17:40 - Tamanho total de WILDCARD coletados na H1: 368
+06-09-2023-15:17:40 - Tamanho total da diferença de 05-09-2023 com 06-09-2023 coletados na H1: 0
+
+06-09-2023-15:17:40 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+06-09-2023-15:23:43 - Tamanho total de empresas coletadas na H1: 208
+06-09-2023-15:23:43 - Tamanho total de Dominios/URL coletados na H1: 2032
+06-09-2023-15:23:43 - Tamanho total de URL coletados na H1: 368
+06-09-2023-15:23:43 - Tamanho total de WILDCARD coletados na H1: 368
+06-09-2023-15:23:43 - Tamanho total da diferença de 05-09-2023 com 06-09-2023 coletados na H1: 0
+
+06-09-2023-15:23:43 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+06-09-2023-15:32:41 - Tamanho total de empresas coletadas na H1: 208
+06-09-2023-15:32:41 - Tamanho total de Dominios/URL coletados na H1: 2032
+06-09-2023-15:32:41 - Tamanho total de URL coletados na H1: 1664
+06-09-2023-15:32:41 - Tamanho total de WILDCARD coletados na H1: 368
+06-09-2023-15:32:41 - Tamanho total da diferença de 05-09-2023 com 06-09-2023 coletados na H1: 0
+
+06-09-2023-15:32:41 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
