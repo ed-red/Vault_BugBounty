@@ -200,11 +200,10 @@ params_pulling(){
     paramspider -l $scan_path/subs_resolved.txt -s | anew $scan_path/params/all_params.txt
     
     awk '{print "http://" $0; print "https://" $0}' $scan_path/subs_resolved.txt | katana | anew $scan_path/params/all_params.txt
+    
     mkdir $scan_path/params
-
     # Declare an array with the list of patterns you want to search for using gf
     declare -a patterns=("debug_logic" "idor" "img-traversal" "interestingEXT" "interestingparams" "interestingsubs" "lfi" "rce" "redirect" "sqli" "ssrf" "ssti" "xss")
-
     # Iterate over each pattern in the patterns array
     for pattern in "${patterns[@]}"; do
         echo $pattern

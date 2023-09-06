@@ -69,6 +69,7 @@ ls subs/subs_chunks/subs_chunk_* | parallel -j 8 "httpx -silent -o subs/subs_htt
 
 time ls subs/subs_chunks/subs_chunk_* | pv -l | parallel --progress --joblog subs/joblog --results subs/results -j 30 "httpx -silent -o subs/subs_httpx_output/{/.}.httpx_output < {}"
 
-time ls subs/subs_chunks/subs_chunk_* | pv -l | parallel --progress --joblog subs/joblog --results subs/results -j 30 "nuclei -silent -o vulns/nuclei/{/.}.nuclei_output < {}"
+time ls subs/subs_chunks/subs_chunk_* | pv -l | parallel --progress --joblog nuclei/joblog --results nuclei/results -j 30 "nuclei -silent -o vulns/nuclei/{/.}.nuclei_output < {}"
 
+time ls subs/subs_chunks/subs_chunk_* | pv -l | parallel --progress --joblog vulns/nuclei/joblog --results vulns/nuclei/results -j 10 "nuclei -silent -o vulns/nuclei/{/.}.nuclei_output < {}"
 ```
