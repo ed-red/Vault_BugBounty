@@ -153,6 +153,15 @@ export ZOOMEYE_API_KEY=
 export NETLAS_API_KEY=
 export CRIMINALIP_API_KEY=
 export PUBLICWWW_API_KEY=
+
 export H1NAME=
 export HACKERONE_API_KEY=
 
+# Alias
+searchscope() {
+    grep -ril "$1" ~/recons/scope/
+}
+
+h(){
+    history | grep $1
+}

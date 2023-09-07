@@ -1841,3 +1841,10 @@ inditex
 
 =================================================================
 
+
+06-09-2023-18:00:01 - Total de Empresas coletadas na H1: 0
+06-09-2023-18:00:01 - Total de Dominios/URL coletados na H1: 0
+06-09-2023-18:00:01 - Total de URL coletados na H1: 1664
+06-09-2023-18:00:01 - Total de WILDCARD coletados na H1: 0
+06-09-2023-18:00:01 - Total da diferença de 05-09-2023 com 06-09-2023 coletados na H1: 0
+

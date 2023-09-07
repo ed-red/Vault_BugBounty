@@ -2,6 +2,7 @@
 ```bash
 xargs -P 500 -a dominios.txt -I@ sh -c 'nc -w1 -z -v @ 443 2>/dev/null && echo @' | xargs -I@ -P10 sh -c './gospider -a -s "http://@" -d 2 | grep -Eo "(http|https)://[^/\"].*\.js+" | sed "s#\] \- #\n#g" | ./unew'
 
+~/Tools/CORStest/corstest.py scope.txt | grep -v 'Error:' | grep -v 'Not vulnerable:' 
 
 ```
 
