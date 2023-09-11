@@ -1869,3 +1869,10 @@ inditex
 09-09-2023-18:00:01 - Total de WILDCARD coletados na H1: 0
 09-09-2023-18:00:01 - Total da diferença de 08-09-2023 com 09-09-2023 coletados na H1: 0
 
+
+10-09-2023-18:00:01 - Total de Empresas coletadas na H1: 0
+10-09-2023-18:00:01 - Total de Dominios/URL coletados na H1: 0
+10-09-2023-18:00:01 - Total de URL coletados na H1: 1664
+10-09-2023-18:00:01 - Total de WILDCARD coletados na H1: 0
+10-09-2023-18:00:01 - Total da diferença de 09-09-2023 com 10-09-2023 coletados na H1: 0
+
