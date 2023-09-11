@@ -106,7 +106,7 @@ total_URL_count_h1=$(echo -e "${RED}$date - Total de URL coletados na H1:${NC} $
 total_WILDCARD_count_h1=$(echo -e "${RED}$date - Total de WILDCARD coletados na H1:${NC} $(cat /root/recons/scope/0_h1_completo/wildcards.txt | wc -l)")
 total_Diferenca_count_h1=$(echo -e "${RED}$date - Total da diferença de $yesterday com $today coletados na H1:${NC} $(cat $scope_completo_por_dia/$today"_scope_completo.txt" | anew -d $scope_completo_por_dia/$yesterday"_scope_completo.txt" >> $new_urls_por_dia/$today"_new_urls_scope_completo.txt" | wc -l)")
 
-echo -e "$total_empresa_count_h1\n$total_dominio_count_h1\n$total_URL_count_h1\n$total_WILDCARD_count_h1\n$total_Diferenca_count_h1\n" | notify -silent -bulk
+echo -e "$total_empresa_count_h1\n$total_dominio_count_h1\n$total_URL_count_h1\n$total_WILDCARD_count_h1\n$total_Diferenca_count_h1\n" | $HOME/go/bin/notify -silent -bulk
 echo -e "\n$total_empresa_count_h1\n$total_dominio_count_h1\n$total_URL_count_h1\n$total_WILDCARD_count_h1\n$total_Diferenca_count_h1\n" | sed "s/\x1B\[[0-9;]*[JKmsu]//g" >> /root/Vault_BugBounty/scripts/scripts_scopes_hackerone/qnt_empresas_dominios_h1.txt
 echo -e "${YELLOW}========================================${NC}\n"
 
