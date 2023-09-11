@@ -504,3 +504,7 @@ https://github.com/projectdiscovery/nuclei-templates/raw/33bf8b7cb2defdf9c0e9a50
 https://github.com/projectdiscovery/nuclei-templates/raw/33bf8b7cb2defdf9c0e9a50cc2d4fac4b0ff99df/http%2Fvulnerabilities%2Fother%2Fseeyon-oa-log4j.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/33bf8b7cb2defdf9c0e9a50cc2d4fac4b0ff99df/http%2Fvulnerabilities%2Fother%2Fzhixiang-oa-msglog-sqli.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/33bf8b7cb2defdf9c0e9a50cc2d4fac4b0ff99df/http%2Fvulnerabilities%2Fqax%2Fsecsslvpn-auth-bypass.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/ed8c5ec8cfd0608a727043ec0f9bd80471d1cc11/http%2Fexposures%2Fbackups%2Fphp-backup-files.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/a549ab009312bd26c5ed191d17de2fa32de1204c/http%2Fmisconfiguration%2Fgitlab%2Fgitlab-public-registration.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/d875760869e278f1cd3b6cc9a49ecaba3e31f0e6/http%2Fexposures%2Ffiles%2Fdrupal-install.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/151d5e4dcfb04263fec2964cee096e6a4858e15a/http%2Fcves%2F2023%2FCVE-2023-40068.yaml

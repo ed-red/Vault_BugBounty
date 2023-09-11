@@ -1952,3 +1952,1613 @@ inditex
 11-09-2023-09:00:01 - Total de WILDCARD coletados na H1: 0
 11-09-2023-09:00:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
 
+
+11-09-2023-09:27:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-09:27:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-09:27:01 - Total de URL coletados na H1: 1664
+11-09-2023-09:27:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-09:27:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-09:29:28 - Total de Empresas coletadas na H1: 207
+11-09-2023-09:29:28 - Total de Dominios/URL coletados na H1: 2034
+11-09-2023-09:29:28 - Total de URL coletados na H1: 1664
+11-09-2023-09:29:28 - Total de WILDCARD coletados na H1: 368
+11-09-2023-09:29:28 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-09:29:28 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-09:42:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-09:42:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-09:42:01 - Total de URL coletados na H1: 1664
+11-09-2023-09:42:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-09:42:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-09:45:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-09:45:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-09:45:01 - Total de URL coletados na H1: 1664
+11-09-2023-09:45:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-09:45:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-09:47:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-09:47:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-09:47:01 - Total de URL coletados na H1: 1664
+11-09-2023-09:47:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-09:47:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-09:58:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-09:58:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-09:58:01 - Total de URL coletados na H1: 1664
+11-09-2023-09:58:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-09:58:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:03:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:03:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:03:01 - Total de URL coletados na H1: 0
+11-09-2023-10:03:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:03:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:05:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:05:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:05:01 - Total de URL coletados na H1: 0
+11-09-2023-10:05:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:05:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:09:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:09:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:09:01 - Total de URL coletados na H1: 0
+11-09-2023-10:09:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:09:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:13:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:13:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:13:01 - Total de URL coletados na H1: 0
+11-09-2023-10:13:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:13:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:21:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:21:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:21:01 - Total de URL coletados na H1: 0
+11-09-2023-10:21:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:21:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:25:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:25:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:25:01 - Total de URL coletados na H1: 0
+11-09-2023-10:25:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:25:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:27:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:27:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:27:01 - Total de URL coletados na H1: 0
+11-09-2023-10:27:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:27:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:27:49 - Total de Empresas coletadas na H1: 207
+11-09-2023-10:27:49 - Total de Dominios/URL coletados na H1: 2034
+11-09-2023-10:27:49 - Total de URL coletados na H1: 0
+11-09-2023-10:27:49 - Total de WILDCARD coletados na H1: 368
+11-09-2023-10:27:49 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-10:27:49 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-10:35:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:35:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:35:01 - Total de URL coletados na H1: 0
+11-09-2023-10:35:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:35:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:39:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:39:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:39:01 - Total de URL coletados na H1: 0
+11-09-2023-10:39:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:39:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:40:52 - Total de Empresas coletadas na H1: 207
+11-09-2023-10:40:52 - Total de Dominios/URL coletados na H1: 2034
+11-09-2023-10:40:52 - Total de URL coletados na H1: 0
+11-09-2023-10:40:52 - Total de WILDCARD coletados na H1: 368
+11-09-2023-10:40:52 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-10:40:52 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-10:46:01 - Total de Empresas coletadas na H1: 207
+11-09-2023-10:46:01 - Total de Dominios/URL coletados na H1: 2034
+11-09-2023-10:46:01 - Total de URL coletados na H1: 1666
+11-09-2023-10:46:01 - Total de WILDCARD coletados na H1: 368
+11-09-2023-10:46:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-10:46:01 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-10:51:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:51:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:51:01 - Total de URL coletados na H1: 1666
+11-09-2023-10:51:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:51:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:53:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:53:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:53:01 - Total de URL coletados na H1: 1666
+11-09-2023-10:53:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:53:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:55:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:55:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:55:01 - Total de URL coletados na H1: 1666
+11-09-2023-10:55:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:55:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-10:59:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-10:59:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-10:59:01 - Total de URL coletados na H1: 1666
+11-09-2023-10:59:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-10:59:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-11:05:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-11:05:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-11:05:01 - Total de URL coletados na H1: 1666
+11-09-2023-11:05:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-11:05:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-11:15:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-11:15:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-11:15:01 - Total de URL coletados na H1: 1666
+11-09-2023-11:15:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-11:15:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-11:22:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-11:22:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-11:22:01 - Total de URL coletados na H1: 3221
+11-09-2023-11:22:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-11:22:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-11:25:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-11:25:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-11:25:01 - Total de URL coletados na H1: 3221
+11-09-2023-11:25:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-11:25:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-11:33:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-11:33:01 - Total de Dominios/URL coletados na H1: 17
+11-09-2023-11:33:01 - Total de URL coletados na H1: 5588
+11-09-2023-11:33:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-11:33:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-11:34:52 - Total de Empresas coletadas na H1: 207
+11-09-2023-11:34:52 - Total de Dominios/URL coletados na H1: 2034
+11-09-2023-11:34:52 - Total de URL coletados na H1: 8219
+11-09-2023-11:34:52 - Total de WILDCARD coletados na H1: 368
+11-09-2023-11:34:52 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-11:34:52 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-11:40:20 - Total de Empresas coletadas na H1: 207
+11-09-2023-11:40:20 - Total de Dominios/URL coletados na H1: 2034
+11-09-2023-11:40:20 - Total de URL coletados na H1: 1666
+11-09-2023-11:40:20 - Total de WILDCARD coletados na H1: 368
+11-09-2023-11:40:20 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-11:40:20 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-11:46:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-11:46:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-11:46:01 - Total de URL coletados na H1: 0
+11-09-2023-11:46:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-11:46:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-11:48:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-11:48:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-11:48:01 - Total de URL coletados na H1: 0
+11-09-2023-11:48:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-11:48:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-11:52:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-11:52:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-11:52:01 - Total de URL coletados na H1: 0
+11-09-2023-11:52:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-11:52:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-11:56:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-11:56:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-11:56:01 - Total de URL coletados na H1: 0
+11-09-2023-11:56:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-11:56:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-12:00:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:00:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:00:01 - Total de URL coletados na H1: 0
+11-09-2023-12:00:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:00:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+
+11-09-2023-12:08:54 - Total de Empresas coletadas na H1: 207
+11-09-2023-12:08:54 - Total de Dominios/URL coletados na H1: 2034
+11-09-2023-12:08:54 - Total de URL coletados na H1: 1666
+11-09-2023-12:08:54 - Total de WILDCARD coletados na H1: 368
+11-09-2023-12:08:54 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:08:54 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-12:14:34 - Total de Empresas coletadas na H1: 207
+11-09-2023-12:14:34 - Total de Dominios/URL coletados na H1: 2034
+11-09-2023-12:14:34 - Total de URL coletados na H1: 1666
+11-09-2023-12:14:34 - Total de WILDCARD coletados na H1: 368
+11-09-2023-12:14:34 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:14:34 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-12:21:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:21:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:21:01 - Total de URL coletados na H1: 0
+11-09-2023-12:21:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:21:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:21:01 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:29:35 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:29:35 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:29:35 - Total de URL coletados na H1: 0
+11-09-2023-12:29:35 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:29:35 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:29:35 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:32:27 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:32:27 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:32:27 - Total de URL coletados na H1: 0
+11-09-2023-12:32:27 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:32:27 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:32:27 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:33:18 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:33:18 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:33:18 - Total de URL coletados na H1: 0
+11-09-2023-12:33:18 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:33:18 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:33:18 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:33:36 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:33:36 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:33:36 - Total de URL coletados na H1: 0
+11-09-2023-12:33:36 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:33:36 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:33:36 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:33:55 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:33:55 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:33:55 - Total de URL coletados na H1: 0
+11-09-2023-12:33:55 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:33:55 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:33:55 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:34:17 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:34:17 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:34:17 - Total de URL coletados na H1: 0
+11-09-2023-12:34:17 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:34:17 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:34:17 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:35:57 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:35:57 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:35:57 - Total de URL coletados na H1: 0
+11-09-2023-12:35:57 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:35:57 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:35:57 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:36:18 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:36:18 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:36:18 - Total de URL coletados na H1: 0
+11-09-2023-12:36:18 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:36:18 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:36:18 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:36:37 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:36:37 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:36:37 - Total de URL coletados na H1: 0
+11-09-2023-12:36:37 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:36:37 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:36:37 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:37:42 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:37:42 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:37:42 - Total de URL coletados na H1: 0
+11-09-2023-12:37:42 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:37:42 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:37:42 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:38:02 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:38:02 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:38:02 - Total de URL coletados na H1: 0
+11-09-2023-12:38:02 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:38:02 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:38:02 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:38:51 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:38:51 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:38:51 - Total de URL coletados na H1: 0
+11-09-2023-12:38:51 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:38:51 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:38:51 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:40:27 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:40:27 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:40:27 - Total de URL coletados na H1: 0
+11-09-2023-12:40:27 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:40:27 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:40:27 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:45:15 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:45:15 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:45:15 - Total de URL coletados na H1: 0
+11-09-2023-12:45:15 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:45:15 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:45:15 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:45:44 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:45:44 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:45:44 - Total de URL coletados na H1: 0
+11-09-2023-12:45:44 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:45:44 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:45:44 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:46:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:46:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:46:01 - Total de URL coletados na H1: 0
+11-09-2023-12:46:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:46:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:46:01 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:46:34 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:46:34 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:46:34 - Total de URL coletados na H1: 0
+11-09-2023-12:46:34 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:46:34 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:46:34 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:47:00 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:47:00 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:47:00 - Total de URL coletados na H1: 0
+11-09-2023-12:47:00 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:47:00 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:47:00 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:47:15 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:47:15 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:47:15 - Total de URL coletados na H1: 0
+11-09-2023-12:47:15 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:47:15 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:47:15 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:48:27 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:48:27 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:48:27 - Total de URL coletados na H1: 0
+11-09-2023-12:48:27 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:48:27 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:48:27 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:49:08 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:49:08 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:49:08 - Total de URL coletados na H1: 0
+11-09-2023-12:49:08 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:49:08 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:49:08 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:49:57 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:49:57 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:49:57 - Total de URL coletados na H1: 0
+11-09-2023-12:49:57 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:49:57 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:49:57 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:50:23 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:50:23 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:50:23 - Total de URL coletados na H1: 0
+11-09-2023-12:50:23 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:50:23 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:50:23 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:51:00 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:51:00 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:51:00 - Total de URL coletados na H1: 0
+11-09-2023-12:51:00 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:51:00 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:51:00 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:53:06 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:53:06 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:53:06 - Total de URL coletados na H1: 0
+11-09-2023-12:53:06 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:53:06 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:53:06 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:54:04 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:54:04 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:54:04 - Total de URL coletados na H1: 0
+11-09-2023-12:54:04 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:54:04 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:54:04 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:54:17 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:54:17 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:54:17 - Total de URL coletados na H1: 0
+11-09-2023-12:54:17 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:54:17 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:54:17 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:54:31 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:54:31 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:54:31 - Total de URL coletados na H1: 0
+11-09-2023-12:54:31 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:54:31 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:54:31 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:56:16 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:56:16 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:56:16 - Total de URL coletados na H1: 0
+11-09-2023-12:56:16 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:56:16 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:56:16 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:58:46 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:58:46 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:58:46 - Total de URL coletados na H1: 0
+11-09-2023-12:58:46 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:58:46 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:58:46 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:59:45 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:59:45 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:59:45 - Total de URL coletados na H1: 0
+11-09-2023-12:59:45 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:59:45 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:59:45 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-12:59:55 - Total de Empresas coletadas na H1: 0
+11-09-2023-12:59:55 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-12:59:55 - Total de URL coletados na H1: 0
+11-09-2023-12:59:55 - Total de WILDCARD coletados na H1: 0
+11-09-2023-12:59:55 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-12:59:55 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:01:53 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:01:53 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:01:53 - Total de URL coletados na H1: 0
+11-09-2023-13:01:53 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:01:53 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:01:53 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:02:40 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:02:40 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:02:40 - Total de URL coletados na H1: 0
+11-09-2023-13:02:40 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:02:40 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:02:40 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:08:40 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:08:40 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:08:40 - Total de URL coletados na H1: 0
+11-09-2023-13:08:40 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:08:40 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:08:40 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:09:34 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:09:34 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:09:34 - Total de URL coletados na H1: 0
+11-09-2023-13:09:34 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:09:34 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:09:34 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:09:51 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:09:51 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:09:51 - Total de URL coletados na H1: 0
+11-09-2023-13:09:51 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:09:51 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:09:51 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:11:19 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:11:19 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:11:19 - Total de URL coletados na H1: 0
+11-09-2023-13:11:19 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:11:19 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:11:19 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:16:42 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:16:42 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:16:42 - Total de URL coletados na H1: 0
+11-09-2023-13:16:42 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:16:42 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:16:42 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:18:09 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:18:09 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:18:09 - Total de URL coletados na H1: 0
+11-09-2023-13:18:09 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:18:09 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:18:09 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:18:23 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:18:23 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:18:23 - Total de URL coletados na H1: 0
+11-09-2023-13:18:23 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:18:23 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:18:23 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:19:47 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:19:47 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:19:47 - Total de URL coletados na H1: 0
+11-09-2023-13:19:47 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:19:47 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:19:47 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:25:01 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:25:01 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:25:01 - Total de URL coletados na H1: 0
+11-09-2023-13:25:01 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:25:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:25:01 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:35:02 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:35:02 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:35:02 - Total de URL coletados na H1: 0
+11-09-2023-13:35:02 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:35:02 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:35:02 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:42:37 - Total de Empresas coletadas na H1: 0
+11-09-2023-13:42:37 - Total de Dominios/URL coletados na H1: 0
+11-09-2023-13:42:37 - Total de URL coletados na H1: 0
+11-09-2023-13:42:37 - Total de WILDCARD coletados na H1: 0
+11-09-2023-13:42:37 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:42:37 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-13:58:01 - Total de Empresas coletadas na H1: 207
+11-09-2023-13:58:01 - Total de Dominios/URL coletados na H1: 2034
+11-09-2023-13:58:01 - Total de URL coletados na H1: 1666
+11-09-2023-13:58:01 - Total de WILDCARD coletados na H1: 368
+11-09-2023-13:58:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-13:58:01 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-14:07:03 - Total de Empresas coletadas na H1: 2
+11-09-2023-14:07:03 - Total de Dominios/URL coletados na H1: 23
+11-09-2023-14:07:03 - Total de URL coletados na H1: 23
+11-09-2023-14:07:03 - Total de WILDCARD coletados na H1: 0
+11-09-2023-14:07:03 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-14:07:03 - Empresas excluídas:
+
+=================================================================
+
+
+11-09-2023-14:05:01 - Total de Empresas coletadas na H1: 184
+11-09-2023-14:05:01 - Total de Dominios/URL coletados na H1: 1747
+11-09-2023-14:05:01 - Total de URL coletados na H1: 1450
+11-09-2023-14:05:01 - Total de WILDCARD coletados na H1: 297
+11-09-2023-14:05:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-14:05:01 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-14:07:01 - Total de Empresas coletadas na H1: 303
+11-09-2023-14:07:01 - Total de Dominios/URL coletados na H1: 2934
+11-09-2023-14:07:01 - Total de URL coletados na H1: 2432
+11-09-2023-14:07:01 - Total de WILDCARD coletados na H1: 502
+11-09-2023-14:07:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-14:07:01 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-14:18:01 - Total de Empresas coletadas na H1: 207
+11-09-2023-14:18:01 - Total de Dominios/URL coletados na H1: 2034
+11-09-2023-14:18:01 - Total de URL coletados na H1: 1666
+11-09-2023-14:18:01 - Total de WILDCARD coletados na H1: 368
+11-09-2023-14:18:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-14:18:01 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+11-09-2023-14:24:01 - Total de Empresas coletadas na H1: 207
+11-09-2023-14:24:01 - Total de Dominios/URL coletados na H1: 2034
+11-09-2023-14:24:01 - Total de URL coletados na H1: 1666
+11-09-2023-14:24:01 - Total de WILDCARD coletados na H1: 368
+11-09-2023-14:24:01 - Total da diferença de 10-09-2023 com 11-09-2023 coletados na H1: 0
+
+11-09-2023-14:24:01 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+ridewithvia
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
