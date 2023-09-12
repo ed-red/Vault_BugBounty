@@ -130,6 +130,8 @@ time ls subs/subs_chunks/subs_chunk_* | pv -l | parallel --progress --joblog nuc
 
 time ls subs/subs_chunks/subs_chunk_* | pv -l | parallel --progress --joblog vulns/nuclei/joblog --results vulns/nuclei/results -j 10 "nuclei -silent -o vulns/nuclei/{/.}.nuclei_output < {}"
 
+time ls subs/subs_chunk_* | pv -l | parallel --progress --joblog subs/joblog --results subs/results -j 5 "httpx --mc 200 -silent | nuclei -rl 60 -es info -t /root/nuclei-templates -o vulns/nuclei/{/.}.nuclei_output < {}"
+
 find subs/subs_httpx_output/ -type f -name 'subs_chunk_*' | xargs cat > parallel_httpx_combined.txt
 
 find vulns -type f -name 'subs_chunk_*' | xargs cat > nuclei_vulns_combined.txt
