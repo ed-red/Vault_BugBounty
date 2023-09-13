@@ -91,21 +91,21 @@ subdomain_enum() {
     # export -f amass_func
     export scan_path
 
-    # # Execute todos os comandos em paralelo
-    # (cat "$roots_exist" | xargs -I {} sh -c "amass enum -silent -d {} -dir $scan_path/amass-outputs && amass db -names -d {} | anew subs.txt" && check_complete "Amass" "$(wc -l subs.txt)" "novos subs") &
-    # echo "${green}Amass em andamento...${reset}"
+    # Execute todos os comandos em paralelo
+    (cat "$roots_exist" | xargs -I {} sh -c "amass enum -silent -d {} -dir $scan_path/amass-outputs && amass db -names -d {} | anew subs.txt" && check_complete "Amass" "$(wc -l subs.txt)" "novos subs") &
+    echo "${green}Amass em andamento...${reset}"
 
-    # (cat "$roots_exist" | parallel -j $PROCESSES --pipe haktrails subdomains | anew subs.txt && check_complete "Haktrails" "$(wc -l subs.txt)" "novos subs") &
-    # echo "${green}Haktrails em andamento...${reset}"
+    (cat "$roots_exist" | parallel -j $PROCESSES --pipe haktrails subdomains | anew subs.txt && check_complete "Haktrails" "$(wc -l subs.txt)" "novos subs") &
+    echo "${green}Haktrails em andamento...${reset}"
 
-    # (cat "$roots_exist" | parallel -j $PROCESSES --pipe subfinder -silent | anew subs.txt && check_complete "Subfinder" "$(wc -l subs.txt)" "novos subs") &
-    # echo "${green}Subfinder em andamento...${reset}"
+    (cat "$roots_exist" | parallel -j $PROCESSES --pipe subfinder -silent | anew subs.txt && check_complete "Subfinder" "$(wc -l subs.txt)" "novos subs") &
+    echo "${green}Subfinder em andamento...${reset}"
 
-    # # (cat "$roots_exist" | parallel -j $PROCESSES --pipe shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" -silent | anew subs.txt && check_complete "Shuffledns" "$(wc -l subs.txt)" "novos subs") &
-    # # echo "${green}Shuffledns em andamento...${reset}"
+    (cat "$roots_exist" | parallel -j $PROCESSES --pipe shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" -silent | anew subs.txt && check_complete "Shuffledns" "$(wc -l subs.txt)" "novos subs") &
+    # echo "${green}Shuffledns em andamento...${reset}"
 
-    # (cat "$roots_exist" | parallel -j $PROCESSES --pipe "awk '{print \"http://\" \$0; print \"https://\" \$0}'" | katana -f fqdn -silent | anew subs.txt && check_complete "Katana Recon subs" "$(wc -l subs.txt)" "novos subs") &
-    # echo "${green}Katana Recon subs em andamento...${reset}"
+    (cat "$roots_exist" | parallel -j $PROCESSES --pipe "awk '{print \"http://\" \$0; print \"https://\" \$0}'" | katana -f fqdn -silent | anew subs.txt && check_complete "Katana Recon subs" "$(wc -l subs.txt)" "novos subs") &
+    echo "${green}Katana Recon subs em andamento...${reset}"
 
     (cat "$roots_exist" | parallel -j $PROCESSES --pipe alterx -l -silent | anew subs.txt && check_complete "Alterx" "$(wc -l subs.txt)" "novos subs") &
     echo "${green}Alterx em andamento...${reset}"

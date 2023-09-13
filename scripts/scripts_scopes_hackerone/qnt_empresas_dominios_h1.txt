@@ -3631,3 +3631,141 @@ inditex
 
 =================================================================
 
+
+12-09-2023-15:04:00 - Empresas H1: 209
+12-09-2023-15:04:00 - Dominios/URLs H1: 2052
+12-09-2023-15:04:00 - URL H1: 1679
+12-09-2023-15:04:00 - WILDCARD H1: 373
+12-09-2023-15:04:00 - Diferença entre 11-09-2023 com 12-09-2023 coletados na H1: 0
+
+12-09-2023-15:04:00 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+baidu
+fireblocks_mpc
+inditex
+
+=================================================================
+
+
+13-09-2023-14:24:01 - Total de Empresas coletadas na H1: 209
+13-09-2023-14:24:01 - Total de Dominios/URL coletados na H1: 2051
+13-09-2023-14:24:01 - Total de URL coletados na H1: 1678
+13-09-2023-14:24:01 - Total de WILDCARD coletados na H1: 373
+13-09-2023-14:24:01 - Total da diferença de 12-09-2023 com 13-09-2023 coletados na H1: 0
+
+13-09-2023-14:24:01 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+soroban
+ring
+aleo
+baidu
+fireblocks_mpc
+inditex
+
+=================================================================
+

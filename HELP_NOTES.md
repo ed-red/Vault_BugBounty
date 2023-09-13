@@ -119,7 +119,7 @@ https://api.hackerone.com/v1/hacketmuxrs/programs/yuga_labs
 
 ## Trabalhando com Chunks nos Scripts:
 ```bash
-split -l 10000 subs.txt subs/subs_chunk_
+split -l 10000 subs.txt chunks/chunk_
 
 ls subs/subs_chunk_* | parallel -j 50 "cat {} | httpx -silent | anew -q subs_resolved.txt"
 ls subs/subs_chunks/subs_chunk_* | parallel -j 8 "httpx -silent -o subs/subs_httpx_output/{/.}.httpx_output < {}"
@@ -136,6 +136,23 @@ find subs/subs_httpx_output/ -type f -name 'subs_chunk_*' | xargs cat > parallel
 
 find vulns -type f -name 'subs_chunk_*' | xargs cat > nuclei_vulns_combined.txt
 
+
+
+
+ls chunks/chunk_* | pv -l | parallel --progress --joblog subs/joblog_subfinder --results subs/results_subfinder -j 30 "subfinder -silent -o subs/subs_output/{/.}.subs_output < {}"
+
+
+ls chunks/chunk_* | pv -l | parallel --progress --joblog subs/joblog_subfinder -j 30 "subfinder -silent -o subs/subs_output/{/.}.subfinder_output < {}"
+
+
+ls chunks/chunk_* | pv -l | parallel --progress --joblog subs/joblog_subfinder --results subs/results_subfinder -j 30 "subfinder -silent -o subs/subfinder_output/{/.}.subfinder_output < {}"
+
+
+ls chunks/chunk_* | pv -l | parallel --progress --joblog subs/joblog_shuffledns --results subs/results_shuffledns -j 30 "shuffledns -silent -o subs/subs_output/{/.}.shufflednss_output < {}"
+
+ls chunks/chunk_* | pv -l | parallel --progress --joblog subs/joblog_amass --results subs/results_amass -j 30 "cat {} | xargs -I URL sh -c 'amass enum -silent -d URL >> subs/subs_output/{/.}.amass_output'"
+
+ls chunks/chunk_* | pv -l | parallel --progress --joblog subs/joblog_amass --results subs/results_amass -j 30 "cat {} | xargs -I URL sh -c 'amass enum -silent -d URL && amass db -names -d URL >> subs/subs_output/{/.}.amass_output'"
 
 ```
 
