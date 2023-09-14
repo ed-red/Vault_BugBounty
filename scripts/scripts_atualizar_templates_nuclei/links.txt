@@ -580,3 +580,14 @@ https://github.com/projectdiscovery/nuclei-templates/raw/68f86634de494eab10779b6
 https://github.com/projectdiscovery/nuclei-templates/raw/68f86634de494eab10779b69e88f4b32cd4d0dc7/http%2Fvulnerabilities%2Fother%2Fkingdee-apusic-directory-traversal.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/68f86634de494eab10779b69e88f4b32cd4d0dc7/http%2Fvulnerabilities%2Fother%2Fsanhui-smg-file-read.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/68f86634de494eab10779b69e88f4b32cd4d0dc7/http%2Fvulnerabilities%2Fother%2Fseeyon-oa-log4j.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/3d99f465a6b17212fdc4c9d65d6c5ebb17bc9238/http%2Fcves%2F2023%2FCVE-2023-4714.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/67bf15b8cb761cf51df104654192fc6ac97e934f/http%2Fcves%2F2023%2FCVE-2023-25573.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b2adcac4a4820349643f87ac705e35c288894c1b/http%2Fexposed-panels%2Fsatis-repository.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/dc702125eeb0dcc6e0518e3a44726692462d5242/javascript%2Fms-sql-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/dc702125eeb0dcc6e0518e3a44726692462d5242/javascript%2Fms-sql-detect.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/dc702125eeb0dcc6e0518e3a44726692462d5242/javascript%2Fpostgres-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/dc702125eeb0dcc6e0518e3a44726692462d5242/javascript%2Fredis-pass-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/dc702125eeb0dcc6e0518e3a44726692462d5242/javascript%2Fssh-auth-methods.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/dc702125eeb0dcc6e0518e3a44726692462d5242/javascript%2Fssh-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/dc702125eeb0dcc6e0518e3a44726692462d5242/javascript%2Fssh-server-fingerprint.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/38b87fd8a1e163a8700e57e5a0fb31686c35750f/http%2Fcves%2F2023%2FCVE-2023-30534.yaml
