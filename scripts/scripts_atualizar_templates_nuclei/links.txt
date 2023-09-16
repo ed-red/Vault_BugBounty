@@ -626,3 +626,11 @@ https://github.com/projectdiscovery/nuclei-templates/raw/49e2d395002eb72cfb9d784
 https://github.com/projectdiscovery/nuclei-templates/raw/49e2d395002eb72cfb9d784a54f1e54bfe52db0a/http%2Fvulnerabilities%2Fother%2Fzhixiang-oa-msglog-sqli.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/49e2d395002eb72cfb9d784a54f1e54bfe52db0a/http%2Fvulnerabilities%2Fqax%2Fsecsslvpn-auth-bypass.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/49e2d395002eb72cfb9d784a54f1e54bfe52db0a/http%2Fvulnerabilities%2Frealor%2Frealor-gwt-system-sqli.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/cab07e61200122458dd5643f9c5a2a35f63eb3c3/javascript%2Fms-sql-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/cab07e61200122458dd5643f9c5a2a35f63eb3c3/javascript%2Fms-sql-detect.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/cab07e61200122458dd5643f9c5a2a35f63eb3c3/javascript%2Fpostgres-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/cab07e61200122458dd5643f9c5a2a35f63eb3c3/javascript%2Fredis-pass-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/cab07e61200122458dd5643f9c5a2a35f63eb3c3/javascript%2Fssh-auth-methods.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/cab07e61200122458dd5643f9c5a2a35f63eb3c3/javascript%2Fssh-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/cab07e61200122458dd5643f9c5a2a35f63eb3c3/javascript%2Fssh-server-fingerprint.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/7298fbee157e0f1c014cc00ccff0c8ac8480517c/http%2Fdefault-logins%2Fempire%2Fempirec2-default-login.yaml
