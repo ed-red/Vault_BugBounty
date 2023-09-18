@@ -694,3 +694,4 @@ https://github.com/projectdiscovery/nuclei-templates/raw/1800f3141934b22e9f9b91b
 https://github.com/projectdiscovery/nuclei-templates/raw/1800f3141934b22e9f9b91b9237f14b61178eac5/http%2Fvulnerabilities%2Fruijie%2Fruijie-nbr-fileupload.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/1800f3141934b22e9f9b91b9237f14b61178eac5/http%2Fvulnerabilities%2Fsangfor%2Fsangfor-login-rce.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/1800f3141934b22e9f9b91b9237f14b61178eac5/http%2Fvulnerabilities%2Fsecworld%2Fsecgate-3600-file-upload.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/1fbc09862c7bed5ac162399e00f70ae8b51bea26/http%2Fexposures%2Ftokens%2Fjotform%2Fjotform-api-key.yaml
