@@ -695,3 +695,11 @@ https://github.com/projectdiscovery/nuclei-templates/raw/1800f3141934b22e9f9b91b
 https://github.com/projectdiscovery/nuclei-templates/raw/1800f3141934b22e9f9b91b9237f14b61178eac5/http%2Fvulnerabilities%2Fsangfor%2Fsangfor-login-rce.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/1800f3141934b22e9f9b91b9237f14b61178eac5/http%2Fvulnerabilities%2Fsecworld%2Fsecgate-3600-file-upload.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/1fbc09862c7bed5ac162399e00f70ae8b51bea26/http%2Fexposures%2Ftokens%2Fjotform%2Fjotform-api-key.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/18ee52043133cb6002c8c3de2ebe3c0a81d60d02/http%2Fmisconfiguration%2Finstaller%2Fbitrix24-installer.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b7eb520be8d24f947f6590b41341cce0b649c225/http%2Fmisconfiguration%2Finstaller%2Falma-installer.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/c02832ffa528c8b5870e8f83abee9f6a9f00fbe3/http%2Fmiscellaneous%2Frdap-whois.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/4dc094fffa6a84a045f2590ed3b798d6797ad0b6/http%2Fcves%2F2023%2FCVE-2023-36845.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/aa5940e06e98851be76d0dbcb7405a561b9413c1/http%2Fexposed-panels%2Fsymantec%2Fsymantec-phishing-readiness-platform.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/aa5940e06e98851be76d0dbcb7405a561b9413c1/http%2Fexposed-panels%2Ftemplate_klr300n-exposure.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/aa5940e06e98851be76d0dbcb7405a561b9413c1/http%2Fmiscellaneous%2Fexternal-service-interaction.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/aa5940e06e98851be76d0dbcb7405a561b9413c1/http%2Fmisconfiguration%2Finstaller%2Fkeo-klr300n-install.yaml
