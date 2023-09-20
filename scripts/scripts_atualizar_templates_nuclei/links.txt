@@ -703,3 +703,17 @@ https://github.com/projectdiscovery/nuclei-templates/raw/aa5940e06e98851be76d0db
 https://github.com/projectdiscovery/nuclei-templates/raw/aa5940e06e98851be76d0dbcb7405a561b9413c1/http%2Fexposed-panels%2Ftemplate_klr300n-exposure.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/aa5940e06e98851be76d0dbcb7405a561b9413c1/http%2Fmiscellaneous%2Fexternal-service-interaction.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/aa5940e06e98851be76d0dbcb7405a561b9413c1/http%2Fmisconfiguration%2Finstaller%2Fkeo-klr300n-install.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/7d7e3a5c54b2311bf6c7a1cd257f4252db964d1a/cves%2F2020%2FCVE-2020-28351.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/abd5551262a6a560a81c3bd336609be03aaadd24/http%2Fcves%2F2022%2FCVE-2022-1595.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/47f97458af0bf017ca44aee9edc0033cdcf0f14f/http%2Fcves%2F2023%2FCVE-2023-42442.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b15e6a8998968b983180739838285f9dc74dcb33/http%2Fmisconfiguration%2Finstaller%2Fakeeba-installer.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/68677f484518e18030c4f9db2647d864bfe46f9c/http%2Fmisconfiguration%2Finstaller%2Fzabbix-installer.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b4681586a6d4d1a762/javascript%2Fcves%2Fcve-2023-34039.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b4681586a6d4d1a762/javascript%2Fms-sql-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b4681586a6d4d1a762/javascript%2Fms-sql-detect.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b4681586a6d4d1a762/javascript%2Fpostgres-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b4681586a6d4d1a762/javascript%2Fredis-pass-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b4681586a6d4d1a762/javascript%2Fssh-auth-methods.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b4681586a6d4d1a762/javascript%2Fssh-brute.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b4681586a6d4d1a762/javascript%2Fssh-server-fingerprint.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/b632cbadd1616378da241f0f5f4b59f455ee0292/http%2Fexposed-panels%2Fkeo-router-klr300n.yaml
