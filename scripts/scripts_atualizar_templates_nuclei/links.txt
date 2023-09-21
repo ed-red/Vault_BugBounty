@@ -717,3 +717,4 @@ https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b
 https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b4681586a6d4d1a762/javascript%2Fssh-brute.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b4681586a6d4d1a762/javascript%2Fssh-server-fingerprint.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/b632cbadd1616378da241f0f5f4b59f455ee0292/http%2Fexposed-panels%2Fkeo-router-klr300n.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/33384eeda15ae3913ce3c3f226c1df6ae1f1f496/http%2Fexposed-panels%2Fgitlab-detect.yaml
