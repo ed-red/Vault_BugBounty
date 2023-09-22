@@ -718,3 +718,6 @@ https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b
 https://github.com/projectdiscovery/nuclei-templates/raw/b771c5ee8f468d1aa65107b4681586a6d4d1a762/javascript%2Fssh-server-fingerprint.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/b632cbadd1616378da241f0f5f4b59f455ee0292/http%2Fexposed-panels%2Fkeo-router-klr300n.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/33384eeda15ae3913ce3c3f226c1df6ae1f1f496/http%2Fexposed-panels%2Fgitlab-detect.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/1d95feb5fad8fe37b2a7b99cf5a92bf7caed4dbb/http%2Fcves%2F2023%2FCVE-2023-23492.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/fa97c496c57afc473b9388b48eb8cadf485883fa/dns%2Felasticbeanstalk-takeover.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/a2ed235ca050fc41f668fe30a419a1b3579d5105/http%2Fmiscellaneous%2Fcrypto-mining-malware.yaml
