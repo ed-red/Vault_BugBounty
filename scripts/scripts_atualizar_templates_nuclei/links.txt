@@ -721,3 +721,4 @@ https://github.com/projectdiscovery/nuclei-templates/raw/33384eeda15ae3913ce3c3f
 https://github.com/projectdiscovery/nuclei-templates/raw/1d95feb5fad8fe37b2a7b99cf5a92bf7caed4dbb/http%2Fcves%2F2023%2FCVE-2023-23492.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/fa97c496c57afc473b9388b48eb8cadf485883fa/dns%2Felasticbeanstalk-takeover.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/a2ed235ca050fc41f668fe30a419a1b3579d5105/http%2Fmiscellaneous%2Fcrypto-mining-malware.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/3e249449a7f05da3b4b61763fcd540c3ca5aea82/http%2Fmisconfiguration%2Fvercel-source-exposure.yaml
