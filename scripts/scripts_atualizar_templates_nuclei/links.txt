@@ -820,3 +820,5 @@ https://github.com/projectdiscovery/nuclei-templates/raw/c8a3864f086992d2eb2aca9
 https://github.com/projectdiscovery/nuclei-templates/raw/6784a9d2c112be990b30111401bb252ae89f3e78/http%2Fcves%2F2019%2FCVE-2019-6802.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/9646d0c305b0bd40793956ecc9df3edf827211ef/http%2Fexposed-panels%2Fws_ftp-server-web-transfer.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/9646d0c305b0bd40793956ecc9df3edf827211ef/network%2Fdetection%2Fws_ftp-ssh-detect.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/208ff388432d062396936c48707c1c89dac184bc/http%2Fcves%2F2023%2FCVE-2023-30013.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/cb0cb3ea0a5ae7a7c629d073368e95684eb69726/file%2Fandroid%2Fgoogle-storage-bucket.yaml
