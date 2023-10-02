@@ -862,3 +862,9 @@ https://github.com/projectdiscovery/nuclei-templates/raw/1597c289772671766191c6f
 https://github.com/projectdiscovery/nuclei-templates/raw/80a98a4c22d3cedc16a7b5b687f754efcaf92cc8/CVE-2023-4203
 https://github.com/projectdiscovery/nuclei-templates/raw/80a98a4c22d3cedc16a7b5b687f754efcaf92cc8/http%2Fexposures%2Ffiles%2Foffice-documents-links.yaml
 https://github.com/projectdiscovery/nuclei-templates/raw/80a98a4c22d3cedc16a7b5b687f754efcaf92cc8/http%2Fvulnerabilities%2Fopnsense%2Fopnsense-xss.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/8ccee371e61afc251ee866400a695eaea08a82f3/http%2Ftoken-spray%2Fapi-tatum.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/63dcb68b75e1a71cfa5b68800ed68c9bad82747d/http%2Fcves%2F2023%2FCVE-2023-2224.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/fa6c8f9bb68e5229bdad7d633f8c330a62030610/http%2Fexposures%2Fbackups%2Fphp-backup-files.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/f37e2b3a02d029fe9ce3ba72ee2fbf636b1d1d45/http%2Fexposures%2Flogs%2Fmilesight-system-log.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/ffa4a84ba9e758b8c0aa72eeb8bf629bc9d2d34b/http%2Fcves%2F2023%2FCVE-2023-33831.yaml
+https://github.com/projectdiscovery/nuclei-templates/raw/1642ed8c67737da0289e0969c80af57c2c74dd09/http%2Fcves%2F2023%2FCVE-2023-40044.yaml
