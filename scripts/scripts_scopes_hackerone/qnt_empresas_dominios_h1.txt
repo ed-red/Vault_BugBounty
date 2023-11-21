@@ -8310,3 +8310,70 @@ inditex
 
 =================================================================
 
+
+20-11-2023-14:24:01 - Total de Empresas coletadas na H1: 220
+20-11-2023-14:24:01 - Total de Dominios/URL coletados na H1: 2069
+20-11-2023-14:24:01 - Total de URL coletados na H1: 1692
+20-11-2023-14:24:01 - Total de WILDCARD coletados na H1: 377
+20-11-2023-14:24:01 - Total da diferença de 19-11-2023 com 20-11-2023 coletados na H1: 0
+
+20-11-2023-14:24:01 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+square-open-source
+torproject
+badoo
+postmates
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+deliveroo
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+enjin
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+meta
+skale_network
+btfs
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+iron_fish_bbp
+ring
+aleo
+fireblocks_mpc
+inditex
+
+=================================================================
+
