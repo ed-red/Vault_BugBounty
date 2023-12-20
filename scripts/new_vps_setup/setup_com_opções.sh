@@ -20,7 +20,7 @@ function execute_script() {
     1) source $DOTFILES/install_upgrade_golang.sh;;
     2) source $DOTFILES/install_tools.sh;;
     3) source $DOTFILES/install_tools_pip3_repo.sh;;
-    4) source $DOTFILES/add_param_apis_bashrc;;
+    4) source $DOTFILES/add_param_apis_bashrc.sh;;
     5) source $DOTFILES/install_custom_bash.sh;;
     *) echo -e "${RED}Opção inválida. Por favor, escolha uma opção de 1 a 5.${RESET}";;
   esac
@@ -32,7 +32,7 @@ while true; do
   echo "1) Install/Upgrade Golang - ${CYAN}($DOTFILES/install_upgrade_golang.sh)${RESET}"
   echo "2) Install Tools - ${CYAN}($DOTFILES/install_tools.sh)${RESET}"
   echo "3) Install Tools from Pip3 Repo - ${CYAN}($DOTFILES/install_tools_pip3_repo.sh)${RESET}"
-  echo "4) Add Param APIs to Bashrc - ${CYAN}($DOTFILES/add_param_apis_bashrc)${RESET}"
+  echo "4) Add Param APIs to Bashrc - ${CYAN}($DOTFILES/add_param_apis_bashrc.sh)${RESET}"
   echo "5) Install Custom Bash - ${CYAN}($DOTFILES/install_custom_bash.sh)${RESET}"
   echo -e "${RED}6) Sair${RESET}"
   echo -e "${YELLOW}==================================${RESET}"
