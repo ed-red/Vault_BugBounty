@@ -110,7 +110,7 @@ subdomain_enum() {
     (cat "$roots_exist" | parallel -j $PROCESSES --pipe alterx -l -silent | anew subs.txt && check_complete "Alterx" "$(wc -l subs.txt)" "novos subs") &
     echo "${green}Alterx em andamento...${reset}"
 
-    (cat "$roots_exist" | parallel -j $PROCESSES chaos -d | anew subs.txt && check_complete "Chaos" "$(wc -l subs.txt)" "novos subs") &
+    (cat "$roots_exist" | parallel -j $PROCESSES chaos -d -silent | anew subs.txt && check_complete "Chaos" "$(wc -l subs.txt)" "novos subs") &
     echo "${green}Chaos em andamento...${reset}"
     # Aguarde todos os comandos em segundo plano serem concluídos
     wait
