@@ -175,7 +175,7 @@ resolved_verified() {
     echo "---------------------------------------------"
     echo "${yellow}[+] Port Scanning & HTTP Server Discovery...${reset}"
     pwd
-    nmap -T4 -vv -iL "$scan_path/ips.txt" --top-ports 3000 -n --open -oX "$scan_path/nmap.xml"
+    # nmap -T4 -vv -iL "$scan_path/ips.txt" --top-ports 3000 -n --open -oX "$scan_path/nmap.xml"
     tew -x "$scan_path/nmap.xml" -dnsx "$scan_path/dns.json" --vhost -o "$scan_path/hostport.txt" | httpx -sr -srd "$scan_path/responses" -json -o "$scan_path/http.json"
     echo "---------------------------------------------"
 
@@ -240,7 +240,7 @@ vuln_scan() {
         echo "O arquivo 'xssvibes_endpoint_vulns.txt' não existe."
     fi
 
-    # cat "$scan_path/subs_resolved.txt" | nuclei -es info -o "$scan_path/nuclei.txt" | notify -silent -bulk
+    cat "$scan_path/subs_resolved.txt" | nuclei -es info -o "$scan_path/nuclei.txt" | notify -silent -bulk
 
     echo "${green}Verificação de vulnerabilidades concluída!${reset}"
     echo "------------------------------------------------------------"
