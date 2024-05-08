@@ -19286,3 +19286,67 @@ chia_network
 
 =================================================================
 
+
+08-05-2024-14:24:01 - Total de Empresas coletadas na H1: 227
+08-05-2024-14:24:01 - Total de Dominios/URL coletados na H1: 2438
+08-05-2024-14:24:01 - Total de URL coletados na H1: 1987
+08-05-2024-14:24:01 - Total de WILDCARD coletados na H1: 451
+08-05-2024-14:24:01 - Total da diferença de 07-05-2024 com 08-05-2024 coletados na H1: 0
+
+08-05-2024-14:24:01 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+torproject
+badoo
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+meta
+skale_network
+btfs
+trafficfactory
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+aleo
+fireblocks_mpc
+inditex
+alchemyplatform
+chia_network
+
+=================================================================
+
