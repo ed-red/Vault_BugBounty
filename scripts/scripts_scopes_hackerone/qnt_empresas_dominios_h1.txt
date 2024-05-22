@@ -20191,3 +20191,68 @@ klarna_bbp_public
 
 =================================================================
 
+
+22-05-2024-14:24:01 - Total de Empresas coletadas na H1: 230
+22-05-2024-14:24:01 - Total de Dominios/URL coletados na H1: 2466
+22-05-2024-14:24:01 - Total de URL coletados na H1: 1994
+22-05-2024-14:24:01 - Total de WILDCARD coletados na H1: 472
+22-05-2024-14:24:01 - Total da diferença de 21-05-2024 com 22-05-2024 coletados na H1: 0
+
+22-05-2024-14:24:01 - Empresas excluídas:
+phabricator
+rails
+django
+mavenlink
+att
+iandunn-projects
+wp-api
+uber
+wordpoints
+glasswire
+imgur
+ips
+torproject
+badoo
+keybase
+owncloud
+bime
+ruby
+paragonie
+bitaccess
+mainwp
+websummit
+icq
+nextcloud
+hiro
+shopify-scripts
+nintendo
+teradici
+wink_jq3al
+hyperledger
+nodejs
+cosmos
+chainlink
+pillarproject
+curl
+vlc_h1c
+putty_h1c
+apache_kafka_h1c
+meta
+skale_network
+btfs
+trafficfactory
+hedera-hashgraph
+palantir_public
+agoric
+zabbix
+tron_dao
+eero
+aleo
+fireblocks_mpc
+inditex
+alchemyplatform
+chia_network
+klarna_bbp_public
+
+=================================================================
+
