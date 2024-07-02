@@ -37,7 +37,7 @@ apt install -y git \
                 htop
 
 ## --->>> Adicionar uma pergunta antes de modificar:
-cp $git_root/tools/bashrc ~/.bashrc
+cp $git_root/tools/para_custom_new_vps/bashrc ~/.bashrc
 
 # echo "${yellow}[+] Instalando Ble.sh ... ${reset}"
 # # Fonte: https://github.com/akinomyoga/ble.sh
