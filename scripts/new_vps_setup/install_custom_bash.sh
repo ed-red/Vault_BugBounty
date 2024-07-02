@@ -4,6 +4,7 @@
 # https://github.com/junegunn/fzf
 
 #------- Variáveis
+cd Vault_BugBounty/
 git_root=$(git rev-parse --show-toplevel)
 errors=""
 
