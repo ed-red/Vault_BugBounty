@@ -31,6 +31,8 @@ pwd
 # Passo 1: Atualizar com o comando newclei
 # echo -e "${yellow}========================================${NC}\n" | $HOME/go/bin/notify -silent -bulk
 # echo -e NUCLEI ATUALIZANDO... $(date) | $HOME/go/bin/notify -silent -bulk
+echo -e "${yellow}========================================${NC}\n" | notify -silent -bulk
+echo -e NUCLEI ATUALIZANDO... $(date) | notify -silent -bulk
 echo "${yellow}[+] Atualizando com o comando newclei...(newclei -token $github_token | anew links.txt | wc -l)${reset}"
 if ! newclei -token $github_token | anew links.txt ; then
     echo "${red}[-] Erro ao executar o comando newclei.${reset}"
