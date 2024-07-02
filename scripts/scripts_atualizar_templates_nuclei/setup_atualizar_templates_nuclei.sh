@@ -26,18 +26,20 @@ else
     exit 1
 fi
 
+pwd
+
 # Passo 1: Atualizar com o comando newclei
-echo -e "${yellow}========================================${NC}\n" | $HOME/go/bin/notify -silent -bulk
-echo -e NUCLEI ATUALIZANDO... $(date) | $HOME/go/bin/notify -silent -bulk
+# echo -e "${yellow}========================================${NC}\n" | $HOME/go/bin/notify -silent -bulk
+# echo -e NUCLEI ATUALIZANDO... $(date) | $HOME/go/bin/notify -silent -bulk
 echo "${yellow}[+] Atualizando com o comando newclei...(newclei -token $github_token | anew links.txt | wc -l)${reset}"
-if ! newclei -token $github_token | anew links.txt | $HOME/go/bin/notify -silent -bulk; then
+if ! newclei -token $github_token | anew links.txt ; then
     echo "${red}[-] Erro ao executar o comando newclei.${reset}"
     exit 1
 fi
 
 # Passo 2: Executar o script Python para puxar os templates
 echo "${yellow}[+] Executando o script Python para puxar os templates...${reset}"
-if ! python3 bot_puxar_templates_nuclei.py; then
+if ! python3 /root/Vault_BugBounty/scripts/scripts_atualizar_templates_nuclei/bot_puxar_templates_nuclei.py; then
     echo "${red}[-] Erro ao executar o script Python.${reset}"
     exit 1
 fi
