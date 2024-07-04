@@ -54,7 +54,8 @@ apt install -y vim-nox \
                 default-jre \
                 default-jdk \
                 libmagic-dev \
-                nmap 
+                nmap \
+                parallel
 
 # Instalação Pacotes Base-Dev
 echo "${yellow}[+] Instalando base-dev libs ... ${reset}"
