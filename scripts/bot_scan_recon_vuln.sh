@@ -24,7 +24,7 @@ echo "${blue}Script iniciou em - $(date +%d-%m-%Y-%H:%M:%S)${reset}"
 
 date="$(date +%d-%m-%Y-%H:%M:%S)"
 
-SUBDOM_LIST="$GIT_ROOT/wordlists/subdomains/httparchive_subdomains_2024_05_28.txt.txt"
+SUBDOM_LIST="$GIT_ROOT/wordlists/subdomains/httparchive_subdomains_2024_05_28.txt"
 RESOLVERS="$GIT_ROOT/wordlists/resolvers/resolvers.txt"
 
 echo $GIT_ROOT
@@ -95,8 +95,8 @@ subdomain_enum() {
     export scan_path
 
     # Execute todos os comandos em paralelo
-    (cat "$roots_exist" | xargs -I {} sh -c "amass enum -silent -d {} -dir $scan_path/amass-outputs && amass db -names -d {} | anew subs.txt" && check_complete "Amass" "$(wc -l subs.txt)") &
-    echo "${green}Amass em andamento...${reset}"
+    # (cat "$roots_exist" | xargs -I {} sh -c "amass enum -silent -d {} -dir $scan_path/amass-outputs && amass db -names -d {} | anew subs.txt" && check_complete "Amass" "$(wc -l subs.txt)") &
+    # echo "${green}Amass em andamento...${reset}"
 
     (cat "$roots_exist" | parallel -j $PROCESSES --pipe haktrails subdomains | anew subs.txt && check_complete "Haktrails" "$(wc -l subs.txt)") &
     echo "${green}Haktrails em andamento...${reset}"
@@ -166,7 +166,7 @@ resolved_verified() {
     echo "${green}Puredns em andamento...${reset}"
     
     echo "${green}httpx em andamento...${reset}"
-    cat $scan_path/subs.txt | httpx -silent | anew subs_resolved.txt && check_complete "httpx" "$(wc -l $scan_path/subs_resolved.txt)" "Subs Resolvidas" &&
+    cat $scan_path/subs.txt | httpx -u | anew subs_resolved.txt && check_complete "httpx" "$(wc -l $scan_path/subs_resolved.txt)" "Subs Resolvidas" &&
     echo "${green}httpx em andamento...${reset}"
 
     # puredns resolve "$scan_path/subs.txt" -r "$RESOLVERS" -w "$scan_path/subs_resolved.txt" | wc -l
