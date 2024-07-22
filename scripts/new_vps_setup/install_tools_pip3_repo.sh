@@ -41,6 +41,7 @@ repos["MSwellDOTS"]="mswell/dotfiles"
 repos["Waymore"]="xnl-h4ck3r/waymore"
 repos["altdns"]="infosec-au/altdns"
 repos["XSStrike-Reborn"]="ItsIgnacioPortal/XSStrike-Reborn"
+repos["Paramspider "]="devanshbatham/paramspider"
 
 dir="$HOME/Tools"
 

@@ -98,22 +98,22 @@ subdomain_enum() {
     # (cat "$roots_exist" | xargs -I {} sh -c "amass enum -silent -d {} -dir $scan_path/amass-outputs && amass db -names -d {} | anew subs.txt" && check_complete "Amass" "$(wc -l subs.txt)") &
     # echo "${green}Amass em andamento...${reset}"
 
-    (cat "$roots_exist" | parallel -j $PROCESSES --pipe haktrails subdomains | anew subs.txt && check_complete "Haktrails" "$(wc -l subs.txt)") &
+    (cat "$roots_exist" | parallel -j $PROCESSES --pipe haktrails subdomains | anew subs.txt && check_complete "Haktrails" "$(wc -l subs.txt)")
     echo "${green}Haktrails em andamento...${reset}"
 
-    (cat "$roots_exist" | parallel -j $PROCESSES --pipe subfinder -silent | anew subs.txt && check_complete "Subfinder" "$(wc -l subs.txt)") &
+    (cat "$roots_exist" | parallel -j $PROCESSES --pipe subfinder -silent | anew subs.txt && check_complete "Subfinder" "$(wc -l subs.txt)")
     echo "${green}Subfinder em andamento...${reset}"
 
-    (cat "$roots_exist" | parallel -j $PROCESSES --pipe shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" -silent | anew subs.txt && check_complete "Shuffledns" "$(wc -l subs.txt)") &
+    (cat "$roots_exist" | parallel -j $PROCESSES --pipe shuffledns -w "$SUBDOM_LIST" -r "$RESOLVERS" -silent | anew subs.txt && check_complete "Shuffledns" "$(wc -l subs.txt)")
     echo "${green}Shuffledns em andamento...${reset}"
 
-    (cat "$roots_exist" | parallel -j $PROCESSES --pipe "awk '{print \"http://\" \$0; print \"https://\" \$0}'" | katana -f fqdn -silent | anew subs.txt && check_complete "Katana Recon subs" "$(wc -l subs.txt)") &
+    (cat "$roots_exist" | parallel -j $PROCESSES --pipe "awk '{print \"http://\" \$0; print \"https://\" \$0}'" | katana -f fqdn -silent | anew subs.txt && check_complete "Katana Recon subs" "$(wc -l subs.txt)")
     echo "${green}Katana Recon subs em andamento...${reset}"
 
-    (cat "$roots_exist" | parallel -j $PROCESSES --pipe alterx -l -silent | anew subs.txt && check_complete "Alterx" "$(wc -l subs.txt)") &
+    (cat "$roots_exist" | parallel -j $PROCESSES --pipe alterx -l -silent | anew subs.txt && check_complete "Alterx" "$(wc -l subs.txt)")
     echo "${green}Alterx em andamento...${reset}"
 
-    (cat "$roots_exist" | parallel -j $PROCESSES chaos -d | anew subs.txt && check_complete "Chaos" "$(wc -l subs.txt)") &
+    (cat "$roots_exist" | parallel -j $PROCESSES chaos -d | anew subs.txt && check_complete "Chaos" "$(wc -l subs.txt)")
     echo "${green}Chaos em andamento...${reset}"
     # Aguarde todos os comandos em segundo plano serem concluídos
     wait
@@ -162,11 +162,10 @@ resolved_verified() {
         touch $scan_path/subs_resolved.txt
     fi
 
-    puredns resolve $scan_path/subs.txt -r "$RESOLVERS" -q | anew subs_resolved.txt && check_complete "Puredns" "$(wc -l $scan_path/subs_resolved.txt)" "Subs Resolvidas" &
+    puredns resolve $scan_path/subs.txt -r "$RESOLVERS" -q | anew subs_resolved.txt && check_complete "Puredns" "$(wc -l $scan_path/subs_resolved.txt)" "Subs Resolvidas"
     echo "${green}Puredns em andamento...${reset}"
     
-    echo "${green}httpx em andamento...${reset}"
-    cat $scan_path/subs.txt | httpx -u | anew subs_resolved.txt && check_complete "httpx" "$(wc -l $scan_path/subs_resolved.txt)" "Subs Resolvidas" &&
+    cat $scan_path/subs.txt | httpx | anew subs_resolved.txt && check_complete "httpx" "$(wc -l $scan_path/subs_resolved.txt)" "Subs Resolvidas"
     echo "${green}httpx em andamento...${reset}"
 
     # puredns resolve "$scan_path/subs.txt" -r "$RESOLVERS" -w "$scan_path/subs_resolved.txt" | wc -l
@@ -193,9 +192,12 @@ resolved_verified() {
     echo "${yellow}[+] Javascript Pulling...${reset}"
     cat "$scan_path/crawl.txt" | grep "\\.js" | httpx -sr -srd js
     echo "---------------------------------------------"
-    
+
+    sed -i 's|http://||g; s|https://||g' $scan_path/subs_resolved.txt
+
     subdominios_count=$(echo -e "${RED}$date - Total de Subdominios Encontrados:${reset} $(cat $scan_path/subs.txt | wc -l)")
     subdominios_resolved_count=$(echo -e "${RED}$date - Total de Subdominios Resolvidos:${reset} $(cat $scan_path/subs_resolved.txt | wc -l)")
+
 
     echo -e "${YELLOW}===============================================${reset}\n"
     echo -e "$subdominios_count\n$subdominios_resolved_count\n"
@@ -218,17 +220,18 @@ params_pulling(){
     echo "---------------------------------------------"
     echo "${yellow}[+] Params Pulling...${reset}"
 
+    mkdir $scan_path/params
+
     paramspider -l $scan_path/subs_resolved.txt -s | anew $scan_path/params/all_params.txt
     
     awk '{print "http://" $0; print "https://" $0}' $scan_path/subs_resolved.txt | katana | anew $scan_path/params/all_params.txt
     
-    mkdir $scan_path/params
     # Declare an array with the list of patterns you want to search for using gf
     declare -a patterns=("debug_logic" "idor" "img-traversal" "interestingEXT" "interestingparams" "interestingsubs" "lfi" "rce" "redirect" "sqli" "ssrf" "ssti" "xss")
     # Iterate over each pattern in the patterns array
     for pattern in "${patterns[@]}"; do
         echo $pattern
-        cat "$scan_path/paramspider.txt" | gf $pattern | tee -a $scan_path/params/$pattern.txt >> $scan_path/params/all_params.txt
+        cat $scan_path/params/all_params.txt | gf $pattern | tee -a $scan_path/params/$pattern.txt >> $scan_path/params/all_params.txt
     done
     echo "---------------------------------------------"
 }
@@ -247,6 +250,8 @@ vuln_scan() {
 
     # nuclei -l $scan_path/params/ssrf.txt -t "/root/Tools/fuzzing-templates/ssrf" -rl 05
     
+    nuclei -l $scan_path/subs_resolved.txt -as -o $scan_path/nuclei.txt
+
     cat $scan_path/paramspider.txt | nuclei -t "github/redmc_custom_templates_nuclei-ed-red/fuzzing/xff-403-bypass.yaml" -rl 50 -o nuclei_fuzzing_xff-403-bypass.txt | notify -silent -bulk
     cat $scan_path/paramspider.txt | nuclei -es info -t "/root/Tools/fuzzing-templates" -rl 50 -o nuclei_fuzzing-templates.txt | notify -silent -bulk
     cat $scan_path/params/xss.txt | nuclei -es info -t "/root/Tools/fuzzing-templates/xss" -rl 50 -o nuclei_fuzzing_xss.txt | notify -silent -bulk

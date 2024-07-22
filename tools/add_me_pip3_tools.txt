@@ -6,3 +6,4 @@ bhedak
 dirsearch
 bbrf
 wafw00f
+paramspider
