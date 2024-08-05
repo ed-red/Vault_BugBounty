@@ -85,6 +85,7 @@ scan_company() {
   fi
 
   # Path for the company's scan files
+  scope_path="$ppath/scope/$COMPANY/scope.txt"
   scan_path="$ppath/scans/$COMPANY_DIR"
   roots_exist="$scan_path/scope.txt" # Points to the domain file
 
@@ -98,7 +99,8 @@ scan_company() {
   if [ ! -f "$roots_exist" ]; then
     echo "${yellow}[+] Creating file $roots_exist for $COMPANY...${reset}"
     touch "$roots_exist"
-    echo "$COMPANY" >> $roots_exist
+    cp $scope_path $roots_exist
+    # echo "$COMPANY" >> $roots_exist
   fi
 
   ### PERFORM SCAN ###
@@ -195,7 +197,7 @@ scan_company() {
 
   echo "${blue}Starting scan against roots:${reset}"
   cat "$roots_exist"
-  # cp -v "$roots_exist" "$scan_path/subs.txt"
+  # cp -v "$roots_exist" "$scan_path/scope.txt"
   cd "$scan_path"
 
   ##################### ADD SCAN LOGIC HERE #####################
