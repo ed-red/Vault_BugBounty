@@ -8,7 +8,7 @@ from urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 # Defina sua URL do Webhook do Teams aqui
-TEAMS_WEBHOOK_URL = 'https://suzano.webhook.office.com/webhookb2/b51ef5a0-c9de-49e7-a0e1-18b02afc9375@a7109315-9727-4adf-97ad-4849bb63edcb/IncomingWebhook/e51f6b50cfeb4bd8a9ba8754fb37b192/771f5608-c1bc-4480-b881-74cc85bff5f9'
+TEAMS_WEBHOOK_URL = ''
 
 # Defina os arquivos para salvar os resultados
 property_file = "property_names.txt"
